@@ -31,6 +31,10 @@
         "title": "The Architecture",
         "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing — plus the journey of a charging session."
       },
+      "code": {
+        "title": "The Code",
+        "desc": "Clean code from both worlds: a backend action (PHP) and a frontend composable (TypeScript) — with notes on why they look the way they do."
+      },
       "tests": {
         "title": "The Tests",
         "desc": "The VoltGrid test suite runs demonstratively: 38 tests, coverage report, quality gate — this is what test culture looks like here."
@@ -75,6 +79,19 @@
       "kpiStations": "stations in network",
       "kpiUptime": "uptime 30d",
       "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
+    },
+    "code": {
+      "title": "VoltGrid Code",
+      "lede": "Two real excerpts from the case study — this is what the code I deliver looks like: cut small, typed, with errors as dedicated exception classes instead of generic try/catch.",
+      "backendTitle": "backend — the action behind POST /api/v1/sessions",
+      "backendWhy1": "One action, one job: the controller stays thin and the business logic is testable in isolation — exactly what the test suite page exercises.",
+      "backendWhy2": "Errors are dedicated exception classes (UnsupportedConnectorException, StationUnavailableException) — never a generic try/catch, giving meaningful 422 responses.",
+      "backendWhy3": "Dependencies arrive typed through the constructor (readonly DI) — swappable in tests, no hidden globals.",
+      "frontendTitle": "frontend — the composable behind the charge button",
+      "frontendWhy1": "State is a discriminated union: idle, starting, charging, failed — impossible states simply cannot be represented.",
+      "frontendWhy2": "The API's 422 field errors land typed in the state — the UI shows them at the right field without error parsing in templates.",
+      "frontendWhy3": "Only readonly(state) and intents (start) are exposed — components can read the state but never bend it.",
+      "note": "// Conventions from real projects: method parameters always type-hinted, never generic exceptions, comments only where business logic needs explaining."
     },
     "tests": {
       "title": "VoltGrid Test Suite",

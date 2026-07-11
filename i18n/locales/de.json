@@ -31,6 +31,10 @@
         "title": "Die Architektur",
         "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing — plus der Weg einer Lade-Session."
       },
+      "code": {
+        "title": "Der Code",
+        "desc": "Sauberer Code aus beiden Welten: eine Backend-Action (PHP) und ein Frontend-Composable (TypeScript) — mit Anmerkungen, warum sie so aussehen."
+      },
       "tests": {
         "title": "Die Tests",
         "desc": "Die VoltGrid-Testsuite läuft demonstrativ durch: 38 Tests, Coverage-Report, Quality-Gate — so sieht Testkultur bei mir aus."
@@ -75,6 +79,19 @@
       "kpiStations": "säulen im netz",
       "kpiUptime": "uptime 30d",
       "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
+    },
+    "code": {
+      "title": "VoltGrid Code",
+      "lede": "Zwei echte Ausschnitte aus dem Fallbeispiel — so sieht Code aus, den ich abliefere: klein geschnitten, typisiert, mit Fehlern als eigene Exception-Klassen statt generischem try/catch.",
+      "backendTitle": "backend — die action hinter POST /api/v1/sessions",
+      "backendWhy1": "Eine Action, eine Aufgabe: Der Controller bleibt dünn, die Geschäftslogik ist isoliert testbar — genau das testet die Testsuite-Seite.",
+      "backendWhy2": "Fehler sind eigene Exception-Klassen (UnsupportedConnectorException, StationUnavailableException) — nie generisches try/except, dafür sprechende 422-Antworten.",
+      "backendWhy3": "Abhängigkeiten kommen typisiert über den Konstruktor (readonly DI) — austauschbar im Test, kein verstecktes Global.",
+      "frontendTitle": "frontend — das composable hinter dem laden-button",
+      "frontendWhy1": "Der Zustand ist eine Discriminated Union: idle, starting, charging, failed — unmögliche Zustände sind gar nicht erst darstellbar.",
+      "frontendWhy2": "Die 422-Feldfehler der API landen typisiert im State — die UI zeigt sie am richtigen Feld, ohne Fehler-Parsing im Template.",
+      "frontendWhy3": "Nach außen nur readonly(state) und Absichten (start) — Komponenten können den Zustand lesen, aber nicht verbiegen.",
+      "note": "// Konventionen aus echten Projekten: Methoden-Parameter immer mit Type-Hints, nie generische Exceptions, Kommentare nur wo Business-Logik erklärungsbedürftig ist."
     },
     "tests": {
       "title": "VoltGrid Testsuite",
