@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "David Gröger — Webentwickler",
+    "description": "Full-Stack-Webentwickler seit 2013 — ich baue Plattformen, die Menschen zusammenbringen. Laravel, Vue, Python, KI-gestützte Workflows."
+  },
+  "nav": {
+    "label": "Hauptnavigation",
+    "work": "projekte",
+    "log": "werdegang",
+    "contact": "kontakt"
+  },
+  "hero": {
+    "eyebrow": "webentwickler · seit 2013 · offen für projekte",
+    "sub": "Ich baue Webanwendungen, die man gern benutzt — von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Bieten, Singen, Feiern und Arbeiten.",
+    "ctaWork": "→ projekte ansehen",
+    "ctaContact": "$ kontakt"
+  },
+  "stub": {
+    "work": "projekte — in arbeit (phase 3)",
+    "log": "werdegang als git-graph — in arbeit (phase 2)",
+    "contact": "kontakt-terminal — in arbeit (phase 2)"
+  }
+}

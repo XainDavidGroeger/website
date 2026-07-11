@@ -1,0 +1,139 @@
+/* ------------------------------------------------------------------ */
+/*  Fonts (selbst gehostet, DSGVO-sauber)                              */
+/* ------------------------------------------------------------------ */
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Design-Tokens — Konzept „Source → Render“                          */
+/*  Dark-first; Light-Theme über [data-theme="light"]                  */
+/* ------------------------------------------------------------------ */
+:root {
+  color-scheme: dark;
+
+  --bg: #0b0f1a;
+  --bg-deep: #070a12;
+  --surface: #121828;
+  --surface-2: #1a2236;
+  --line: #23304a;
+  --text: #e9eef8;
+  --muted: #93a1bc;
+  --faint: #5c6b8a;
+
+  --amber: #ffad3b;
+  --amber-dim: rgba(255, 173, 59, 0.14);
+  --mint: #6fe3c2;
+
+  --font-display: 'Clash Display', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Satoshi', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'Cascadia Code', Consolas, monospace;
+
+  --wrap: 1100px;
+  --gutter: 24px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f4f6fb;
+  --bg-deep: #e9edf6;
+  --surface: #ffffff;
+  --surface-2: #eef1f8;
+  --line: #d3dbea;
+  --text: #101728;
+  --muted: #4d5b76;
+  --faint: #8c99b2;
+
+  --amber: #d97e06;
+  --amber-dim: rgba(217, 126, 6, 0.12);
+  --mint: #0e9b76;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--amber);
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+.eyebrow .tick {
+  color: var(--amber);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

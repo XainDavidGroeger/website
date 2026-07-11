@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "David Gröger — Web Developer",
+    "description": "Full-stack web developer since 2013 — I build platforms that bring people together. Laravel, Vue, Python, AI-powered workflows."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "work": "work",
+    "log": "career",
+    "contact": "contact"
+  },
+  "hero": {
+    "eyebrow": "web developer · since 2013 · open for projects",
+    "sub": "I build web applications people enjoy using — from planning to production. Platforms that bring people together: to bid, sing, celebrate and work.",
+    "ctaWork": "→ view work",
+    "ctaContact": "$ contact"
+  },
+  "stub": {
+    "work": "work — in progress (phase 3)",
+    "log": "career as git graph — in progress (phase 2)",
+    "contact": "contact terminal — in progress (phase 2)"
+  }
+}
