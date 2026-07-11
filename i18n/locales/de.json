@@ -166,8 +166,8 @@
         "name": "schnappern.com",
         "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand.",
         "about": "Schnappern ist eine Live-Auktionsplattform: Täglich laufen Echtzeit-Auktionen auf Markenprodukte — geboten wird live, ein automatischer Gebots-Bot („Piri-Bot“) bietet auf Wunsch auch nachts mit. Bezahlt wird sicher über gängige Zahlungsarten, versendet versichert per DHL, DPD oder UPS.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nUmsetzung der Echtzeit-Auktionslogik inklusive Gebots-Bot\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik\nUmsetzung des Administrationstools — Auktionen, Bestellungen, Versand, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
-        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nEchtzeit-Auktionslogik über WebSockets (Laravel Reverb + Echo) inklusive Gebots-Bot\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Braintree)\nUmsetzung des Administrationstools — Auktionen, Bestellungen, Versand, Statistik\nQueues und Hintergrund-Jobs über Redis/Horizon\nTestabdeckung mit Pest und Vitest\nBetrieb und Weiterentwicklung",
+        "stack": "PHP 8.3, Laravel 11, Octane, Reverb (WebSockets), Livewire 3, Redis/Horizon, Vue 3, Vuetify, Tailwind, MySQL",
         "date": "in Betrieb"
       },
       "socialmatch": {

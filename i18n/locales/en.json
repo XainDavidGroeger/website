@@ -166,8 +166,8 @@
         "name": "schnappern.com",
         "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping.",
         "about": "Schnappern is a live auction platform: real-time auctions on brand products run every day — bidding happens live, and an automated bidding bot (“Piri bot”) keeps bidding overnight if you want it to. Payments run through the usual providers, shipping is insured via DHL, DPD or UPS.",
-        "tasks": "Platform concept\nServer setup — domain registration\nReal-time auction logic including the bidding bot\nData structure implementation\nPayment integration\nAdmin tool — auctions, orders, shipping, statistics\nSEO optimization\nOperations and ongoing development",
-        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "tasks": "Platform concept\nServer setup — domain registration\nReal-time auction logic over WebSockets (Laravel Reverb + Echo) including the bidding bot\nData structure implementation\nPayment integration (Braintree)\nAdmin tool — auctions, orders, shipping, statistics\nQueues and background jobs via Redis/Horizon\nTest coverage with Pest and Vitest\nOperations and ongoing development",
+        "stack": "PHP 8.3, Laravel 11, Octane, Reverb (WebSockets), Livewire 3, Redis/Horizon, Vue 3, Vuetify, Tailwind, MySQL",
         "date": "in production"
       },
       "socialmatch": {
