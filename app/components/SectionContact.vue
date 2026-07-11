@@ -12,6 +12,19 @@ const outEl = ref<HTMLElement | null>(null)
 const inputEl = ref<HTMLInputElement | null>(null)
 const lines = ref<TermLine[]>([])
 
+/* Prompt-Bot: 1 neutral · 4 antwortet · 5 ratlos (?) · 6 erfolg (✓✓) */
+const botPose = ref(1)
+let botTimer: ReturnType<typeof setTimeout> | null = null
+function setBotPose(pose: number) {
+  botPose.value = pose
+  if (botTimer) clearTimeout(botTimer)
+  if (pose !== 1) {
+    botTimer = setTimeout(() => {
+      botPose.value = 1
+    }, 2800)
+  }
+}
+
 onMounted(() => {
   lines.value = [{ cmd: 'motd' }, { res: t('term.motd') }]
 })
@@ -32,9 +45,13 @@ function run() {
   const key = value.toLowerCase()
   if (key === 'clear') {
     lines.value = []
+    setBotPose(1)
     return
   }
   const res = commands.value[key]
+  if (key === 'sudo hire-david') setBotPose(6)
+  else if (res) setBotPose(4)
+  else setBotPose(5)
   lines.value.push({
     cmd: value,
     res: res ?? t('term.notFound', { cmd: value }),
@@ -57,6 +74,12 @@ function run() {
 
       <div class="grid">
         <div v-reveal class="term" @click="inputEl?.focus()">
+          <img
+            class="term-bot"
+            :src="`/img/crew/prompt-${botPose}.webp`"
+            :alt="t('crew.promptAlt')"
+            height="84"
+          >
           <div ref="outEl" class="term-out">
             <template v-for="(line, i) in lines" :key="i">
               <div v-if="line.cmd">
@@ -111,6 +134,7 @@ function run() {
 }
 
 .term {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--bg-deep);
@@ -122,6 +146,26 @@ function run() {
   display: flex;
   flex-direction: column;
   min-height: 280px;
+}
+
+/* Prompt-Bot schwebt an der oberen Terminal-Kante und reagiert auf Befehle */
+.term-bot {
+  position: absolute;
+  top: -46px;
+  right: 16px;
+  height: 84px;
+  width: auto;
+  animation: bot-float 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes bot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
 }
 
 .term-out {
@@ -195,5 +239,11 @@ function run() {
   font-size: 13.5px;
   color: var(--faint);
   margin-top: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .term-bot {
+    animation: none;
+  }
 }
 </style>

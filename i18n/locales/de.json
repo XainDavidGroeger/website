@@ -87,6 +87,10 @@
     "startxOut": "DavidOS wird vorbereitet … kommt in v2.1 🤫",
     "notFound": "befehl nicht gefunden: {cmd} — tipp: help"
   },
+  "crew": {
+    "promptAlt": "Prompt, der Terminal-Bot — reagiert auf deine Befehle",
+    "idleAlt": "Psst, hier schläft ein Bot — anklicken zum Wecken"
+  },
   "stub": {
     "work": "projekte — in arbeit (phase 3)"
   }

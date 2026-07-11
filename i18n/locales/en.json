@@ -87,6 +87,10 @@
     "startxOut": "preparing DavidOS … coming in v2.1 🤫",
     "notFound": "command not found: {cmd} — try: help"
   },
+  "crew": {
+    "promptAlt": "Prompt, the terminal bot — reacts to your commands",
+    "idleAlt": "Psst, a bot is sleeping here — click to wake it"
+  },
   "stub": {
     "work": "work — in progress (phase 3)"
   }

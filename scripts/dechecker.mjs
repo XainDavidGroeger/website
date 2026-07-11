@@ -1,0 +1,47 @@
+/**
+ * Entfernt den eingebackenen Schachbrett-Hintergrund aus crew/pixel-sheet.png
+ * per Flood-Fill von den Bildrändern: helle, ungesättigte Pixel (Checker-Grau/Weiß)
+ * werden transparent, bis eine farbige/dunkle Kontur stoppt.
+ * Ergebnis: crew/pixel-sheet-alpha.png
+ */
+import sharp from 'sharp'
+
+const IN = 'crew/pixel-sheet.png'
+const OUT = 'crew/pixel-sheet-alpha.png'
+
+const { data, info } = await sharp(IN).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
+const { width: w, height: h } = info
+
+const idx = (x, y) => (y * w + x) * 4
+
+function isChecker(x, y) {
+  const i = idx(x, y)
+  const r = data[i], g = data[i + 1], b = data[i + 2]
+  const max = Math.max(r, g, b)
+  const min = Math.min(r, g, b)
+  return max - min < 14 && min > 190
+}
+
+// Flood-Fill von allen Randpixeln
+const visited = new Uint8Array(w * h)
+const stack = []
+for (let x = 0; x < w; x++) { stack.push([x, 0], [x, h - 1]) }
+for (let y = 0; y < h; y++) { stack.push([0, y], [w - 1, y]) }
+
+let cleared = 0
+while (stack.length) {
+  const [x, y] = stack.pop()
+  if (x < 0 || y < 0 || x >= w || y >= h) continue
+  const v = y * w + x
+  if (visited[v]) continue
+  visited[v] = 1
+  if (!isChecker(x, y)) continue
+  data[idx(x, y) + 3] = 0
+  cleared++
+  stack.push([x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1])
+}
+
+console.log(`${cleared} Pixel transparent gemacht (${Math.round((cleared / (w * h)) * 100)} % der Fläche)`)
+
+await sharp(data, { raw: { width: w, height: h, channels: 4 } }).png().toFile(OUT)
+console.log(`geschrieben: ${OUT}`)

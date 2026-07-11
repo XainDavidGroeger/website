@@ -6,12 +6,11 @@ const { t } = useI18n()
   <section id="about" class="section">
     <div class="wrap grid">
       <div v-reveal class="portrait" tabindex="0" :aria-label="t('about.inspectHint')">
-        <!-- Platzhalter: altes Foto — wird durch das neue Porträt ersetzt -->
-        <img src="/img/david.webp" :alt="t('about.alt')" width="700" height="466" loading="lazy">
+        <img src="/img/david.webp" :alt="t('about.alt')" width="900" height="1350" loading="lazy">
         <div class="duo" aria-hidden="true" />
         <div class="marquee" aria-hidden="true" />
         <span class="sel" aria-hidden="true">img.portrait</span>
-        <span class="dims" aria-hidden="true">700 × 466</span>
+        <span class="dims" aria-hidden="true">900 × 1350</span>
       </div>
 
       <div v-reveal class="body">

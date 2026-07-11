@@ -5,6 +5,22 @@ const switchLocalePath = useSwitchLocalePath()
 const otherLocale = computed(() =>
   locales.value.find(l => l.code !== locale.value),
 )
+
+/* Idle-Bot im Footer: 1 schläft · 2 schreckt hoch · 6 salutiert */
+const idlePose = ref(1)
+let idleTimers: ReturnType<typeof setTimeout>[] = []
+function wakeIdleBot() {
+  idleTimers.forEach(clearTimeout)
+  idlePose.value = 2
+  idleTimers = [
+    setTimeout(() => {
+      idlePose.value = 6
+    }, 900),
+    setTimeout(() => {
+      idlePose.value = 1
+    }, 3200),
+  ]
+}
 </script>
 
 <template>
@@ -34,6 +50,9 @@ const otherLocale = computed(() =>
     </main>
 
     <footer class="site-foot">
+      <button class="foot-bot" type="button" :aria-label="t('crew.idleAlt')" @click="wakeIdleBot">
+        <img :src="`/img/crew/idle-${idlePose}.webp`" alt="" height="60">
+      </button>
       <div class="wrap bar">
         <span>© {{ new Date().getFullYear() }} David Gröger</span>
         <span class="dim">// build successful ✓</span>
@@ -103,6 +122,7 @@ main {
 }
 
 .site-foot {
+  position: relative;
   border-top: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 12.5px;
@@ -110,5 +130,25 @@ main {
 }
 .site-foot .dim {
   color: var(--mint);
+}
+
+/* Idle-Bot pennt auf der Footer-Kante, Klick weckt ihn */
+.foot-bot {
+  position: absolute;
+  right: 48px;
+  top: -59px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+.foot-bot img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+.foot-bot:hover img {
+  transform: scale(1.06);
 }
 </style>
