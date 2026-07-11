@@ -64,13 +64,10 @@ onMounted(() => {
 
     <SectionAbout />
     <SectionStack />
+    <SectionAgents />
     <SectionLog />
-
-    <!-- Platzhalter: Case Studies folgen in Phase 3 -->
-    <section id="work" class="stub wrap">
-      <p class="eyebrow"><span class="tick">/* work */</span> {{ t('stub.work') }}</p>
-    </section>
-
+    <SectionWork />
+    <SectionRefs />
     <SectionContact />
   </div>
 </template>

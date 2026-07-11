@@ -91,7 +91,87 @@
     "promptAlt": "Prompt, the terminal bot — reacts to your commands",
     "idleAlt": "Psst, a bot is sleeping here — click to wake it"
   },
-  "stub": {
-    "work": "work — in progress (phase 3)"
+  "agents": {
+    "eyebrow": "agent-optimized since 2023",
+    "title": "The AI Crew",
+    "lede": "I don't just work with AI — I work with a crew. Agents refactor, test and document in the background while I own architecture, reviews and quality. That's how speed happens without care falling off the table.",
+    "pixelAlt": "Pixel, the guide bot, pointing at the running pipeline",
+    "forgeAlt": "Forge, the worker bot, tightening the panel",
+    "logTitle": "~/crew — agent log · live",
+    "closing": "In practice: legacy migrations (jQuery → Livewire, Laravel 5 → 8), test coverage and docs run agent-assisted — and every line gets reviewed by me. The bots on this site are the same idea, just visible.",
+    "jobs": {
+      "refactor": "migrated jQuery → Livewire · 12 files",
+      "test": "42/42 tests green",
+      "review": "2 findings found → fixed",
+      "docs": "api documentation updated",
+      "perf": "query time 1.8s → 0.3s",
+      "deploy": "build 68s → staging live"
+    }
+  },
+  "work": {
+    "eyebrow": "selected projects",
+    "title": "Platforms that bring people together",
+    "lede": "To bid, sing, taste wine and work: four products of my own, live and in production — plus freelance engagements. Full case studies with numbers are coming; you can visit everything today.",
+    "shelfOwn": "my own platforms",
+    "shelfFreelance": "freelance work",
+    "shelfArchive": "archive & stations",
+    "tagOwn": "own product · live",
+    "tagFreelance": "freelance",
+    "visit": "→ visit live",
+    "archive": "Socialmatch (5+ years of care) · SpeedDating XXL · Coinoto · XAIN AG · Bitmotion (TYPO3 client projects)",
+    "cases": {
+      "schnappern": {
+        "name": "schnappern.com",
+        "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping."
+      },
+      "teamevent": {
+        "name": "mein-teamevent.de",
+        "desc": "Team event marketplace for DE/AT: filters by budget, location and group size, 20+ formats, inquiry funnel."
+      },
+      "singalong": {
+        "name": "singalong.de",
+        "desc": "Sing-along events in 15+ cities plus Vienna: ticketing, vouchers and themed formats from rock to Christmas."
+      },
+      "weinhopping": {
+        "name": "weinhopping.com",
+        "desc": "Wine-tasting hopping across three locations per evening: ticket tiers, vouchers — from the Socialmatch family."
+      },
+      "muziqme": {
+        "name": "muziqme · self-booking",
+        "desc": "Self-booking platform for live music: artist registration, direct booking for events, ticketing."
+      },
+      "buggyfit": {
+        "name": "buggyfit.de",
+        "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education."
+      }
+    }
+  },
+  "refs": {
+    "eyebrow": "code reviews",
+    "title": "Voices from projects",
+    "lede": "Four reviews from real collaboration — all approved.",
+    "approved": "Approved ✓",
+    "reviews": {
+      "patrick": {
+        "name": "Patrick Kuhlmann",
+        "role": "Founder & CEO {'@'} Socialmatch",
+        "text": "David has been successfully taking care of the frontend and backend of my websites for over five years. He brings a lot of experience, and it shows in the high quality! What stands out most is his reliability and availability. Even on weekends he steps in on short notice when something important needs to be done."
+      },
+      "ekkehard": {
+        "name": "Ekkehard Gümbel",
+        "role": "CEO {'@'} Leuchtfeuer Digital Marketing",
+        "text": "David supported us as a TYPO3 agency in developing and maintaining our client projects. He got up to speed with our tech stack very quickly and was a great addition to our development team. His deep expertise was reflected in the quality of his work."
+      },
+      "frederik": {
+        "name": "Frederik Frey",
+        "role": "CEO {'@'} BINAERIX",
+        "text": "As an IT company, our biggest challenge is finding reliable developers who meet our quality standards. David delivers his tasks within deadlines and takes feedback to heart. When difficulties arise, he reaches out proactively and independently proposes constructive solutions."
+      },
+      "felix": {
+        "name": "Felix Hahmann",
+        "role": "Co-Founder {'@'} XAIN AG",
+        "text": "David actively supported XAIN's early phase with his web development expertise. Beyond our own web presence, he held a technical lead role in client projects, which he carried out with great dedication and professionalism paired with excellent expertise."
+      }
+    }
   }
 }

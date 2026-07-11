@@ -91,7 +91,87 @@
     "promptAlt": "Prompt, der Terminal-Bot — reagiert auf deine Befehle",
     "idleAlt": "Psst, hier schläft ein Bot — anklicken zum Wecken"
   },
-  "stub": {
-    "work": "projekte — in arbeit (phase 3)"
+  "agents": {
+    "eyebrow": "agentenoptimiert seit 2023",
+    "title": "Die KI-Crew",
+    "lede": "Ich arbeite nicht nur mit KI — ich arbeite mit einer Crew. Agenten refactoren, testen und dokumentieren im Hintergrund, während ich Architektur, Reviews und Qualität verantworte. So entsteht Tempo, ohne dass Sorgfalt hinten runterfällt.",
+    "pixelAlt": "Pixel, der Guide-Bot, zeigt auf die laufende Pipeline",
+    "forgeAlt": "Forge, der Worker-Bot, schraubt am Panel",
+    "logTitle": "~/crew — agenten-log · live",
+    "closing": "Konkret heißt das: Legacy-Migrationen (jQuery → Livewire, Laravel 5 → 8), Testabdeckung und Doku laufen agentengestützt — reviewed wird jede Zeile von mir. Die Bots hier auf der Seite sind übrigens dieselbe Idee, nur sichtbar.",
+    "jobs": {
+      "refactor": "jQuery → Livewire migriert · 12 dateien",
+      "test": "42/42 tests grün",
+      "review": "2 findings gefunden → gefixt",
+      "docs": "api-dokumentation aktualisiert",
+      "perf": "query-zeit 1.8s → 0.3s",
+      "deploy": "build 68s → staging live"
+    }
+  },
+  "work": {
+    "eyebrow": "ausgewählte projekte",
+    "title": "Plattformen, die Menschen zusammenbringen",
+    "lede": "Zum Bieten, Singen, Weintrinken und Arbeiten: Vier eigene Produkte, live und in Betrieb — dazu Einsätze als Freelancer. Ausführliche Case Studies mit Zahlen folgen; besuchen kann man alles jetzt schon.",
+    "shelfOwn": "eigene plattformen",
+    "shelfFreelance": "freelance-einsätze",
+    "shelfArchive": "archiv & stationen",
+    "tagOwn": "eigenes produkt · live",
+    "tagFreelance": "freelance",
+    "visit": "→ live ansehen",
+    "archive": "Socialmatch (5+ Jahre Betreuung) · SpeedDating XXL · Coinoto · XAIN AG · Bitmotion (TYPO3-Kundenprojekte)",
+    "cases": {
+      "schnappern": {
+        "name": "schnappern.com",
+        "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand."
+      },
+      "teamevent": {
+        "name": "mein-teamevent.de",
+        "desc": "Teamevent-Vermittlung für DE/AT: Filter nach Budget, Ort und Teilnehmerzahl, 20+ Formate, Anfrage-Funnel."
+      },
+      "singalong": {
+        "name": "singalong.de",
+        "desc": "Mitsing-Events in 15+ Städten und Wien: Ticketing, Gutscheine und Themen-Formate von Rock bis Weihnachten."
+      },
+      "weinhopping": {
+        "name": "weinhopping.com",
+        "desc": "Weintasting-Hopping durch drei Locations pro Abend: Ticket-Stufen, Gutscheine — aus dem Socialmatch-Umfeld."
+      },
+      "muziqme": {
+        "name": "muziqme · self-booking",
+        "desc": "Self-Booking-Plattform für Live-Musik: Künstler-Registrierung, Direktbuchung für Events, Ticketing."
+      },
+      "buggyfit": {
+        "name": "buggyfit.de",
+        "desc": "Fitness-Plattform für Mütter: Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Trainer-Ausbildung."
+      }
+    }
+  },
+  "refs": {
+    "eyebrow": "code reviews",
+    "title": "Stimmen aus Projekten",
+    "lede": "Vier Reviews aus echter Zusammenarbeit — alle approved.",
+    "approved": "Approved ✓",
+    "reviews": {
+      "patrick": {
+        "name": "Patrick Kuhlmann",
+        "role": "Gründer & Geschäftsführer {'@'} Socialmatch",
+        "text": "David kümmert sich bei mir schon über 5 Jahre erfolgreich um Frontend und Backend meiner Webseiten. Er verfügt über viel Erfahrung, das spiegelt sich in der hohen Qualität wider! Hervorzuheben ist insbesondere seine Zuverlässigkeit und Erreichbarkeit. Selbst am Wochenende springt er kurzfristig ein, wenn etwas Wichtiges gemacht werden muss."
+      },
+      "ekkehard": {
+        "name": "Ekkehard Gümbel",
+        "role": "Geschäftsführer {'@'} Leuchtfeuer Digital Marketing",
+        "text": "David hat uns als TYPO3-Agentur bei Entwicklung, Wartung und Weiterentwicklung unserer Kundenprojekte unterstützt. Er hat sich sehr schnell in unseren Tech-Stack einarbeiten können und war eine große Bereicherung für unser Entwicklerteam. Seine große Expertise spiegelte sich in der Qualität seiner Arbeit wider."
+      },
+      "frederik": {
+        "name": "Frederik Frey",
+        "role": "Geschäftsführer {'@'} BINAERIX",
+        "text": "Als Unternehmen in der IT-Branche ist es unsere größte Herausforderung, zuverlässige Entwickler zu finden, die unsere Qualitätsansprüche erfüllen. David liefert seine Tasks innerhalb der Deadlines und nimmt sich Feedback zu Herzen. Bei Schwierigkeiten meldet er sich proaktiv und gibt selbstständig konstruktive Vorschläge zur Problemlösung."
+      },
+      "felix": {
+        "name": "Felix Hahmann",
+        "role": "Co-Founder {'@'} XAIN AG",
+        "text": "David hat die Startphase bei XAIN tatkräftig mit seiner Expertise in der Webentwicklung unterstützt. Neben dem eigenen Webauftritt hatte er eine technische Leitungsfunktion in Kundenprojekten, die er mit viel Hingabe und Professionalität gepaart mit sehr gutem Fachwissen ausgeführt hat."
+      }
+    }
   }
 }
