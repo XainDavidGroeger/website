@@ -30,6 +30,14 @@
       "arch": {
         "title": "Die Architektur",
         "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing — plus der Weg einer Lade-Session."
+      },
+      "tests": {
+        "title": "Die Tests",
+        "desc": "Die VoltGrid-Testsuite läuft demonstrativ durch: 38 Tests, Coverage-Report, Quality-Gate — so sieht Testkultur bei mir aus."
+      },
+      "deploy": {
+        "title": "Das Deployment",
+        "desc": "Vom git push bis production in einer Pipeline: Lint, Tests, Docker-Build, Migrationen, Canary-Rollout — demonstrativ in der Konsole."
       }
     },
     "api": {
@@ -66,6 +74,22 @@
       "kpiStations": "säulen im netz",
       "kpiUptime": "uptime 30d",
       "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
+    },
+    "tests": {
+      "title": "VoltGrid Testsuite",
+      "lede": "So läuft die Testsuite des Fallbeispiels durch: Unit-Tests für die Tarif-Logik, Feature-Tests gegen die API (inklusive der 422-Fälle aus der Sandbox-API) — am Ende Coverage-Report und Quality-Gate. Der Lauf unten spielt automatisch ab, ↻ wiederholt ihn.",
+      "factUnit": "Tarif-Rechnung und Stecker-Matching sind pure Domänen-Logik — ohne Datenbank getestet, deshalb in Millisekunden durch.",
+      "factFeature": "Die Feature-Tests treffen exakt die Endpunkte der Sandbox-API — auch die Fehlerfälle: Wartung, besetzt, ungültige kWh.",
+      "factGate": "Unter 90 % Coverage bricht die CI ab. Das Gate ist Teil der Pipeline, nicht Verhandlungssache.",
+      "note": "// Demonstrativer Lauf mit realistischem Output — dieselbe Testkultur (Pest/Vitest, Gates) fahre ich in echten Projekten wie schnappern.com."
+    },
+    "deploy": {
+      "title": "VoltGrid Deployment",
+      "lede": "Ein Push auf main, und die Pipeline übernimmt: Lint und statische Analyse, Tests mit Coverage-Gate, Docker-Build, Migrationen mit Rollback-Plan, Staging-Smoke-Tests — und ein Canary-Rollout, der erst bei 0 % Fehlerrate auf 100 % dreht. Der Lauf unten spielt automatisch ab.",
+      "factGates": "Jede Stufe ist ein Gate: schlägt Lint, ein Test oder das Coverage-Minimum fehl, kommt nichts in Produktion.",
+      "factCanary": "Neue Versionen sehen erst 10 %, dann 50 % des Traffics — Fehlerrate und p95-Latenz entscheiden über den Rest.",
+      "factRollback": "Migrationen werden mit Rollback-Plan angewendet, das vorherige Image bleibt im Registry — zurück in unter einer Minute.",
+      "note": "// Demonstrativer Lauf — Zero-Downtime-Deploys mit Gates und Canary sind der Standard, den ich in Projekten aufsetze."
     },
     "arch": {
       "title": "VoltGrid Architektur",

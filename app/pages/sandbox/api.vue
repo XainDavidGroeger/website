@@ -96,6 +96,10 @@ curl -X POST {{ origin }}/api/v1/sessions \
 .swagger-host .swagger-ui .wrapper {
   background: transparent;
 }
+/* weißer "Servers"-Kasten: überflüssig (nur ein Server "/") → ausblenden */
+.swagger-host .swagger-ui .scheme-container {
+  display: none;
+}
 .swagger-host .swagger-ui .info .title,
 .swagger-host .swagger-ui .opblock-tag,
 .swagger-host .swagger-ui .opblock .opblock-summary-description,

@@ -148,7 +148,8 @@ function run() {
   min-height: 280px;
 }
 
-/* Prompt-Bot schwebt an der oberen Terminal-Kante und reagiert auf Befehle */
+/* Prompt-Bot schwebt an der oberen Terminal-Kante und reagiert auf Befehle
+   (gespiegelt, damit er ZUM Terminal schaut) */
 .term-bot {
   position: absolute;
   top: -46px;
@@ -161,10 +162,10 @@ function run() {
 @keyframes bot-float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: scaleX(-1) translateY(0);
   }
   50% {
-    transform: translateY(-7px);
+    transform: scaleX(-1) translateY(-7px);
   }
 }
 

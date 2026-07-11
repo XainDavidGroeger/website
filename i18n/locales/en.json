@@ -30,6 +30,14 @@
       "arch": {
         "title": "The Architecture",
         "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing — plus the journey of a charging session."
+      },
+      "tests": {
+        "title": "The Tests",
+        "desc": "The VoltGrid test suite runs demonstratively: 38 tests, coverage report, quality gate — this is what test culture looks like here."
+      },
+      "deploy": {
+        "title": "The Deployment",
+        "desc": "From git push to production in one pipeline: lint, tests, docker build, migrations, canary rollout — demonstratively in the console."
       }
     },
     "api": {
@@ -66,6 +74,22 @@
       "kpiStations": "stations in network",
       "kpiUptime": "uptime 30d",
       "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
+    },
+    "tests": {
+      "title": "VoltGrid Test Suite",
+      "lede": "This is the case study's test suite running: unit tests for the tariff logic, feature tests against the API (including the 422 cases from the sandbox API) — with a coverage report and quality gate at the end. The run below plays automatically, ↻ replays it.",
+      "factUnit": "Tariff math and connector matching are pure domain logic — tested without a database, which is why they finish in milliseconds.",
+      "factFeature": "The feature tests hit exactly the endpoints of the sandbox API — including the error cases: maintenance, occupied, invalid kWh.",
+      "factGate": "Below 90 % coverage the CI aborts. The gate is part of the pipeline, not up for negotiation.",
+      "note": "// Demonstrative run with realistic output — the same test culture (Pest/Vitest, gates) runs in real projects like schnappern.com."
+    },
+    "deploy": {
+      "title": "VoltGrid Deployment",
+      "lede": "One push to main and the pipeline takes over: lint and static analysis, tests with a coverage gate, docker build, migrations with a rollback plan, staging smoke tests — and a canary rollout that only goes to 100 % at 0 % error rate. The run below plays automatically.",
+      "factGates": "Every stage is a gate: if lint, a test or the coverage minimum fails, nothing reaches production.",
+      "factCanary": "New versions see 10 %, then 50 % of traffic first — error rate and p95 latency decide the rest.",
+      "factRollback": "Migrations are applied with a rollback plan and the previous image stays in the registry — back in under a minute.",
+      "note": "// Demonstrative run — zero-downtime deploys with gates and canary are the standard I set up in projects."
     },
     "arch": {
       "title": "VoltGrid Architecture",

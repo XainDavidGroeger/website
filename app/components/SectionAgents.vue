@@ -119,14 +119,14 @@ onUnmounted(() => {
   animation: crew-float 3.6s ease-in-out infinite;
 }
 .bot-pixel {
-  left: -8px;
+  left: -34px;
   bottom: 34px;
-  height: 140px;
+  height: 124px;
 }
 .bot-forge {
-  right: 6px;
-  top: 0;
-  height: 120px;
+  right: 10px;
+  top: 6px;
+  height: 96px;
   animation-delay: -1.6s;
 }
 @keyframes crew-float {

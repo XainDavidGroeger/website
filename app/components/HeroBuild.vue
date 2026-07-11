@@ -93,9 +93,9 @@ onMounted(() => {
 
 .bot {
   position: absolute;
-  left: -64px;
-  bottom: -30px;
-  height: 120px;
+  left: -82px;
+  bottom: 66px;
+  height: 96px;
   width: auto;
   z-index: 2;
   animation: bot-float 3.6s ease-in-out infinite;

@@ -10,6 +10,8 @@ const areas = [
   { key: 'api', to: '/sandbox/api', icon: '{ }' },
   { key: 'ui', to: '/sandbox/ui', icon: '<∕>' },
   { key: 'arch', to: '/sandbox/architecture', icon: '◫' },
+  { key: 'tests', to: '/sandbox/tests', icon: '✓' },
+  { key: 'deploy', to: '/sandbox/deploy', icon: '↥' },
 ]
 </script>
 
