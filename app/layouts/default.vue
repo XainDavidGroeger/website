@@ -1,26 +1,13 @@
 <script setup lang="ts">
 const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const { toggle: toggleTheme } = useTheme()
+
+const paletteOpen = useState('palette-open', () => false)
 
 const otherLocale = computed(() =>
   locales.value.find(l => l.code !== locale.value),
 )
-
-/* Idle-Bot im Footer: 1 schläft · 2 schreckt hoch · 6 salutiert */
-const idlePose = ref(1)
-let idleTimers: ReturnType<typeof setTimeout>[] = []
-function wakeIdleBot() {
-  idleTimers.forEach(clearTimeout)
-  idlePose.value = 2
-  idleTimers = [
-    setTimeout(() => {
-      idlePose.value = 6
-    }, 900),
-    setTimeout(() => {
-      idlePose.value = 1
-    }, 3200),
-  ]
-}
 </script>
 
 <template>
@@ -34,6 +21,8 @@ function wakeIdleBot() {
           <a href="#work">{{ t('nav.work') }}</a>
           <a href="#log">{{ t('nav.log') }}</a>
           <a href="#init">{{ t('nav.contact') }}</a>
+          <button class="ctrl" type="button" :aria-label="t('nav.themeAria')" @click="toggleTheme">◐</button>
+          <button class="ctrl kbd" type="button" :aria-label="t('nav.paletteAria')" @click="paletteOpen = true">⌘K</button>
           <NuxtLink
             v-if="otherLocale"
             :to="switchLocalePath(otherLocale.code)"
@@ -50,14 +39,16 @@ function wakeIdleBot() {
     </main>
 
     <footer class="site-foot">
-      <button class="foot-bot" type="button" :aria-label="t('crew.idleAlt')" @click="wakeIdleBot">
-        <img :src="`/img/crew/idle-${idlePose}.webp`" alt="" height="60">
-      </button>
       <div class="wrap bar">
         <span>© {{ new Date().getFullYear() }} David Gröger</span>
         <span class="dim">// build successful ✓</span>
       </div>
     </footer>
+
+    <AppPalette />
+    <ClientOnly>
+      <CompanionBot />
+    </ClientOnly>
   </div>
 </template>
 
@@ -121,8 +112,31 @@ main {
   color: var(--text);
 }
 
+.ctrl {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.ctrl:hover {
+  color: var(--amber);
+}
+.ctrl.kbd {
+  border-color: var(--line);
+  font-size: 11.5px;
+}
+@media (max-width: 560px) {
+  .ctrl.kbd {
+    display: none;
+  }
+}
+
 .site-foot {
-  position: relative;
   border-top: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 12.5px;
@@ -130,25 +144,5 @@ main {
 }
 .site-foot .dim {
   color: var(--mint);
-}
-
-/* Idle-Bot pennt auf der Footer-Kante, Klick weckt ihn */
-.foot-bot {
-  position: absolute;
-  right: 48px;
-  top: -59px;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  line-height: 0;
-}
-.foot-bot img {
-  height: 60px;
-  width: auto;
-  transition: transform 0.2s ease;
-}
-.foot-bot:hover img {
-  transform: scale(1.06);
 }
 </style>

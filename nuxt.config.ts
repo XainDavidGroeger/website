@@ -14,8 +14,13 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0B0F1A' },
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/ClashDisplay-Variable.woff2', crossorigin: '' },
         { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Satoshi-Variable.woff2', crossorigin: '' },
+      ],
+      script: [
+        // Theme vor dem ersten Paint setzen (kein FOUC beim Light-Theme)
+        { innerHTML: '(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})()' },
       ],
     },
   },

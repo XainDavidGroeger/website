@@ -7,7 +7,34 @@
     "label": "Hauptnavigation",
     "work": "projekte",
     "log": "werdegang",
-    "contact": "kontakt"
+    "contact": "kontakt",
+    "themeAria": "Farbschema umschalten",
+    "paletteAria": "Befehlspalette öffnen (Strg+K)"
+  },
+  "palette": {
+    "aria": "Befehlspalette",
+    "placeholder": "Wohin? Tippen oder Pfeiltasten …",
+    "empty": "nichts gefunden — esc zum Schließen",
+    "work": "→ projekte ansehen",
+    "agents": "→ ki-crew",
+    "log": "→ werdegang (git log)",
+    "about": "→ über mich",
+    "contact": "$ kontakt",
+    "theme": "theme umschalten",
+    "lang": "switch to english",
+    "cv": "lebenslauf herunterladen (pdf)"
+  },
+  "companion": {
+    "aria": "Idle, der Begleiter-Bot — anklicken für einen Tipp",
+    "tips": {
+      "hero": "scroll mal an — die seite kompiliert sich selbst.",
+      "about": "beweg die maus übers foto: inspect-mode.",
+      "stack": "keine prozentbalken. alles hier steckt in echten projekten.",
+      "agents": "das agenten-log da drüben läuft wirklich.",
+      "log": "der werdegang als git-graph — tags inklusive.",
+      "work": "die plattformen sind alle live — klick rein.",
+      "refs": "vier reviews, vier mal approved ✓"
+    }
   },
   "hero": {
     "eyebrow": "webentwickler · seit 2013 · offen für projekte",

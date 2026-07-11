@@ -7,7 +7,34 @@
     "label": "Main navigation",
     "work": "work",
     "log": "career",
-    "contact": "contact"
+    "contact": "contact",
+    "themeAria": "Toggle color scheme",
+    "paletteAria": "Open command palette (Ctrl+K)"
+  },
+  "palette": {
+    "aria": "Command palette",
+    "placeholder": "Where to? Type or use arrows …",
+    "empty": "nothing found — esc to close",
+    "work": "→ view work",
+    "agents": "→ ai crew",
+    "log": "→ career (git log)",
+    "about": "→ about me",
+    "contact": "$ contact",
+    "theme": "toggle theme",
+    "lang": "auf deutsch wechseln",
+    "cv": "download resume (pdf)"
+  },
+  "companion": {
+    "aria": "Idle, the companion bot — click for a tip",
+    "tips": {
+      "hero": "scroll on — this page compiles itself.",
+      "about": "hover the photo: inspect mode.",
+      "stack": "no percentage bars. everything here ships in real projects.",
+      "agents": "that agent log over there is actually running.",
+      "log": "the career as a git graph — tags included.",
+      "work": "all platforms are live — click through.",
+      "refs": "four reviews, four approvals ✓"
+    }
   },
   "hero": {
     "eyebrow": "web developer · since 2013 · open for projects",

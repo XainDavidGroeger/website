@@ -35,6 +35,9 @@ onMounted(() => {
   <div>
     <section class="hero">
       <div class="hero-grid" aria-hidden="true" />
+      <ClientOnly>
+        <HeroField />
+      </ClientOnly>
       <div class="wrap hero-inner">
         <p class="eyebrow">
           <span class="tick">/*</span> {{ t('hero.eyebrow') }} <span class="tick">*/</span>
