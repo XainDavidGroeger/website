@@ -18,9 +18,10 @@ const otherLocale = computed(() =>
           <span class="tick">&lt;</span>dg <span class="tick">/&gt;</span>
         </NuxtLink>
         <nav class="nav" :aria-label="t('nav.label')">
-          <a href="#work">{{ t('nav.work') }}</a>
-          <a href="#log">{{ t('nav.log') }}</a>
-          <a href="#init">{{ t('nav.contact') }}</a>
+          <a :href="`${locale === 'de' ? '' : '/en'}/#work`">{{ t('nav.work') }}</a>
+          <a :href="`${locale === 'de' ? '' : '/en'}/#log`">{{ t('nav.log') }}</a>
+          <NuxtLinkLocale to="/sandbox">{{ t('nav.sandbox') }}</NuxtLinkLocale>
+          <a :href="`${locale === 'de' ? '' : '/en'}/#init`">{{ t('nav.contact') }}</a>
           <button class="ctrl" type="button" :aria-label="t('nav.themeAria')" @click="toggleTheme">◐</button>
           <button class="ctrl kbd" type="button" :aria-label="t('nav.paletteAria')" @click="paletteOpen = true">⌘K</button>
           <NuxtLink

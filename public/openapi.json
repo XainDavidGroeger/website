@@ -1,0 +1,152 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Event Booking API — Sandbox",
+    "version": "1.0.0",
+    "description": "Demo-API im Stil der Event-Plattformen, die ich baue (SingAlong, Weinhopping, Matching Night …). Die Endpunkte laufen wirklich — probier sie über **Try it out** aus. Es wird nichts gespeichert.\n\nA demo API in the style of the event platforms I build. The endpoints are live — use **Try it out**. Nothing is persisted.",
+    "contact": {
+      "name": "David Gröger",
+      "url": "https://david-webdev.de"
+    }
+  },
+  "servers": [{ "url": "/" }],
+  "tags": [
+    { "name": "events", "description": "Events durchsuchen und abrufen" },
+    { "name": "bookings", "description": "Buchungen anlegen (Demo, ohne Persistenz)" }
+  ],
+  "paths": {
+    "/api/v1/events": {
+      "get": {
+        "tags": ["events"],
+        "summary": "Events auflisten",
+        "description": "Liste aller Events, optional gefiltert nach Stadt und Kategorie.",
+        "parameters": [
+          { "name": "city", "in": "query", "schema": { "type": "string" }, "example": "Berlin", "description": "Exakter Städtename (case-insensitive)" },
+          { "name": "category", "in": "query", "schema": { "type": "string", "enum": ["singing", "wine", "dating", "team"] }, "description": "Event-Kategorie" },
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 50, "default": 50 } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Gefilterte Event-Liste",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": { "type": "array", "items": { "$ref": "#/components/schemas/Event" } },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "count": { "type": "integer" },
+                        "total": { "type": "integer" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/events/{id}": {
+      "get": {
+        "tags": ["events"],
+        "summary": "Einzelnes Event abrufen",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" }, "example": 3 }
+        ],
+        "responses": {
+          "200": {
+            "description": "Das Event",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "data": { "$ref": "#/components/schemas/Event" } }
+                }
+              }
+            }
+          },
+          "404": { "description": "Event nicht gefunden" }
+        }
+      }
+    },
+    "/api/v1/bookings": {
+      "post": {
+        "tags": ["bookings"],
+        "summary": "Buchung anlegen",
+        "description": "Validiert die Anfrage und bestätigt die Buchung. Demo: nichts wird gespeichert, keine E-Mail versendet.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/BookingRequest" },
+              "example": { "eventId": 3, "name": "Ada Lovelace", "email": "ada@example.org", "seats": 2 }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Buchung bestätigt",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "data": { "$ref": "#/components/schemas/Booking" } }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validierungsfehler",
+            "content": {
+              "application/json": {
+                "example": { "statusCode": 422, "statusMessage": "Validation Failed", "data": { "errors": { "email": "valid email is required" } } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Event": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 3 },
+          "title": { "type": "string", "example": "Matching Night" },
+          "category": { "type": "string", "enum": ["singing", "wine", "dating", "team"] },
+          "city": { "type": "string", "example": "Hamburg" },
+          "date": { "type": "string", "format": "date", "example": "2026-09-26" },
+          "priceCents": { "type": "integer", "example": 2900 },
+          "seatsTotal": { "type": "integer", "example": 250 },
+          "seatsBooked": { "type": "integer", "example": 197 },
+          "seatsAvailable": { "type": "integer", "example": 53 }
+        }
+      },
+      "BookingRequest": {
+        "type": "object",
+        "required": ["eventId", "name", "email", "seats"],
+        "properties": {
+          "eventId": { "type": "integer" },
+          "name": { "type": "string", "minLength": 2 },
+          "email": { "type": "string", "format": "email" },
+          "seats": { "type": "integer", "minimum": 1, "maximum": 10 }
+        }
+      },
+      "Booking": {
+        "type": "object",
+        "properties": {
+          "bookingId": { "type": "string", "example": "bk_x7k2m9qa" },
+          "eventId": { "type": "integer" },
+          "event": { "type": "string" },
+          "seats": { "type": "integer" },
+          "status": { "type": "string", "example": "confirmed" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -8,8 +8,53 @@
     "work": "projekte",
     "log": "werdegang",
     "contact": "kontakt",
+    "sandbox": "sandbox",
     "themeAria": "Farbschema umschalten",
     "paletteAria": "Befehlspalette öffnen (Strg+K)"
+  },
+  "sandbox": {
+    "eyebrow": "anfassen erlaubt",
+    "title": "Die Sandbox",
+    "lede": "Reden kann jeder — hier kann man mein Handwerk anklicken: eine echte Demo-API mit Swagger-Doku, wiederverwendbare UI-Komponenten zum Schrauben und Architektur-Diagramme, wie ich Systeme entwerfe.",
+    "open": "→ öffnen",
+    "areas": {
+      "api": {
+        "title": "REST-API + Swagger",
+        "desc": "Eine laufende Event-Booking-API mit OpenAPI-Spezifikation — direkt im Browser ausprobieren, inklusive Validierungsfehlern."
+      },
+      "ui": {
+        "title": "UI-Komponenten",
+        "desc": "Die wiederverwendbaren Bausteine dieser Seite als Playground: Props verstellen, Ergebnis live sehen, Code kopieren."
+      },
+      "arch": {
+        "title": "Architektur-Diagramme",
+        "desc": "Wie ich Systeme entwerfe — am Beispiel einer Echtzeit-Auktionsplattform und meines KI-Agenten-Workflows."
+      }
+    },
+    "api": {
+      "title": "Event-Booking-API",
+      "lede": "Drei Endpunkte, die wirklich laufen: Events listen und filtern, Details abrufen, Buchungen anlegen — mit sauberer Validierung (422 inklusive Feld-Fehlern). Unten die vollständige Swagger-Doku mit Try-it-out.",
+      "note": "// Demo-API ohne Persistenz: Buchungen werden bestätigt, aber nicht gespeichert. Spec: /openapi.json"
+    },
+    "ui": {
+      "title": "Komponenten-Playground",
+      "lede": "Diese Seite ist aus wiederverwendbaren Komponenten gebaut — drei davon zum Anfassen: Props links verstellen, unten fällt der fertige Code raus.",
+      "windowLine": "hallo aus der sandbox",
+      "note": "// Dieselben Komponenten (DgButton, DgTag, DgWindow) stecken überall auf dieser Seite — einmal gebaut, überall konsistent."
+    },
+    "arch": {
+      "title": "Architektur-Diagramme",
+      "lede": "Zwei Beispiele, wie ich Systeme denke: eine Echtzeit-Auktionsplattform (angelehnt an schnappern.com) und der KI-Agenten-Workflow, mit dem ich entwickle.",
+      "d1Title": "echtzeit-auktionsplattform",
+      "d1Note": "Der heiße Pfad läuft über den App-Cluster (Laravel 11 auf Octane): Gebote gehen per REST rein, werden über Redis-Queues von Horizon-Workern verarbeitet und über Reverb-WebSockets an alle Bieter zurückgespielt — der Browser bekommt neue Gebote ohne Reload. Payments und Monitoring sind bewusst externe Dienste: Zahlungsdaten bleiben bei Braintree, Fehler landen in Sentry.",
+      "d2Title": "ki-agenten-workflow",
+      "d2Note": "So entsteht Software bei mir seit 2023: Ich zerlege das Ticket in einen Plan, die Agenten arbeiten parallel an Code, Tests und Doku — und jede Zeile geht durch mein Review, bevor sie gemergt und deployt wird. Tempo durch Parallelität, Qualität durch die Review-Schranke.",
+      "hoverHint": "// hover über die knoten",
+      "legendSync": "synchron (request/response)",
+      "legendAsync": "asynchron (queue/events)",
+      "legendRealtime": "echtzeit",
+      "legendExt": "externer dienst"
+    }
   },
   "palette": {
     "aria": "Befehlspalette",
@@ -20,6 +65,7 @@
     "log": "→ werdegang (git log)",
     "about": "→ über mich",
     "contact": "$ kontakt",
+    "sandbox": "→ sandbox (api · ui · architektur)",
     "theme": "theme umschalten",
     "lang": "switch to english",
     "cv": "lebenslauf herunterladen (pdf)"

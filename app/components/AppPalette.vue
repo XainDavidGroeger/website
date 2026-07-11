@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const localePath = useLocalePath()
 const { toggle: toggleTheme } = useTheme()
 
 const open = useState('palette-open', () => false)
@@ -18,7 +19,10 @@ interface PaletteItem {
 }
 
 function goTo(hash: string) {
-  document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
+  const el = document.querySelector(hash)
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  // von Unterseiten (z. B. /sandbox) zurück zur Startseite mit Anker
+  else navigateTo(`${localePath('/')}${hash}`)
 }
 
 const items = computed<PaletteItem[]>(() => [
@@ -27,6 +31,7 @@ const items = computed<PaletteItem[]>(() => [
   { id: 'log', label: t('palette.log'), hint: 'W', action: () => goTo('#log') },
   { id: 'about', label: t('palette.about'), hint: 'A', action: () => goTo('#about') },
   { id: 'contact', label: t('palette.contact'), hint: '↵', action: () => goTo('#init') },
+  { id: 'sandbox', label: t('palette.sandbox'), hint: 'S', action: () => navigateTo(localePath('/sandbox')) },
   { id: 'theme', label: t('palette.theme'), hint: 'T', action: () => toggleTheme() },
   {
     id: 'lang',

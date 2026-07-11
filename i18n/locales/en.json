@@ -8,8 +8,53 @@
     "work": "work",
     "log": "career",
     "contact": "contact",
+    "sandbox": "sandbox",
     "themeAria": "Toggle color scheme",
     "paletteAria": "Open command palette (Ctrl+K)"
+  },
+  "sandbox": {
+    "eyebrow": "hands-on",
+    "title": "The Sandbox",
+    "lede": "Anyone can talk — here you can click my craft: a live demo API with Swagger docs, reusable UI components to tinker with, and architecture diagrams showing how I design systems.",
+    "open": "→ open",
+    "areas": {
+      "api": {
+        "title": "REST API + Swagger",
+        "desc": "A running event booking API with an OpenAPI spec — try it right in the browser, validation errors included."
+      },
+      "ui": {
+        "title": "UI Components",
+        "desc": "The reusable building blocks of this site as a playground: tweak props, see results live, copy the code."
+      },
+      "arch": {
+        "title": "Architecture Diagrams",
+        "desc": "How I design systems — a real-time auction platform and my AI agent workflow as examples."
+      }
+    },
+    "api": {
+      "title": "Event Booking API",
+      "lede": "Three endpoints that actually run: list and filter events, fetch details, create bookings — with proper validation (422 with field errors included). Below: the full Swagger docs with try-it-out.",
+      "note": "// Demo API without persistence: bookings are confirmed but not stored. Spec: /openapi.json"
+    },
+    "ui": {
+      "title": "Component Playground",
+      "lede": "This site is built from reusable components — three of them hands-on: tweak the props on the left, the finished code drops out below.",
+      "windowLine": "hello from the sandbox",
+      "note": "// The same components (DgButton, DgTag, DgWindow) power this entire site — built once, consistent everywhere."
+    },
+    "arch": {
+      "title": "Architecture Diagrams",
+      "lede": "Two examples of how I think about systems: a real-time auction platform (modeled on schnappern.com) and the AI agent workflow I develop with.",
+      "d1Title": "real-time auction platform",
+      "d1Note": "The hot path runs through the app cluster (Laravel 11 on Octane): bids come in via REST, are processed by Horizon workers through Redis queues, and pushed back to all bidders via Reverb WebSockets — the browser receives new bids without a reload. Payments and monitoring are deliberately external services: payment data stays with Braintree, errors land in Sentry.",
+      "d2Title": "ai agent workflow",
+      "d2Note": "This is how software gets built here since 2023: I break the ticket down into a plan, agents work on code, tests and docs in parallel — and every line passes my review before it gets merged and deployed. Speed through parallelism, quality through the review gate.",
+      "hoverHint": "// hover the nodes",
+      "legendSync": "synchronous (request/response)",
+      "legendAsync": "asynchronous (queue/events)",
+      "legendRealtime": "real-time",
+      "legendExt": "external service"
+    }
   },
   "palette": {
     "aria": "Command palette",
@@ -20,6 +65,7 @@
     "log": "→ career (git log)",
     "about": "→ about me",
     "contact": "$ contact",
+    "sandbox": "→ sandbox (api · ui · architecture)",
     "theme": "toggle theme",
     "lang": "auf deutsch wechseln",
     "cv": "download resume (pdf)"
