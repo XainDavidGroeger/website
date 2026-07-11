@@ -19,6 +19,10 @@
     "fictionalTag": "⚠ fiktives produkt — als arbeitsprobe erdacht",
     "open": "→ öffnen",
     "areas": {
+      "spec": {
+        "title": "Die Spec",
+        "desc": "Spec-Driven mit KI: Anforderungen, Doku und Akzeptanzkriterien zuerst — dann arbeitet ein Agenten-Loop dagegen, bis alles grün ist. Live zu sehen."
+      },
       "api": {
         "title": "Die API",
         "desc": "Die VoltGrid Charging API läuft wirklich: Säulen filtern, Lade-Sessions starten, Validierungsfehler provozieren — komplett mit OpenAPI-Spec und Swagger-Doku."
@@ -83,6 +87,27 @@
       "kpiStations": "säulen im netz",
       "kpiUptime": "uptime 30d",
       "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
+    },
+    "spec": {
+      "title": "Spec-Driven mit KI",
+      "lede": "So arbeite ich: Erst die Spec — Ziel, Akzeptanzkriterien, API-Vertrag, technische Notizen. Dann arbeitet ein Agenten-Loop-Harness dagegen: implementieren, testen, nachbessern — bis jedes Kriterium grün ist. Links die Spec von SPEC-042, rechts der Loop. Schau zu, wie die Checkboxen abgehakt werden.",
+      "flowSpec": "spec + doku",
+      "flowLoop": "agenten-loop bis grün",
+      "flowArtifacts": "code · tests · openapi · doku",
+      "mappingTitle": "die spec ist die quelle — jedes artefakt dieser sandbox stammt aus ihr",
+      "mapTests": "Akzeptanzkriterien wurden 1:1 die Testnamen der Testsuite",
+      "mapApi": "der API-Vertrag wurde openapi.json und die Swagger-Doku",
+      "mapCode": "die Tech-Notes wurden der Service-Layer (TariffCalculator als eine Preis-Wahrheit)",
+      "benefitsTitle": "warum spec-driven — gerade mit ki",
+      "b1Title": "Doku entsteht zuerst — und veraltet nie",
+      "b1Text": "Requirements, API-Vertrag und technische Doku stehen vor der ersten Codezeile. Ändert sich die Anforderung, ändert sich die Spec — und der Loop zieht Code, Tests und OpenAPI nach. Es gibt keine zweite, veraltete Wahrheit.",
+      "b2Title": "Anforderungen werden testbar",
+      "b2Text": "Akzeptanzkriterien sind so formuliert, dass Agenten daraus direkt Tests ableiten. Was der Kunde abgenommen hat, ist wortwörtlich das, was die CI prüft — keine Übersetzungsverluste zwischen Fachlichkeit und Code.",
+      "b3Title": "KI wird produktiv statt riskant",
+      "b3Text": "Agenten sind schnell, aber nur so gut wie ihr Ziel. Gegen eine präzise Spec mit Loop-Harness arbeiten sie, bis die Kriterien grün sind — eine Halluzination scheitert am Test-Gate statt in Produktion.",
+      "b4Title": "Review auf der richtigen Ebene",
+      "b4Text": "Ich reviewe Spec und finalen Diff — nicht jeden Tastendruck. Architektur- und Fachentscheidungen bleiben beim Menschen, die Fleißarbeit übernimmt der Loop. Das ist der Tempo-Gewinn ohne Kontrollverlust.",
+      "note": "// Genau so ist übrigens diese Portfolio-Seite entstanden: Konzept-Spec zuerst, dann iterative Umsetzung mit KI-Agenten — jede Zeile reviewed."
     },
     "map": {
       "title": "VoltGrid Netzkarte",

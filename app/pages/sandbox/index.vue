@@ -7,6 +7,7 @@ useSeoMeta({
 })
 
 const areas = [
+  { key: 'spec', to: '/sandbox/spec', icon: '§' },
   { key: 'api', to: '/sandbox/api', icon: '{ }' },
   { key: 'code', to: '/sandbox/code', icon: '</>' },
   { key: 'ui', to: '/sandbox/ui', icon: '<∕>' },

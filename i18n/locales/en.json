@@ -19,6 +19,10 @@
     "fictionalTag": "⚠ fictional product — invented as a work sample",
     "open": "→ open",
     "areas": {
+      "spec": {
+        "title": "The Spec",
+        "desc": "Spec-driven with AI: requirements, docs and acceptance criteria first — then an agent loop works against them until everything is green. Watch it live."
+      },
       "api": {
         "title": "The API",
         "desc": "The VoltGrid Charging API actually runs: filter stations, start charging sessions, provoke validation errors — complete with an OpenAPI spec and Swagger docs."
@@ -83,6 +87,27 @@
       "kpiStations": "stations in network",
       "kpiUptime": "uptime 30d",
       "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
+    },
+    "spec": {
+      "title": "Spec-Driven with AI",
+      "lede": "This is how I work: the spec comes first — goal, acceptance criteria, API contract, tech notes. Then an agent loop harness works against it: implement, test, fix — until every criterion is green. On the left the spec of SPEC-042, on the right the loop. Watch the checkboxes get ticked.",
+      "flowSpec": "spec + docs",
+      "flowLoop": "agent loop until green",
+      "flowArtifacts": "code · tests · openapi · docs",
+      "mappingTitle": "the spec is the source — every artifact in this sandbox derives from it",
+      "mapTests": "acceptance criteria became the test suite's test names, 1:1",
+      "mapApi": "the api contract became openapi.json and the swagger docs",
+      "mapCode": "the tech notes became the service layer (TariffCalculator as the single pricing truth)",
+      "benefitsTitle": "why spec-driven — especially with ai",
+      "b1Title": "Docs come first — and never go stale",
+      "b1Text": "Requirements, API contract and technical docs exist before the first line of code. When requirements change, the spec changes — and the loop pulls code, tests and OpenAPI along. There is no second, outdated truth.",
+      "b2Title": "Requirements become testable",
+      "b2Text": "Acceptance criteria are written so agents can derive tests from them directly. What the client signed off is literally what CI verifies — no translation loss between domain and code.",
+      "b3Title": "AI becomes productive instead of risky",
+      "b3Text": "Agents are fast, but only as good as their target. Against a precise spec with a loop harness they work until the criteria are green — a hallucination fails at the test gate instead of in production.",
+      "b4Title": "Review at the right level",
+      "b4Text": "I review the spec and the final diff — not every keystroke. Architecture and domain decisions stay with the human, the loop does the legwork. That's the speed gain without losing control.",
+      "note": "// This portfolio site was built exactly this way, by the way: concept spec first, then iterative implementation with AI agents — every line reviewed."
     },
     "map": {
       "title": "VoltGrid Network Map",
