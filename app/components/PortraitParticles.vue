@@ -14,7 +14,6 @@ const wrapEl = ref<HTMLDivElement | null>(null)
 const canvasEl = ref<HTMLCanvasElement | null>(null)
 const active = ref(false)
 
-const GAP = 7
 const DUO_DARK = [11, 15, 26] as const // #0B0F1A
 const DUO_LIGHT = [255, 173, 59] as const // #FFAD3B
 
@@ -25,6 +24,9 @@ onMounted(() => {
   if (!wrap || !canvas) return
   const ctx = canvas.getContext('2d')
   if (!ctx) return
+
+  // feineres Raster auf Desktop (~10.500 Partikel), gröber auf Touch-Geräten (schwächere CPUs)
+  const GAP = window.matchMedia('(pointer: coarse)').matches ? 7 : 5
 
   interface Particle {
     x: number
