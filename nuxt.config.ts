@@ -2,6 +2,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-11',
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n'],
+  components: [
+    // kein Pfad-Präfix: components/ui/DgButton.vue → <DgButton>, nicht <UiDgButton>
+    { path: '~/components', pathPrefix: false },
+  ],
   css: [
     '~/assets/css/tokens.css',
     '@fontsource-variable/jetbrains-mono',

@@ -9,7 +9,7 @@ useSeoMeta({
 /* ------------------------------------------------------------------ */
 /*  Composer: aus Bausteinen ein VoltGrid-Dashboard zusammenbauen      */
 /* ------------------------------------------------------------------ */
-type BlockKind = 'headline' | 'stats' | 'station' | 'stationRow' | 'actions' | 'terminal'
+type BlockKind = 'headline' | 'stats' | 'chart' | 'station' | 'stationRow' | 'actions' | 'terminal'
 
 interface Block {
   uid: number
@@ -19,6 +19,7 @@ interface Block {
 const blockDefs: { kind: BlockKind, code: string }[] = [
   { kind: 'headline', code: '<VgPageHead title="…" />' },
   { kind: 'stats', code: '<VgStatTile v-for="kpi in kpis" … />' },
+  { kind: 'chart', code: '<VgLoadChart :series="load24h" />' },
   { kind: 'station', code: '<VgStationCard :station="station" />' },
   { kind: 'stationRow', code: '<VgStationCard v-for="s in stations" … />' },
   { kind: 'actions', code: '<DgButton>…</DgButton> <DgButton variant="ghost">…</DgButton>' },
@@ -29,6 +30,7 @@ let nextUid = 1
 const canvas = ref<Block[]>([
   { uid: nextUid++, kind: 'headline' },
   { uid: nextUid++, kind: 'stats' },
+  { uid: nextUid++, kind: 'chart' },
   { uid: nextUid++, kind: 'station' },
 ])
 
@@ -98,6 +100,12 @@ const generatedCode = computed(() => {
             <VgStationCard />
           </div>
         </div>
+        <div class="cell wide">
+          <p class="cell-name">&lt;VgLoadChart /&gt;</p>
+          <div class="cell-stage block">
+            <VgLoadChart />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -141,6 +149,7 @@ const generatedCode = computed(() => {
                 <VgStatTile :label="t('sandbox.ui.kpiStations')" value="2.418" delta="+38" />
                 <VgStatTile :label="t('sandbox.ui.kpiUptime')" value="99,2 %" delta="−0,1 %" delta-color="amber" />
               </div>
+              <VgLoadChart v-else-if="block.kind === 'chart'" />
               <div v-else-if="block.kind === 'station'" class="b-station">
                 <VgStationCard />
               </div>
@@ -223,6 +232,12 @@ const generatedCode = computed(() => {
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
+}
+.cell-stage.block {
+  display: block;
+}
+.cell-stage.block > :deep(.vg-chart) {
+  width: 100%;
 }
 
 /* ---------- Composer ---------- */

@@ -57,6 +57,7 @@
       "block": {
         "headline": "Seitenkopf",
         "stats": "KPI-Zeile",
+        "chart": "Lastkurve",
         "station": "Säulen-Karte",
         "stationRow": "Säulen-Reihe",
         "actions": "Button-Zeile",

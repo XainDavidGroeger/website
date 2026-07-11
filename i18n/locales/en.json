@@ -57,6 +57,7 @@
       "block": {
         "headline": "Page header",
         "stats": "KPI row",
+        "chart": "Load curve",
         "station": "Station card",
         "stationRow": "Station row",
         "actions": "Button row",
