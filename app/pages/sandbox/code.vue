@@ -6,13 +6,19 @@ useSeoMeta({
   description: () => t('sandbox.areas.code.desc'),
 })
 
-const backendCode = `<?php
+/* ---------- Backend: ein Request durch die Schichten ---------- */
 
-declare(strict_types=1);
+const controllerCode = `final class SessionController
+{
+    public function store(StartSessionRequest $request, StartChargingSession $action): JsonResponse
+    {
+        return SessionResource::make($action->handle($request->toCommand()))
+            ->response()
+            ->setStatusCode(201);
+    }
+}`
 
-namespace VoltGrid\\Charging\\Actions;
-
-final class StartChargingSession
+const actionCode = `final class StartChargingSession
 {
     public function __construct(
         private readonly StationRepository $stations,
@@ -21,29 +27,71 @@ final class StartChargingSession
     ) {
     }
 
-    public function handle(StartSessionRequest $request): SessionReceipt
+    public function handle(StartSessionCommand $command): ChargingSession
     {
-        $station = $this->stations->findOrFail($request->stationId);
+        $station = $this->stations->findOrFail($command->stationId);
 
-        if (! $station->supports($request->connectorType)) {
-            throw new UnsupportedConnectorException($station, $request->connectorType);
+        if (! $station->supports($command->connectorType)) {
+            throw new UnsupportedConnectorException($station, $command->connectorType);
         }
 
         if (! $station->isAvailable()) {
             throw new StationUnavailableException($station);
         }
 
-        $estimate = $this->tariff->estimate($station, $request->estimatedKwh);
-        $session = ChargingSession::start($station, $request->connectorType, $estimate);
+        $estimate = $this->tariff->estimate($station, $command->estimatedKwh);
+        $session = ChargingSession::start($station, $command->connectorType, $estimate);
 
         $this->events->dispatch(new SessionStarted($session));
 
-        return SessionReceipt::fromSession($session);
+        return $session;
     }
 }`
 
-const frontendCode = `// composables/useChargingSession.ts
+const serviceCode = `final class TariffCalculator
+{
+    public function __construct(private readonly TariffRepository $tariffs)
+    {
+    }
 
+    public function estimate(Station $station, KilowattHours $kwh): Money
+    {
+        $tariff = $this->tariffs->activeFor($station);
+
+        return $tariff->pricePerKwh()
+            ->multiply($kwh->value())
+            ->add($tariff->baseFee());
+    }
+}`
+
+const workerCode = `final class FinalizeSessionInvoice implements ShouldQueue
+{
+    public function __construct(private readonly TariffCalculator $tariff)
+    {
+    }
+
+    public function handle(SessionCompleted $event): void
+    {
+        // derselbe TariffCalculator wie im Live-Estimate:
+        // ein Preis-Codepfad — Anzeige und Rechnung können nie abweichen
+        $amount = $this->tariff->estimate($event->station, $event->chargedKwh);
+
+        Invoice::issueFor($event->session, $amount);
+    }
+}`
+
+/* ---------- Frontend: Util → Composable → Komponente ---------- */
+
+const utilCode = `// utils/http.ts
+export function extractFieldErrors(error: unknown): Record<string, string> {
+  if (isFetchError(error) && error.statusCode === 422) {
+    return error.data?.data?.errors ?? {}
+  }
+
+  return { _global: 'unexpected error — please retry' }
+}`
+
+const composableCode = `// composables/useChargingSession.ts
 type SessionState =
   | { status: 'idle' }
   | { status: 'starting' }
@@ -71,6 +119,20 @@ export function useChargingSession() {
 
   return { state: readonly(state), start, isCharging }
 }`
+
+const componentCode = `<script setup lang="ts">
+const props = defineProps<{ stationId: number }>()
+const { state, start, isCharging } = useChargingSession()
+<\/script>
+
+<template>
+  <DgButton
+    :disabled="isCharging"
+    @click="start({ stationId: props.stationId, connectorType: 'CCS', estimatedKwh: 40 })"
+  >
+    {{ isCharging ? '⚡ lädt …' : '→ laden' }}
+  </DgButton>
+</template>`
 </script>
 
 <template>
@@ -83,26 +145,83 @@ export function useChargingSession() {
       <p class="lede">{{ t('sandbox.code.lede') }}</p>
     </div>
 
-    <!-- Backend -->
-    <section v-reveal class="pair">
+    <!-- ===== Backend: Schichten ===== -->
+    <section v-reveal class="stack">
       <p class="sub">// {{ t('sandbox.code.backendTitle') }}</p>
-      <CodePanel title="app/Charging/Actions/StartChargingSession.php" lang="php" :code="backendCode" />
-      <ul class="why">
-        <li>{{ t('sandbox.code.backendWhy1') }}</li>
-        <li>{{ t('sandbox.code.backendWhy2') }}</li>
-        <li>{{ t('sandbox.code.backendWhy3') }}</li>
-      </ul>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip http">http</span>
+          <p>{{ t('sandbox.code.layerController') }}</p>
+        </div>
+        <CodePanel title="Http/Controllers/SessionController.php" lang="php" :code="controllerCode" />
+      </div>
+
+      <p class="arrow" aria-hidden="true">↓ {{ t('sandbox.code.delegates') }}</p>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip app">application</span>
+          <p>{{ t('sandbox.code.layerAction') }}</p>
+        </div>
+        <CodePanel title="Charging/Actions/StartChargingSession.php" lang="php" :code="actionCode" />
+      </div>
+
+      <p class="arrow" aria-hidden="true">↓ {{ t('sandbox.code.uses') }}</p>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip domain">domain · service</span>
+          <p>{{ t('sandbox.code.layerService') }}</p>
+        </div>
+        <CodePanel title="Domain/Tariff/TariffCalculator.php" lang="php" :code="serviceCode" />
+        <p class="reuse">↺ {{ t('sandbox.code.serviceReuse') }}</p>
+      </div>
+
+      <p class="arrow" aria-hidden="true">↓ {{ t('sandbox.code.reusedBy') }}</p>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip queue">queue · worker</span>
+          <p>{{ t('sandbox.code.layerWorker') }}</p>
+        </div>
+        <CodePanel title="Billing/Jobs/FinalizeSessionInvoice.php" lang="php" :code="workerCode" />
+      </div>
     </section>
 
-    <!-- Frontend -->
-    <section v-reveal class="pair">
+    <!-- ===== Frontend: Util → Composable → Komponente ===== -->
+    <section v-reveal class="stack">
       <p class="sub">// {{ t('sandbox.code.frontendTitle') }}</p>
-      <CodePanel title="composables/useChargingSession.ts" lang="ts" :code="frontendCode" />
-      <ul class="why">
-        <li>{{ t('sandbox.code.frontendWhy1') }}</li>
-        <li>{{ t('sandbox.code.frontendWhy2') }}</li>
-        <li>{{ t('sandbox.code.frontendWhy3') }}</li>
-      </ul>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip domain">util</span>
+          <p>{{ t('sandbox.code.layerUtil') }}</p>
+        </div>
+        <CodePanel title="utils/http.ts" lang="ts" :code="utilCode" />
+        <p class="reuse">↺ {{ t('sandbox.code.utilReuse') }}</p>
+      </div>
+
+      <p class="arrow" aria-hidden="true">↓ {{ t('sandbox.code.uses') }}</p>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip app">composable · logic</span>
+          <p>{{ t('sandbox.code.layerComposable') }}</p>
+        </div>
+        <CodePanel title="composables/useChargingSession.ts" lang="ts" :code="composableCode" />
+      </div>
+
+      <p class="arrow" aria-hidden="true">↓ {{ t('sandbox.code.consumedBy') }}</p>
+
+      <div class="layer">
+        <div class="layer-head">
+          <span class="chip http">component · ui</span>
+          <p>{{ t('sandbox.code.layerComponent') }}</p>
+        </div>
+        <CodePanel title="components/ChargeButton.vue" lang="vue" :code="componentCode" />
+        <p class="reuse">↺ {{ t('sandbox.code.componentReuse') }}</p>
+      </div>
     </section>
 
     <p v-reveal class="note">{{ t('sandbox.code.note') }}</p>
@@ -121,23 +240,64 @@ export function useChargingSession() {
   font-size: 12.5px;
   letter-spacing: 0.06em;
   color: var(--faint);
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
-.pair {
-  margin-bottom: 44px;
+.stack {
+  margin-bottom: 56px;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
 }
 
-.why {
-  margin: 16px 0 0;
-  padding-left: 20px;
+.layer-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.layer-head p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.8;
-  max-width: 75ch;
 }
-.why li::marker {
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  padding: 3px 11px;
+  white-space: nowrap;
+}
+.chip.http {
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.chip.app {
   color: var(--amber);
+  border: 1px solid color-mix(in srgb, var(--amber) 45%, var(--line));
+}
+.chip.domain {
+  color: var(--mint);
+  border: 1px solid color-mix(in srgb, var(--mint) 45%, var(--line));
+}
+.chip.queue {
+  color: var(--faint);
+  border: 1px dashed var(--line);
+}
+
+.arrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--faint);
+  margin: 14px 0 14px 6px;
+}
+
+.reuse {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--mint);
+  line-height: 1.7;
 }
 
 .note {

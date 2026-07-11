@@ -6,7 +6,7 @@
  */
 const props = defineProps<{
   title: string
-  lang: 'php' | 'ts'
+  lang: 'php' | 'ts' | 'vue'
   code: string
 }>()
 
@@ -14,9 +14,10 @@ function escapeHtml(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-const KEYWORDS: Record<'php' | 'ts', string> = {
+const KEYWORDS: Record<'php' | 'ts' | 'vue', string> = {
   php: 'final|abstract|class|interface|enum|extends|implements|public|private|protected|readonly|static|function|return|if|else|match|throw|new|use|namespace|declare|strict_types|null|true|false|self|this',
   ts: 'import|export|type|interface|const|let|function|async|await|return|if|else|try|catch|throw|new|null|true|false|readonly|extends|keyof|typeof|as|from',
+  vue: 'import|export|type|const|let|function|async|await|return|if|else|setup|lang|template|script',
 }
 
 const highlighted = computed(() => {
