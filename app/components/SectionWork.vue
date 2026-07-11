@@ -190,38 +190,38 @@ const selectedTasks = computed(() =>
   border-color: var(--amber);
 }
 
-/* Logo-Wasserzeichen: geistert groß und transparent hinterm Inhalt */
+/* Logo-Wasserzeichen: klein und scharf statt hochskaliert (Favicon-Quellen ~128px) */
 .wm {
   position: absolute;
-  right: -18px;
-  bottom: -18px;
-  width: 130px;
-  height: 130px;
+  right: 16px;
+  bottom: 14px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  opacity: 0.07;
-  filter: grayscale(1) brightness(1.9);
+  opacity: 0.1;
+  filter: grayscale(1) brightness(1.7);
   pointer-events: none;
   transition: opacity 0.25s ease, filter 0.25s ease;
 }
 .case:hover .wm {
-  opacity: 0.16;
-  filter: grayscale(0.4) brightness(1.3);
+  opacity: 0.28;
+  filter: grayscale(0.2) brightness(1.15);
 }
 .wm-text {
   position: absolute;
-  right: -6px;
-  bottom: -20px;
+  right: 12px;
+  bottom: 4px;
   font-family: var(--font-display);
-  font-size: 92px;
+  font-size: 58px;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text);
-  opacity: 0.05;
+  opacity: 0.06;
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
 .case:hover .wm-text {
-  opacity: 0.1;
+  opacity: 0.12;
 }
 
 .case .tag {
