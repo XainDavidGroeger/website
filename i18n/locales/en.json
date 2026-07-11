@@ -38,14 +38,14 @@
   },
   "hero": {
     "eyebrow": "web developer · since 2013 · open for projects",
-    "sub": "I build web applications people enjoy using — from planning to production. Platforms that bring people together: to bid, sing, celebrate and work.",
+    "sub": "I build web applications people enjoy using — from planning to production. Platforms that bring people together: to date, bid, sing, celebrate and work.",
     "ctaWork": "→ view work",
     "ctaContact": "$ contact"
   },
   "about": {
     "eyebrow": "who's building here",
     "title": "Hi, I'm David.",
-    "text": "Full-stack developer since 2013 — from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and I build my own platforms on the side. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
+    "text": "Full-stack developer since 2013 — from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and as a freelancer I build complete platforms from scratch. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
     "alt": "Portrait of David Gröger at his desk",
     "inspectHint": "Photo — hover reveals an element inspection",
     "chip1": "10+ years of web",
@@ -138,18 +138,26 @@
   "work": {
     "eyebrow": "selected projects",
     "title": "Platforms that bring people together",
-    "lede": "To bid, sing, taste wine and work: four products of my own, live and in production — plus freelance engagements. Full case studies with numbers are coming; you can visit everything today.",
-    "shelfOwn": "my own platforms",
-    "shelfFreelance": "freelance work",
+    "lede": "To date, bid, sing, taste wine and work: six platforms I built completely on my own as a freelancer — from the first line to production. Plus projects I took over and extended as a freelancer. Everything is live, everything can be visited.",
+    "shelfOwn": "built solo, from scratch",
+    "shelfFreelance": "taken over & extended",
     "shelfArchive": "archive & stations",
-    "tagOwn": "own product · live",
-    "tagFreelance": "freelance",
+    "tagOwn": "built solo · live",
+    "tagFreelance": "taken over · freelance",
     "visit": "→ visit live",
-    "archive": "Socialmatch (5+ years of care) · SpeedDating XXL · Coinoto · XAIN AG · Bitmotion (TYPO3 client projects)",
+    "archive": "Coinoto · XAIN AG (company website + team lead) · Bitmotion (TYPO3 client projects)",
     "cases": {
       "schnappern": {
         "name": "schnappern.com",
         "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping."
+      },
+      "socialmatch": {
+        "name": "socialmatch.de",
+        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing — built and maintained by me for over 5 years."
+      },
+      "speeddating": {
+        "name": "speeddating-xxl.de",
+        "desc": "Speed dating events across DE/AT: up to 20 dates per evening, ticketing and automated matching with contact exchange."
       },
       "teamevent": {
         "name": "mein-teamevent.de",

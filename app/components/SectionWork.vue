@@ -3,9 +3,11 @@ const { t } = useI18n()
 
 const featured = [
   { key: 'schnappern', url: 'https://schnappern.com' },
+  { key: 'socialmatch', url: 'https://socialmatch.de' },
   { key: 'teamevent', url: 'https://mein-teamevent.de' },
   { key: 'singalong', url: 'https://singalong.de' },
   { key: 'weinhopping', url: 'https://www.weinhopping.com' },
+  { key: 'speeddating', url: 'https://speeddating-xxl.de' },
 ]
 
 const freelance = [

@@ -38,14 +38,14 @@
   },
   "hero": {
     "eyebrow": "webentwickler · seit 2013 · offen für projekte",
-    "sub": "Ich baue Webanwendungen, die man gern benutzt — von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Bieten, Singen, Feiern und Arbeiten.",
+    "sub": "Ich baue Webanwendungen, die man gern benutzt — von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Daten, Bieten, Singen, Feiern und Arbeiten.",
     "ctaWork": "→ projekte ansehen",
     "ctaContact": "$ kontakt"
   },
   "about": {
     "eyebrow": "wer hier baut",
     "title": "Hi, ich bin David.",
-    "text": "Full-Stack-Entwickler seit 2013 — vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue nebenbei eigene Plattformen. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
+    "text": "Full-Stack-Entwickler seit 2013 — vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue als Freelancer komplette Plattformen von Grund auf. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
     "alt": "Porträt von David Gröger an seinem Schreibtisch",
     "inspectHint": "Foto — Hover zeigt eine Element-Inspektion",
     "chip1": "10+ jahre web",
@@ -138,18 +138,26 @@
   "work": {
     "eyebrow": "ausgewählte projekte",
     "title": "Plattformen, die Menschen zusammenbringen",
-    "lede": "Zum Bieten, Singen, Weintrinken und Arbeiten: Vier eigene Produkte, live und in Betrieb — dazu Einsätze als Freelancer. Ausführliche Case Studies mit Zahlen folgen; besuchen kann man alles jetzt schon.",
-    "shelfOwn": "eigene plattformen",
-    "shelfFreelance": "freelance-einsätze",
+    "lede": "Zum Daten, Bieten, Singen, Weintrinken und Arbeiten: Sechs Plattformen, die ich als Freelancer komplett allein aufgebaut habe — von der ersten Zeile bis zum Betrieb. Dazu Projekte, die ich als Freelancer übernommen und weiterentwickelt habe. Alles live, alles besuchbar.",
+    "shelfOwn": "komplett allein aufgebaut",
+    "shelfFreelance": "übernommen & weiterentwickelt",
     "shelfArchive": "archiv & stationen",
-    "tagOwn": "eigenes produkt · live",
-    "tagFreelance": "freelance",
+    "tagOwn": "solo aufgebaut · live",
+    "tagFreelance": "übernommen · freelance",
     "visit": "→ live ansehen",
-    "archive": "Socialmatch (5+ Jahre Betreuung) · SpeedDating XXL · Coinoto · XAIN AG · Bitmotion (TYPO3-Kundenprojekte)",
+    "archive": "Coinoto · XAIN AG (Firmen-Website + Teamlead) · Bitmotion (TYPO3-Kundenprojekte)",
     "cases": {
       "schnappern": {
         "name": "schnappern.com",
         "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand."
+      },
+      "socialmatch": {
+        "name": "socialmatch.de",
+        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing — seit über 5 Jahren von mir gebaut und betreut."
+      },
+      "speeddating": {
+        "name": "speeddating-xxl.de",
+        "desc": "Speed-Dating-Events in DE/AT: bis zu 20 Dates pro Abend, Ticketing und automatisches Matching mit Kontakt-Austausch."
       },
       "teamevent": {
         "name": "mein-teamevent.de",
