@@ -146,39 +146,85 @@
     "tagOwn": "built solo · live",
     "tagFreelance": "taken over · freelance",
     "visit": "→ visit live",
+    "details": "→ details",
+    "myWork": "my work",
+    "since": "period",
+    "website": "→ visit website",
+    "back": "back",
+    "close": "Close details",
     "archive": "Coinoto · XAIN AG (company website + team lead) · Bitmotion (TYPO3 client projects)",
     "cases": {
       "schnappern": {
         "name": "schnappern.com",
-        "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping."
+        "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping.",
+        "about": "Schnappern is a live auction platform: real-time auctions on brand products run every day — bidding happens live, and an automated bidding bot (“Piri bot”) keeps bidding overnight if you want it to. Payments run through the usual providers, shipping is insured via DHL, DPD or UPS.",
+        "tasks": "Platform concept\nServer setup — domain registration\nReal-time auction logic including the bidding bot\nData structure implementation\nPayment integration\nAdmin tool — auctions, orders, shipping, statistics\nSEO optimization\nOperations and ongoing development",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in production"
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing — built and maintained by me for over 5 years."
+        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing — built and maintained by me for over 5 years.",
+        "about": "Socialmatch is a unique event series in bars where you meet new people over a board game created by the founders — a mix of questions, action tasks and entertainment, played solo or in teams. Six to ten participants per event, a balanced ratio, and a host guides the evening.",
+        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool — events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "June 2015 — today"
+      },
+      "matchingnight": {
+        "name": "Matching Night",
+        "desc": "Singles event for up to 250 participants: personality test, colored wristbands, Lock&Key icebreaker — bar atmosphere instead of a dating format.",
+        "about": "Matching Night is the big sister format of SpeedDating XXL: up to 250 singles in one evening in a relaxed bar atmosphere. A science-based personality test drives the matching via colored wristbands, and the Lock&Key game breaks the ice — organized mingling instead of random encounters.",
+        "tasks": "Concept and implementation of the format on the platform\nPersonality test and matching logic\nTicketing and booking flow\nAdmin tool — events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "in production"
       },
       "speeddating": {
         "name": "speeddating-xxl.de",
-        "desc": "Speed dating events across DE/AT: up to 20 dates per evening, ticketing and automated matching with contact exchange."
+        "desc": "Speed dating events across DE/AT: up to 20 dates per evening, ticketing and automated matching with contact exchange.",
+        "about": "SpeedDating XXL brings far more singles together in one evening than classic speed dating: up to 20 dates, with fresh conversation starters in every round instead of stiff small talk. After the event, automated matching exchanges the contacts of mutual matches.",
+        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool — events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "since August 2019"
       },
       "teamevent": {
         "name": "mein-teamevent.de",
-        "desc": "Team event marketplace for DE/AT: filters by budget, location and group size, 20+ formats, inquiry funnel."
+        "desc": "Team event marketplace for DE/AT: filters by budget, location and group size, 20+ formats, inquiry funnel.",
+        "about": "Mein Teamevent brokers team-building and corporate events across Germany and Austria — from quiz nights to wine tastings. Companies filter by group size, budget, category and location, and send non-binding inquiries directly through the platform.",
+        "tasks": "Platform concept\nServer setup — domain registration\nEvent search with filters (group size, budget, category, location)\nData structure implementation\nInquiry funnel including mail sequences\nAdmin tool — events, inquiries, statistics\nSEO optimization\nOperations and ongoing development",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in production"
       },
       "singalong": {
         "name": "singalong.de",
-        "desc": "Sing-along events in 15+ cities plus Vienna: ticketing, vouchers and themed formats from rock to Christmas."
+        "desc": "Sing-along events in 15+ cities plus Vienna: ticketing, vouchers and themed formats from rock to Christmas.",
+        "about": "SingAlong is an event series where hundreds of participants sing along to well-known hits together — lyrics rolling on a big screen. Themed formats from rock to schlager to Christmas, bookable in over 15 German cities plus Vienna.",
+        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation\nTicketing and voucher system\nData structure and payment integration\nAdmin tool — events, bookings, marketing, statistics\nSEO optimization\nCity rollout and operations",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in production"
       },
       "weinhopping": {
         "name": "weinhopping.com",
-        "desc": "Wine-tasting hopping across three locations per evening: ticket tiers, vouchers — from the Socialmatch family."
+        "desc": "Wine-tasting hopping across three locations per evening: ticket tiers, vouchers — from the Socialmatch family.",
+        "about": "Weinhopping takes you through three wine locations of a city in one evening — casual wine tastings where you meet new people along the way and support the local scene. Bookable in cities like Berlin, Hamburg, Düsseldorf, Frankfurt and Munich, with tiered ticket options.",
+        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation\nTicket tiers (Standard, PLUS, DELUXE) and voucher system\nData structure and payment integration\nAdmin tool — events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in production"
       },
       "muziqme": {
         "name": "muziqme · self-booking",
-        "desc": "Self-booking platform for live music: artist registration, direct booking for events, ticketing."
+        "desc": "Self-booking platform for live music: artist registration, direct booking for events, ticketing.",
+        "about": "muziqme is a live music agency with an attached self-booking platform: private and business hosts book the right live music directly, while musicians register for free with their own profile.",
+        "tasks": "Takeover and ongoing development of the self-booking platform\nArtist registration and profiles\nBooking flow improvements\nTicketing features\nBug fixes, maintenance and technical consulting",
+        "stack": "PHP, Laravel, MySQL, JavaScript, Bootstrap",
+        "date": "freelance engagement"
       },
       "buggyfit": {
         "name": "buggyfit.de",
-        "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education."
+        "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education.",
+        "about": "buggyFit offers outdoor training for moms before and after pregnancy — with the baby in the stroller, in parks all over Germany. The platform bundles course booking, an online shop, health-insurance billing, a video channel and the training of new instructors.",
+        "tasks": "Takeover and ongoing development of the platform\nCourse booking improvements\nOnline shop\nSupport for health-insurance processes\nMaintenance, bug fixes and support",
+        "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
+        "date": "freelance engagement"
       }
     }
   },

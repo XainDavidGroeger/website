@@ -146,39 +146,85 @@
     "tagOwn": "solo aufgebaut · live",
     "tagFreelance": "übernommen · freelance",
     "visit": "→ live ansehen",
+    "details": "→ details",
+    "myWork": "meine arbeit",
+    "since": "zeitraum",
+    "website": "→ website besuchen",
+    "back": "zurück",
+    "close": "Details schließen",
     "archive": "Coinoto · XAIN AG (Firmen-Website + Teamlead) · Bitmotion (TYPO3-Kundenprojekte)",
     "cases": {
       "schnappern": {
         "name": "schnappern.com",
-        "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand."
+        "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand.",
+        "about": "Schnappern ist eine Live-Auktionsplattform: Täglich laufen Echtzeit-Auktionen auf Markenprodukte — geboten wird live, ein automatischer Gebots-Bot („Piri-Bot“) bietet auf Wunsch auch nachts mit. Bezahlt wird sicher über gängige Zahlungsarten, versendet versichert per DHL, DPD oder UPS.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nUmsetzung der Echtzeit-Auktionslogik inklusive Gebots-Bot\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik\nUmsetzung des Administrationstools — Auktionen, Bestellungen, Versand, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in Betrieb"
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing — seit über 5 Jahren von mir gebaut und betreut."
+        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing — seit über 5 Jahren von mir gebaut und betreut.",
+        "about": "Socialmatch steht für eine einzigartige Veranstaltungsreihe in Bars, bei der man neue Leute bei einem von den Gründern kreierten Brettspiel kennenlernt — eine Mischung aus Fragen, Aktionsaufgaben und Unterhaltung, allein oder im Team. Sechs bis zehn Teilnehmer pro Event, ausgewogenes Verhältnis, ein Spielleiter führt durch den Abend.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools — Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "Juni 2015 — heute"
+      },
+      "matchingnight": {
+        "name": "Matching Night",
+        "desc": "Single-Event für bis zu 250 Teilnehmer: Persönlichkeitstest, farbige Armbänder, Lock&Key-Icebreaker — Bar-Atmosphäre statt Dating-Format.",
+        "about": "Matching Night ist das große Schwester-Format von SpeedDating XXL: bis zu 250 Singles an einem Abend in lockerer Bar-Atmosphäre. Ein wissenschaftlich fundierter Persönlichkeitstest steuert das Matching über farbige Armbänder, das Lock&Key-Spiel bricht das Eis — organisiertes Kennenlernen statt Zufallsbegegnung.",
+        "tasks": "Konzeption und Umsetzung des Formats auf der Plattform\nPersönlichkeitstest und Matching-Logik\nTicketing und Buchungsstrecke\nUmsetzung des Administrationstools — Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "in Betrieb"
       },
       "speeddating": {
         "name": "speeddating-xxl.de",
-        "desc": "Speed-Dating-Events in DE/AT: bis zu 20 Dates pro Abend, Ticketing und automatisches Matching mit Kontakt-Austausch."
+        "desc": "Speed-Dating-Events in DE/AT: bis zu 20 Dates pro Abend, Ticketing und automatisches Matching mit Kontakt-Austausch.",
+        "about": "SpeedDating XXL bringt deutlich mehr Singles an einen Abend zusammen als klassisches Speed-Dating: bis zu 20 Dates, in jeder Runde neue Einstiegsfragen gegen steifen Smalltalk. Nach dem Event tauscht ein automatisches Matching die Kontakte der beidseitigen Treffer aus.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools — Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
+        "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
+        "date": "seit August 2019"
       },
       "teamevent": {
         "name": "mein-teamevent.de",
-        "desc": "Teamevent-Vermittlung für DE/AT: Filter nach Budget, Ort und Teilnehmerzahl, 20+ Formate, Anfrage-Funnel."
+        "desc": "Teamevent-Vermittlung für DE/AT: Filter nach Budget, Ort und Teilnehmerzahl, 20+ Formate, Anfrage-Funnel.",
+        "about": "Mein Teamevent vermittelt Teambuilding- und Firmenevents in Deutschland und Österreich — vom Quizabend bis zum Weintasting. Firmen filtern nach Teilnehmerzahl, Budget, Kategorie und Ort und stellen unverbindliche Anfragen direkt über die Plattform.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nUmsetzung der Event-Suche mit Filtern (Teilnehmer, Budget, Kategorie, Ort)\nImplementierung der Datenstruktur\nUmsetzung des Anfrage-Funnels inklusive Mail-Strecken\nUmsetzung des Administrationstools — Events, Anfragen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in Betrieb"
       },
       "singalong": {
         "name": "singalong.de",
-        "desc": "Mitsing-Events in 15+ Städten und Wien: Ticketing, Gutscheine und Themen-Formate von Rock bis Weihnachten."
+        "desc": "Mitsing-Events in 15+ Städten und Wien: Ticketing, Gutscheine und Themen-Formate von Rock bis Weihnachten.",
+        "about": "SingAlong ist eine Eventreihe, bei der Hunderte Teilnehmer gemeinsam zu bekannten Hits singen — die Songtexte laufen auf großer Leinwand mit. Themen-Formate von Rock über Schlager bis Weihnachten, buchbar in über 15 deutschen Städten und Wien.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite\nTicketing und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools — Events, Buchungen, Marketing, Statistik\nSEO-Optimierungen\nStädte-Rollout und Betrieb",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in Betrieb"
       },
       "weinhopping": {
         "name": "weinhopping.com",
-        "desc": "Weintasting-Hopping durch drei Locations pro Abend: Ticket-Stufen, Gutscheine — aus dem Socialmatch-Umfeld."
+        "desc": "Weintasting-Hopping durch drei Locations pro Abend: Ticket-Stufen, Gutscheine — aus dem Socialmatch-Umfeld.",
+        "about": "Weinhopping führt an einem Abend durch drei Weinlocations einer Stadt — Weintastings in lockerer Atmosphäre, bei denen man nebenbei neue Leute kennenlernt und die lokale Gastroszene unterstützt. Buchbar in Städten wie Berlin, Hamburg, Düsseldorf, Frankfurt und München, mit gestaffelten Ticket-Varianten.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite\nTicket-Stufen (Standard, PLUS, DELUXE) und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools — Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "date": "in Betrieb"
       },
       "muziqme": {
         "name": "muziqme · self-booking",
-        "desc": "Self-Booking-Plattform für Live-Musik: Künstler-Registrierung, Direktbuchung für Events, Ticketing."
+        "desc": "Self-Booking-Plattform für Live-Musik: Künstler-Registrierung, Direktbuchung für Events, Ticketing.",
+        "about": "muziqme ist eine Agentur für Live-Musik mit angeschlossener Self-Booking-Plattform: Private und geschäftliche Veranstalter buchen dort direkt die passende Live-Musik, Musikschaffende registrieren sich kostenlos mit eigenem Profil.",
+        "tasks": "Übernahme und Weiterentwicklung der Self-Booking-Plattform\nKünstler-Registrierung und Profile\nWeiterentwicklung der Buchungsstrecke\nTicketing-Funktionen\nBugfixes, Wartung und technische Beratung",
+        "stack": "PHP, Laravel, MySQL, JavaScript, Bootstrap",
+        "date": "Freelance-Einsatz"
       },
       "buggyfit": {
         "name": "buggyfit.de",
-        "desc": "Fitness-Plattform für Mütter: Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Trainer-Ausbildung."
+        "desc": "Fitness-Plattform für Mütter: Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Trainer-Ausbildung.",
+        "about": "buggyFit bietet Outdoor-Training für Mamas vor und nach der Schwangerschaft — mit Baby im Kinderwagen, in Parks in ganz Deutschland. Die Plattform bündelt Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Video-Channel und die Ausbildung neuer Trainerinnen.",
+        "tasks": "Übernahme und Weiterentwicklung der Plattform\nWeiterentwicklung der Kursbuchung\nOnline-Shop\nUnterstützung der Krankenkassen-Prozesse\nWartung, Bugfixes und Support",
+        "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
+        "date": "Freelance-Einsatz"
       }
     }
   },
