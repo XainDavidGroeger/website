@@ -27,6 +27,10 @@
         "title": "The UI Kit",
         "desc": "The building blocks of the VoltGrid dashboard — plus a composer where you assemble a dashboard from the components yourself."
       },
+      "map": {
+        "title": "The Map",
+        "desc": "The station network as an interactive map: click markers with live status, view details — and start a session against the real API right from the modal."
+      },
       "arch": {
         "title": "The Architecture",
         "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing — plus the journey of a charging session."
@@ -79,6 +83,29 @@
       "kpiStations": "stations in network",
       "kpiUptime": "uptime 30d",
       "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
+    },
+    "map": {
+      "title": "VoltGrid Network Map",
+      "lede": "The case study's station network on a map — the markers come live from GET /api/v1/stations. Clicking a station opens its details, and the session button fires a real POST against the sandbox API: station 4 (maintenance) and station 2 (occupied) answer with 422.",
+      "mapAria": "Stylized map of Germany with clickable charging station markers",
+      "legend": "status",
+      "statusAvailable": "available — pulses mint",
+      "statusCharging": "charging — pulses amber",
+      "statusMaintenance": "maintenance — dashed",
+      "hint": "Click a marker to open station details with live data from the API.",
+      "kpiLabel": "stations loaded via api",
+      "kpiDelta": "live",
+      "status": {
+        "available": "available",
+        "charging": "charging",
+        "maintenance": "maintenance"
+      },
+      "connectors": "choose connector",
+      "startSession": "→ start session (40 kWh)",
+      "startHint": "real POST /api/v1/sessions",
+      "estCost": "estimated",
+      "unknownError": "unexpected error — please retry",
+      "note": "// Map, modal and session start use the same building blocks as the rest of this site: DgTag, DgButton, VgStatTile — and the real sandbox API."
     },
     "code": {
       "title": "VoltGrid Code",

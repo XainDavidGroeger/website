@@ -27,6 +27,10 @@
         "title": "Das UI-Kit",
         "desc": "Die Bausteine des VoltGrid-Dashboards — und ein Composer, in dem du dir aus den Komponenten selbst ein Dashboard zusammenbaust."
       },
+      "map": {
+        "title": "Die Karte",
+        "desc": "Das Säulen-Netz als interaktive Karte: Marker mit Live-Status anklicken, Details ansehen — und direkt aus dem Modal eine Session gegen die echte API starten."
+      },
       "arch": {
         "title": "Die Architektur",
         "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing — plus der Weg einer Lade-Session."
@@ -79,6 +83,29 @@
       "kpiStations": "säulen im netz",
       "kpiUptime": "uptime 30d",
       "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
+    },
+    "map": {
+      "title": "VoltGrid Netzkarte",
+      "lede": "Das Säulen-Netz des Fallbeispiels auf einer Karte — die Marker kommen live aus GET /api/v1/stations. Klick auf eine Säule öffnet die Details, und der Session-Button feuert einen echten POST gegen die Sandbox-API: Säule 4 (Wartung) und Säule 2 (besetzt) antworten mit 422.",
+      "mapAria": "Stilisierte Deutschland-Karte mit klickbaren Ladesäulen-Markern",
+      "legend": "status",
+      "statusAvailable": "frei — pulsiert mint",
+      "statusCharging": "lädt — pulsiert bernstein",
+      "statusMaintenance": "wartung — gestrichelt",
+      "hint": "Klick auf einen Marker öffnet die Säulen-Details mit Live-Daten aus der API.",
+      "kpiLabel": "säulen geladen via api",
+      "kpiDelta": "live",
+      "status": {
+        "available": "frei",
+        "charging": "lädt",
+        "maintenance": "wartung"
+      },
+      "connectors": "stecker wählen",
+      "startSession": "→ session starten (40 kWh)",
+      "startHint": "echter POST /api/v1/sessions",
+      "estCost": "geschätzt",
+      "unknownError": "unerwarteter fehler — nochmal versuchen",
+      "note": "// Karte, Modal und Session-Start nutzen dieselben Bausteine wie der Rest der Seite: DgTag, DgButton, VgStatTile — und die echte Sandbox-API."
     },
     "code": {
       "title": "VoltGrid Code",
