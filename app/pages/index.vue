@@ -77,6 +77,7 @@ onMounted(() => {
     <SectionLog />
     <SectionWork />
     <SectionRefs />
+    <SectionSandbox />
     <SectionContact />
   </div>
 </template>

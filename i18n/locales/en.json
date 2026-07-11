@@ -12,8 +12,15 @@
     "themeAria": "Toggle color scheme",
     "paletteAria": "Open command palette (Ctrl+K)"
   },
+  "sandboxTeaser": {
+    "eyebrow": "hands-on over claims",
+    "title": "See for yourself.",
+    "lede": "References are good — touching is better. That's why the sandbox exists: VoltGrid, an invented product, built out completely. From the spec through architecture, a running API and UI kit to tests and deployment — everything clickable, much of it actually running.",
+    "cta": "→ open the sandbox",
+    "ctaHint": "// 8 perspectives · one case study · real api"
+  },
   "sandbox": {
-    "eyebrow": "one case study, three perspectives",
+    "eyebrow": "one case study, eight perspectives",
     "title": "VoltGrid",
     "lede": "VoltGrid is an invented EV charging platform — 2,418 stations, real-time status, charging sessions, billing. Invented so I can show it end to end: the same platform as a running API with Swagger docs, as a UI kit you can assemble, and as an architecture diagram.",
     "fictionalTag": "⚠ fictional product — invented as a work sample",

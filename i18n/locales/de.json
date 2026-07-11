@@ -12,8 +12,15 @@
     "themeAria": "Farbschema umschalten",
     "paletteAria": "Befehlspalette öffnen (Strg+K)"
   },
+  "sandboxTeaser": {
+    "eyebrow": "anfassen statt behaupten",
+    "title": "Überzeug dich selbst.",
+    "lede": "Referenzen sind gut — Anfassen ist besser. Deshalb gibt es die Sandbox: VoltGrid, ein erfundenes Produkt, einmal komplett durchgebaut. Von der Spec über Architektur, laufende API und UI-Kit bis zu Tests und Deployment — alles klickbar, vieles läuft wirklich.",
+    "cta": "→ sandbox öffnen",
+    "ctaHint": "// 8 perspektiven · ein fallbeispiel · echte api"
+  },
   "sandbox": {
-    "eyebrow": "ein fallbeispiel, drei perspektiven",
+    "eyebrow": "ein fallbeispiel, acht perspektiven",
     "title": "VoltGrid",
     "lede": "VoltGrid ist eine erfundene E-Ladesäulen-Plattform — 2.418 Säulen, Echtzeit-Status, Lade-Sessions, Abrechnung. Erfunden, damit ich sie komplett zeigen kann: dieselbe Plattform als laufende API mit Swagger-Doku, als UI-Kit zum Zusammenbauen und als Architektur-Diagramm.",
     "fictionalTag": "⚠ fiktives produkt — als arbeitsprobe erdacht",
