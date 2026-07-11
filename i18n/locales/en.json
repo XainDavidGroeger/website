@@ -13,47 +13,72 @@
     "paletteAria": "Open command palette (Ctrl+K)"
   },
   "sandbox": {
-    "eyebrow": "hands-on",
-    "title": "The Sandbox",
-    "lede": "Anyone can talk — here you can click my craft: a live demo API with Swagger docs, reusable UI components to tinker with, and architecture diagrams showing how I design systems.",
+    "eyebrow": "one case study, three perspectives",
+    "title": "VoltGrid",
+    "lede": "VoltGrid is an invented EV charging platform — 2,418 stations, real-time status, charging sessions, billing. Invented so I can show it end to end: the same platform as a running API with Swagger docs, as a UI kit you can assemble, and as an architecture diagram.",
+    "fictionalTag": "⚠ fictional product — invented as a work sample",
     "open": "→ open",
     "areas": {
       "api": {
-        "title": "REST API + Swagger",
-        "desc": "A running event booking API with an OpenAPI spec — try it right in the browser, validation errors included."
+        "title": "The API",
+        "desc": "The VoltGrid Charging API actually runs: filter stations, start charging sessions, provoke validation errors — complete with an OpenAPI spec and Swagger docs."
       },
       "ui": {
-        "title": "UI Components",
-        "desc": "The reusable building blocks of this site as a playground: tweak props, see results live, copy the code."
+        "title": "The UI Kit",
+        "desc": "The building blocks of the VoltGrid dashboard — plus a composer where you assemble a dashboard from the components yourself."
       },
       "arch": {
-        "title": "Architecture Diagrams",
-        "desc": "How I design systems — a real-time auction platform and my AI agent workflow as examples."
+        "title": "The Architecture",
+        "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing — plus the journey of a charging session."
       }
     },
     "api": {
-      "title": "Event Booking API",
-      "lede": "Three endpoints that actually run: list and filter events, fetch details, create bookings — with proper validation (422 with field errors included). Below: the full Swagger docs with try-it-out.",
-      "note": "// Demo API without persistence: bookings are confirmed but not stored. Spec: /openapi.json"
+      "title": "VoltGrid Charging API",
+      "lede": "Three endpoints that actually run: list and filter stations (city, status, connector, power), fetch details, start charging sessions — with proper validation. Tip: station 4 is under maintenance, station 2 is occupied — go provoke the 422s. Below: the full Swagger docs.",
+      "note": "// Demo API without persistence: sessions are confirmed but no station actually starts. Spec: /openapi.json"
     },
     "ui": {
-      "title": "Component Playground",
-      "lede": "This site is built from reusable components — three of them hands-on: tweak the props on the left, the finished code drops out below.",
-      "windowLine": "hello from the sandbox",
-      "note": "// The same components (DgButton, DgTag, DgWindow) power this entire site — built once, consistent everywhere."
+      "title": "VoltGrid UI Kit",
+      "lede": "A few primitives (button, tag, window) compose into domain components like the station card — and those into full screens. In the composer below you can assemble the dashboard yourself.",
+      "galleryTitle": "the building blocks — as they appear on the page",
+      "composed": "← composed from DgTag + DgButton",
+      "composerTitle": "the composer — build your own dashboard",
+      "composerLede": "Click blocks on the left and they appear on the canvas. Hover a block to move it up/down or remove it. The component code below writes itself as you build.",
+      "blocks": "blocks",
+      "canvas": "canvas",
+      "block": {
+        "headline": "Page header",
+        "stats": "KPI row",
+        "station": "Station card",
+        "stationRow": "Station row",
+        "actions": "Button row",
+        "terminal": "Event log"
+      },
+      "moveUp": "move up",
+      "moveDown": "move down",
+      "remove": "remove",
+      "empty": "// canvas empty — add blocks on the left",
+      "demoEyebrow": "operator dashboard",
+      "demoTitle": "Network Overview",
+      "demoCta": "add station",
+      "demoCta2": "export",
+      "kpiSessions": "active sessions",
+      "kpiStations": "stations in network",
+      "kpiUptime": "uptime 30d",
+      "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
     },
     "arch": {
-      "title": "Architecture Diagrams",
-      "lede": "Two examples of how I think about systems: a real-time auction platform (modeled on schnappern.com) and the AI agent workflow I develop with.",
-      "d1Title": "real-time auction platform",
-      "d1Note": "The hot path runs through the app cluster (Laravel 11 on Octane): bids come in via REST, are processed by Horizon workers through Redis queues, and pushed back to all bidders via Reverb WebSockets — the browser receives new bids without a reload. Payments and monitoring are deliberately external services: payment data stays with Braintree, errors land in Sentry.",
-      "d2Title": "ai agent workflow",
-      "d2Note": "This is how software gets built here since 2023: I break the ticket down into a plan, agents work on code, tests and docs in parallel — and every line passes my review before it gets merged and deployed. Speed through parallelism, quality through the review gate.",
+      "title": "VoltGrid Architecture",
+      "lede": "The system behind the platform: charging stations report via OCPP/MQTT to an IoT gateway, the realtime hub pushes live status into the apps, sessions flow asynchronously through queues into billing. Hover the nodes to see the data flows.",
+      "d1Title": "system architecture",
+      "d1Note": "Two separate paths keep the system calm: the synchronous path (app → API → PostgreSQL) answers requests immediately, the asynchronous path (queue → billing worker) processes session completions and invoices without blocking the API. Telemetry flows separately into TimescaleDB — 2,418 stations send kW curves that never weigh down the session database. Payment data stays with the external PSP.",
+      "d2Title": "one charging session, end to end",
+      "d2Note": "A session's journey through the system: the app starts it via REST, the gateway wakes the station over OCPP, the kW curve streams back into the app via WebSocket — and after unplugging, billing runs asynchronously. This exact flow powers the POST /api/v1/sessions in the sandbox API.",
       "hoverHint": "// hover the nodes",
       "legendSync": "synchronous (request/response)",
       "legendAsync": "asynchronous (queue/events)",
       "legendRealtime": "real-time",
-      "legendExt": "external service"
+      "legendExt": "external / hardware"
     }
   },
   "palette": {

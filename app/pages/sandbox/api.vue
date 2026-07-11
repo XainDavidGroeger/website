@@ -32,7 +32,7 @@ onMounted(async () => {
   <div class="wrap page">
     <div v-reveal class="sec-head">
       <p class="eyebrow">
-        <NuxtLinkLocale to="/sandbox" class="crumb">/* sandbox */</NuxtLinkLocale> → api
+        <NuxtLinkLocale to="/sandbox" class="crumb">/* voltgrid */</NuxtLinkLocale> → api
       </p>
       <h2>{{ t('sandbox.api.title') }}</h2>
       <p class="lede">{{ t('sandbox.api.lede') }}</p>
@@ -40,11 +40,11 @@ onMounted(async () => {
 
     <div v-reveal class="quick">
       <DgWindow title="~/quickstart — curl">
-        <pre>curl {{ origin }}/api/v1/events?city=Berlin
+        <pre>curl "{{ origin }}/api/v1/stations?city=Hamburg&status=available"
 
-curl -X POST {{ origin }}/api/v1/bookings \
+curl -X POST {{ origin }}/api/v1/sessions \
   -H "Content-Type: application/json" \
-  -d '{"eventId": 3, "name": "Ada", "email": "ada@example.org", "seats": 2}'</pre>
+  -d '{"stationId": 1, "connectorType": "CCS", "estimatedKwh": 40}'</pre>
       </DgWindow>
     </div>
 

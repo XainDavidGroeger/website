@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Event Booking API — Sandbox",
+    "title": "VoltGrid Charging API — Sandbox",
     "version": "1.0.0",
-    "description": "Demo-API im Stil der Event-Plattformen, die ich baue (SingAlong, Weinhopping, Matching Night …). Die Endpunkte laufen wirklich — probier sie über **Try it out** aus. Es wird nichts gespeichert.\n\nA demo API in the style of the event platforms I build. The endpoints are live — use **Try it out**. Nothing is persisted.",
+    "description": "Demo-API von **VoltGrid**, einer fiktiven E-Ladesäulen-Plattform — mein durchgestochenes Fallbeispiel (API · UI-Kit · Architektur). Die Endpunkte laufen wirklich, es wird nichts gespeichert.\n\nDemo API of **VoltGrid**, a fictional EV charging platform — my end-to-end case study. The endpoints are live, nothing is persisted.",
     "contact": {
       "name": "David Gröger",
       "url": "https://david-webdev.de"
@@ -11,29 +11,31 @@
   },
   "servers": [{ "url": "/" }],
   "tags": [
-    { "name": "events", "description": "Events durchsuchen und abrufen" },
-    { "name": "bookings", "description": "Buchungen anlegen (Demo, ohne Persistenz)" }
+    { "name": "stations", "description": "Ladesäulen durchsuchen und abrufen" },
+    { "name": "sessions", "description": "Lade-Sessions starten (Demo, ohne Persistenz)" }
   ],
   "paths": {
-    "/api/v1/events": {
+    "/api/v1/stations": {
       "get": {
-        "tags": ["events"],
-        "summary": "Events auflisten",
-        "description": "Liste aller Events, optional gefiltert nach Stadt und Kategorie.",
+        "tags": ["stations"],
+        "summary": "Ladesäulen auflisten",
+        "description": "Liste aller Säulen, optional gefiltert nach Stadt, Status, Stecker-Typ und Mindestleistung.",
         "parameters": [
-          { "name": "city", "in": "query", "schema": { "type": "string" }, "example": "Berlin", "description": "Exakter Städtename (case-insensitive)" },
-          { "name": "category", "in": "query", "schema": { "type": "string", "enum": ["singing", "wine", "dating", "team"] }, "description": "Event-Kategorie" },
+          { "name": "city", "in": "query", "schema": { "type": "string" }, "example": "Hamburg" },
+          { "name": "status", "in": "query", "schema": { "type": "string", "enum": ["available", "charging", "maintenance"] } },
+          { "name": "connector", "in": "query", "schema": { "type": "string", "enum": ["CCS", "CHAdeMO", "Typ2"] } },
+          { "name": "minPowerKw", "in": "query", "schema": { "type": "integer" }, "example": 150 },
           { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 50, "default": 50 } }
         ],
         "responses": {
           "200": {
-            "description": "Gefilterte Event-Liste",
+            "description": "Gefilterte Säulen-Liste",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "data": { "type": "array", "items": { "$ref": "#/components/schemas/Event" } },
+                    "data": { "type": "array", "items": { "$ref": "#/components/schemas/Station" } },
                     "meta": {
                       "type": "object",
                       "properties": {
@@ -49,51 +51,51 @@
         }
       }
     },
-    "/api/v1/events/{id}": {
+    "/api/v1/stations/{id}": {
       "get": {
-        "tags": ["events"],
-        "summary": "Einzelnes Event abrufen",
+        "tags": ["stations"],
+        "summary": "Einzelne Säule abrufen",
         "parameters": [
-          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" }, "example": 3 }
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" }, "example": 1 }
         ],
         "responses": {
           "200": {
-            "description": "Das Event",
+            "description": "Die Säule",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "data": { "$ref": "#/components/schemas/Event" } }
+                  "properties": { "data": { "$ref": "#/components/schemas/Station" } }
                 }
               }
             }
           },
-          "404": { "description": "Event nicht gefunden" }
+          "404": { "description": "Säule nicht gefunden" }
         }
       }
     },
-    "/api/v1/bookings": {
+    "/api/v1/sessions": {
       "post": {
-        "tags": ["bookings"],
-        "summary": "Buchung anlegen",
-        "description": "Validiert die Anfrage und bestätigt die Buchung. Demo: nichts wird gespeichert, keine E-Mail versendet.",
+        "tags": ["sessions"],
+        "summary": "Lade-Session starten",
+        "description": "Validiert Säule, Stecker und Energiemenge und startet die Session. Demo: nichts wird gespeichert, keine Säule startet wirklich. Tipp: Säule 4 ist in Wartung, Säule 2 besetzt — probier die Fehlerfälle aus.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BookingRequest" },
-              "example": { "eventId": 3, "name": "Ada Lovelace", "email": "ada@example.org", "seats": 2 }
+              "schema": { "$ref": "#/components/schemas/SessionRequest" },
+              "example": { "stationId": 1, "connectorType": "CCS", "estimatedKwh": 40 }
             }
           }
         },
         "responses": {
           "201": {
-            "description": "Buchung bestätigt",
+            "description": "Session gestartet",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "data": { "$ref": "#/components/schemas/Booking" } }
+                  "properties": { "data": { "$ref": "#/components/schemas/Session" } }
                 }
               }
             }
@@ -102,7 +104,7 @@
             "description": "Validierungsfehler",
             "content": {
               "application/json": {
-                "example": { "statusCode": 422, "statusMessage": "Validation Failed", "data": { "errors": { "email": "valid email is required" } } }
+                "example": { "statusCode": 422, "statusMessage": "Validation Failed", "data": { "errors": { "stationId": "station is under maintenance" } } }
               }
             }
           }
@@ -112,38 +114,44 @@
   },
   "components": {
     "schemas": {
-      "Event": {
+      "Connector": {
         "type": "object",
         "properties": {
-          "id": { "type": "integer", "example": 3 },
-          "title": { "type": "string", "example": "Matching Night" },
-          "category": { "type": "string", "enum": ["singing", "wine", "dating", "team"] },
+          "type": { "type": "string", "enum": ["CCS", "CHAdeMO", "Typ2"] },
+          "powerKw": { "type": "integer", "example": 150 }
+        }
+      },
+      "Station": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 1 },
+          "name": { "type": "string", "example": "Hafenstraße 12" },
           "city": { "type": "string", "example": "Hamburg" },
-          "date": { "type": "string", "format": "date", "example": "2026-09-26" },
-          "priceCents": { "type": "integer", "example": 2900 },
-          "seatsTotal": { "type": "integer", "example": 250 },
-          "seatsBooked": { "type": "integer", "example": 197 },
-          "seatsAvailable": { "type": "integer", "example": 53 }
+          "status": { "type": "string", "enum": ["available", "charging", "maintenance"] },
+          "connectors": { "type": "array", "items": { "$ref": "#/components/schemas/Connector" } },
+          "pricePerKwhCents": { "type": "integer", "example": 49 },
+          "uptimePercent": { "type": "number", "example": 99.2 }
         }
       },
-      "BookingRequest": {
+      "SessionRequest": {
         "type": "object",
-        "required": ["eventId", "name", "email", "seats"],
+        "required": ["stationId", "connectorType", "estimatedKwh"],
         "properties": {
-          "eventId": { "type": "integer" },
-          "name": { "type": "string", "minLength": 2 },
-          "email": { "type": "string", "format": "email" },
-          "seats": { "type": "integer", "minimum": 1, "maximum": 10 }
+          "stationId": { "type": "integer" },
+          "connectorType": { "type": "string", "enum": ["CCS", "CHAdeMO", "Typ2"] },
+          "estimatedKwh": { "type": "integer", "minimum": 1, "maximum": 150 }
         }
       },
-      "Booking": {
+      "Session": {
         "type": "object",
         "properties": {
-          "bookingId": { "type": "string", "example": "bk_x7k2m9qa" },
-          "eventId": { "type": "integer" },
-          "event": { "type": "string" },
-          "seats": { "type": "integer" },
-          "status": { "type": "string", "example": "confirmed" },
+          "sessionId": { "type": "string", "example": "chg_x7k2m9qa" },
+          "stationId": { "type": "integer" },
+          "station": { "type": "string" },
+          "connectorType": { "type": "string" },
+          "estimatedKwh": { "type": "integer" },
+          "estimatedCostCents": { "type": "integer", "example": 1960 },
+          "status": { "type": "string", "example": "charging" },
           "note": { "type": "string" }
         }
       }

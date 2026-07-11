@@ -13,47 +13,72 @@
     "paletteAria": "Befehlspalette öffnen (Strg+K)"
   },
   "sandbox": {
-    "eyebrow": "anfassen erlaubt",
-    "title": "Die Sandbox",
-    "lede": "Reden kann jeder — hier kann man mein Handwerk anklicken: eine echte Demo-API mit Swagger-Doku, wiederverwendbare UI-Komponenten zum Schrauben und Architektur-Diagramme, wie ich Systeme entwerfe.",
+    "eyebrow": "ein fallbeispiel, drei perspektiven",
+    "title": "VoltGrid",
+    "lede": "VoltGrid ist eine erfundene E-Ladesäulen-Plattform — 2.418 Säulen, Echtzeit-Status, Lade-Sessions, Abrechnung. Erfunden, damit ich sie komplett zeigen kann: dieselbe Plattform als laufende API mit Swagger-Doku, als UI-Kit zum Zusammenbauen und als Architektur-Diagramm.",
+    "fictionalTag": "⚠ fiktives produkt — als arbeitsprobe erdacht",
     "open": "→ öffnen",
     "areas": {
       "api": {
-        "title": "REST-API + Swagger",
-        "desc": "Eine laufende Event-Booking-API mit OpenAPI-Spezifikation — direkt im Browser ausprobieren, inklusive Validierungsfehlern."
+        "title": "Die API",
+        "desc": "Die VoltGrid Charging API läuft wirklich: Säulen filtern, Lade-Sessions starten, Validierungsfehler provozieren — komplett mit OpenAPI-Spec und Swagger-Doku."
       },
       "ui": {
-        "title": "UI-Komponenten",
-        "desc": "Die wiederverwendbaren Bausteine dieser Seite als Playground: Props verstellen, Ergebnis live sehen, Code kopieren."
+        "title": "Das UI-Kit",
+        "desc": "Die Bausteine des VoltGrid-Dashboards — und ein Composer, in dem du dir aus den Komponenten selbst ein Dashboard zusammenbaust."
       },
       "arch": {
-        "title": "Architektur-Diagramme",
-        "desc": "Wie ich Systeme entwerfe — am Beispiel einer Echtzeit-Auktionsplattform und meines KI-Agenten-Workflows."
+        "title": "Die Architektur",
+        "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing — plus der Weg einer Lade-Session."
       }
     },
     "api": {
-      "title": "Event-Booking-API",
-      "lede": "Drei Endpunkte, die wirklich laufen: Events listen und filtern, Details abrufen, Buchungen anlegen — mit sauberer Validierung (422 inklusive Feld-Fehlern). Unten die vollständige Swagger-Doku mit Try-it-out.",
-      "note": "// Demo-API ohne Persistenz: Buchungen werden bestätigt, aber nicht gespeichert. Spec: /openapi.json"
+      "title": "VoltGrid Charging API",
+      "lede": "Drei Endpunkte, die wirklich laufen: Säulen listen und filtern (Stadt, Status, Stecker, Leistung), Details abrufen, Lade-Sessions starten — mit sauberer Validierung. Tipp: Säule 4 ist in Wartung, Säule 2 besetzt — provozier die 422er. Unten die vollständige Swagger-Doku.",
+      "note": "// Demo-API ohne Persistenz: Sessions werden bestätigt, aber keine Säule startet wirklich. Spec: /openapi.json"
     },
     "ui": {
-      "title": "Komponenten-Playground",
-      "lede": "Diese Seite ist aus wiederverwendbaren Komponenten gebaut — drei davon zum Anfassen: Props links verstellen, unten fällt der fertige Code raus.",
-      "windowLine": "hallo aus der sandbox",
-      "note": "// Dieselben Komponenten (DgButton, DgTag, DgWindow) stecken überall auf dieser Seite — einmal gebaut, überall konsistent."
+      "title": "VoltGrid UI-Kit",
+      "lede": "Aus wenigen Primitiven (Button, Tag, Window) entstehen Fach-Komponenten wie die Säulen-Karte — und daraus ganze Screens. Unten im Composer kannst du dir das Dashboard selbst zusammenbauen.",
+      "galleryTitle": "die bausteine — so sehen sie auf der seite aus",
+      "composed": "← komponiert aus DgTag + DgButton",
+      "composerTitle": "der composer — bau dir dein dashboard",
+      "composerLede": "Links Bausteine anklicken, sie erscheinen auf der Leinwand. Hover über einen Block: nach oben/unten schieben oder entfernen. Unten schreibt sich der Komponenten-Code live mit.",
+      "blocks": "bausteine",
+      "canvas": "leinwand",
+      "block": {
+        "headline": "Seitenkopf",
+        "stats": "KPI-Zeile",
+        "station": "Säulen-Karte",
+        "stationRow": "Säulen-Reihe",
+        "actions": "Button-Zeile",
+        "terminal": "Event-Log"
+      },
+      "moveUp": "nach oben",
+      "moveDown": "nach unten",
+      "remove": "entfernen",
+      "empty": "// leinwand leer — links bausteine hinzufügen",
+      "demoEyebrow": "betreiber-dashboard",
+      "demoTitle": "Netz-Übersicht",
+      "demoCta": "säule hinzufügen",
+      "demoCta2": "exportieren",
+      "kpiSessions": "aktive sessions",
+      "kpiStations": "säulen im netz",
+      "kpiUptime": "uptime 30d",
+      "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
     },
     "arch": {
-      "title": "Architektur-Diagramme",
-      "lede": "Zwei Beispiele, wie ich Systeme denke: eine Echtzeit-Auktionsplattform (angelehnt an schnappern.com) und der KI-Agenten-Workflow, mit dem ich entwickle.",
-      "d1Title": "echtzeit-auktionsplattform",
-      "d1Note": "Der heiße Pfad läuft über den App-Cluster (Laravel 11 auf Octane): Gebote gehen per REST rein, werden über Redis-Queues von Horizon-Workern verarbeitet und über Reverb-WebSockets an alle Bieter zurückgespielt — der Browser bekommt neue Gebote ohne Reload. Payments und Monitoring sind bewusst externe Dienste: Zahlungsdaten bleiben bei Braintree, Fehler landen in Sentry.",
-      "d2Title": "ki-agenten-workflow",
-      "d2Note": "So entsteht Software bei mir seit 2023: Ich zerlege das Ticket in einen Plan, die Agenten arbeiten parallel an Code, Tests und Doku — und jede Zeile geht durch mein Review, bevor sie gemergt und deployt wird. Tempo durch Parallelität, Qualität durch die Review-Schranke.",
+      "title": "VoltGrid Architektur",
+      "lede": "Das System hinter der Plattform: Ladesäulen melden über OCPP/MQTT an ein IoT-Gateway, der Realtime-Hub pusht Status live in Apps, Sessions laufen asynchron über Queues in die Abrechnung. Hover über die Knoten zeigt die Datenflüsse.",
+      "d1Title": "systemarchitektur",
+      "d1Note": "Zwei getrennte Pfade halten das System ruhig: Der synchrone Pfad (App → API → PostgreSQL) beantwortet Anfragen sofort, der asynchrone Pfad (Queue → Billing-Worker) verarbeitet Session-Abschlüsse und Rechnungen, ohne die API zu blockieren. Telemetrie fließt getrennt in TimescaleDB — 2.418 Säulen senden kW-Kurven, die niemals die Session-Datenbank belasten. Zahlungsdaten bleiben beim externen PSP.",
+      "d2Title": "eine lade-session, ende zu ende",
+      "d2Note": "Der Weg einer Session durchs System: Die App startet per REST, das Gateway weckt die Säule über OCPP, die kW-Kurve kommt live per WebSocket zurück in die App — und nach dem Abstecken wird asynchron abgerechnet. Genau dieser Flow steckt auch hinter dem POST /api/v1/sessions in der Sandbox-API.",
       "hoverHint": "// hover über die knoten",
       "legendSync": "synchron (request/response)",
       "legendAsync": "asynchron (queue/events)",
       "legendRealtime": "echtzeit",
-      "legendExt": "externer dienst"
+      "legendExt": "extern / hardware"
     }
   },
   "palette": {

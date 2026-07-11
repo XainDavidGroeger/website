@@ -19,6 +19,7 @@ const areas = [
       <p class="eyebrow"><span class="tick">/* sandbox */</span> {{ t('sandbox.eyebrow') }}</p>
       <h2>{{ t('sandbox.title') }}</h2>
       <p class="lede">{{ t('sandbox.lede') }}</p>
+      <p class="fictional"><DgTag color="amber">{{ t('sandbox.fictionalTag') }}</DgTag></p>
     </div>
 
     <div class="areas">
@@ -42,6 +43,9 @@ const areas = [
 <style scoped>
 .page {
   padding-block: 110px;
+}
+.fictional {
+  margin-top: 4px;
 }
 
 .areas {
