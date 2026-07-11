@@ -40,7 +40,15 @@
     "eyebrow": "web developer · since 2013 · open for projects",
     "sub": "I build web applications people enjoy using — from planning to production. Platforms that bring people together: to date, bid, sing, celebrate and work.",
     "ctaWork": "→ view work",
-    "ctaContact": "$ contact"
+    "ctaContact": "$ contact",
+    "build": {
+      "cmd": "$ nuxt build --with ai-crew",
+      "l1": "✓ experience    10+ years of web",
+      "l2": "✓ platforms     7 live in production",
+      "l3": "✓ stack         laravel · vue · python",
+      "l4": "✓ ai crew       4 agents active",
+      "done": "● build successful — ready for your project"
+    }
   },
   "about": {
     "eyebrow": "who's building here",

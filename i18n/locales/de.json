@@ -40,7 +40,15 @@
     "eyebrow": "webentwickler · seit 2013 · offen für projekte",
     "sub": "Ich baue Webanwendungen, die man gern benutzt — von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Daten, Bieten, Singen, Feiern und Arbeiten.",
     "ctaWork": "→ projekte ansehen",
-    "ctaContact": "$ kontakt"
+    "ctaContact": "$ kontakt",
+    "build": {
+      "cmd": "$ nuxt build --with ki-crew",
+      "l1": "✓ erfahrung      10+ jahre web",
+      "l2": "✓ plattformen    7 live in betrieb",
+      "l3": "✓ stack          laravel · vue · python",
+      "l4": "✓ ki-crew        4 agenten aktiv",
+      "done": "● build successful — bereit für dein projekt"
+    }
   },
   "about": {
     "eyebrow": "wer hier baut",

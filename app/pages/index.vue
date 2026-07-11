@@ -39,27 +39,33 @@ onMounted(() => {
         <HeroField />
       </ClientOnly>
       <div class="wrap hero-inner">
-        <p class="eyebrow">
-          <span class="tick">/*</span> {{ t('hero.eyebrow') }} <span class="tick">*/</span>
-        </p>
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="tick">/*</span> {{ t('hero.eyebrow') }} <span class="tick">*/</span>
+          </p>
 
-        <p class="typeline" :aria-label="typeTarget">
-          <span aria-hidden="true">{{ typed }}</span><span v-if="!typingDone" class="caret" aria-hidden="true" />
-        </p>
+          <p class="typeline" :aria-label="typeTarget">
+            <span aria-hidden="true">{{ typed }}</span><span v-if="!typingDone" class="caret" aria-hidden="true" />
+          </p>
 
-        <h1 :class="{ show: typingDone }">
-          <span class="row"><span>David</span></span>
-          <span class="row"><span class="outline">Gröger</span></span>
-        </h1>
+          <h1 :class="{ show: typingDone }">
+            <span class="row"><span>David</span></span>
+            <span class="row"><span class="outline">Gröger</span></span>
+          </h1>
 
-        <p class="hero-sub">
-          {{ t('hero.sub') }}
-        </p>
+          <p class="hero-sub">
+            {{ t('hero.sub') }}
+          </p>
 
-        <div class="hero-cta">
-          <a href="#work" class="btn btn-primary">{{ t('hero.ctaWork') }}</a>
-          <a href="#init" class="btn">{{ t('hero.ctaContact') }}</a>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary">{{ t('hero.ctaWork') }}</a>
+            <a href="#init" class="btn">{{ t('hero.ctaContact') }}</a>
+          </div>
         </div>
+
+        <ClientOnly>
+          <HeroBuild class="hero-right" />
+        </ClientOnly>
       </div>
 
       <a href="#work" class="scroll-hint" aria-hidden="true">↓ scroll</a>
@@ -97,11 +103,25 @@ onMounted(() => {
 
 .hero-inner {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 48px;
+  padding-block: 80px;
+  width: 100%;
+}
+.hero-copy {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-block: 80px;
-  width: 100%;
+}
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-right {
+    display: none;
+  }
 }
 
 .typeline {
@@ -126,7 +146,7 @@ onMounted(() => {
 }
 
 h1 {
-  font-size: clamp(56px, 11vw, 150px);
+  font-size: clamp(52px, 8.5vw, 118px);
   line-height: 0.94;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -148,7 +168,9 @@ h1 .row:nth-child(2) span {
   transition-delay: 0.1s;
 }
 h1 .outline {
-  color: transparent;
+  /* Füllung in Hintergrundfarbe statt transparent: kaschiert überlappende
+     Stroke-Konturen der Variable-Font (sichtbare Linien in den Buchstaben) */
+  color: var(--bg);
   -webkit-text-stroke: 1.5px var(--amber);
 }
 
