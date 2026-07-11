@@ -15,9 +15,79 @@
     "ctaWork": "→ projekte ansehen",
     "ctaContact": "$ kontakt"
   },
+  "about": {
+    "eyebrow": "wer hier baut",
+    "title": "Hi, ich bin David.",
+    "text": "Full-Stack-Entwickler seit 2013 — vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue nebenbei eigene Plattformen. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
+    "alt": "Porträt von David Gröger an seinem Schreibtisch",
+    "inspectHint": "Foto — Hover zeigt eine Element-Inspektion",
+    "chip1": "10+ jahre web",
+    "chip2": "senior {'@'} pflegehelden",
+    "chip3": "ki-optimierter workflow"
+  },
+  "stack": {
+    "eyebrow": "werkzeuge",
+    "title": "Der Stack",
+    "lede": "Keine Prozentbalken — was hier steht, setze ich in echten Projekten ein.",
+    "aiAgents": "KI-Agenten",
+    "groups": {
+      "backend": "backend",
+      "frontend": "frontend",
+      "tooling": "tooling & ki"
+    }
+  },
+  "log": {
+    "title": "Der Werdegang",
+    "lede": "Zehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags.",
+    "graphAlt": "Werdegang als Git-Graph: von modotex 2013 über HTW Berlin und XAIN bis Pflegehelden (HEAD, senior)",
+    "freelance": "freiberuflich",
+    "freelanceTag": "tag: +200% umsatz",
+    "archiveLabel": "// weitere stationen:",
+    "archive": "Kochhaus (OXID, Werkstudent) · NewStore (Test-Infrastruktur) · Nosfair (CRM/WaWi) · b.i.b. (Fachinformatiker) — Details im Lebenslauf.",
+    "stations": {
+      "ph": {
+        "hash": "a3f9c21 (HEAD → senior)",
+        "role": "Senior Softwareentwickler",
+        "where": "Pflegehelden Franchise GmbH · seit 2023",
+        "what": "CRM-Weiterentwicklung, Hubspot-Anbindung, Legacy-Refactoring (jQuery → Livewire, Laravel 5 → 8), Matching-Modul zwischen Pflegekräften und Patienten."
+      },
+      "free": {
+        "hash": "8b2e470",
+        "role": "Full-Stack-Webentwickler",
+        "where": "freiberuflich · seit 2018",
+        "what": "Komplexe Webanwendungen, E-Commerce, SEO und Performance: +200 % Umsatz durch Marketing-Automatisierung, CRM-Statistiken 5× schneller."
+      },
+      "xain": {
+        "hash": "5d91acc",
+        "role": "Full-Stack-Webentwickler & Teamlead",
+        "where": "XAIN AG · 2017–2018",
+        "what": "Leitung eines 4-köpfigen Entwicklungsteams, Kundenprojekte von Konzeption bis Betrieb, Cloud-Migration gegen Server-Ausfälle."
+      }
+    }
+  },
+  "contact": {
+    "title": "Lass uns bauen.",
+    "lede": "Du arbeitest an einem Webprojekt und brauchst Unterstützung? Schreib mir — oder red mit dem Terminal.",
+    "direct": "Direkt erreichen",
+    "mobile": "mobil",
+    "cv": "Lebenslauf (PDF)",
+    "note": "Sitz in Bad Fallingbostel, Projekte remote in DE/AT/CH."
+  },
+  "term": {
+    "prompt": "gast{'@'}david-webdev",
+    "motd": "willkommen. dieses terminal ist echt — tipp: help",
+    "inputLabel": "Terminal-Eingabe",
+    "logCmd": "werdegang",
+    "contactCmd": "kontakt",
+    "help": "verfügbare befehle:\n  stack · werdegang · kontakt\n  sudo hire-david · clear",
+    "stackOut": "backend:   PHP · Laravel · Python · Django · MySQL\nfrontend:  Vue · Nuxt · React · TypeScript · Tailwind\ntooling:   Git · Docker · CI/CD · KI-Agenten",
+    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden — Senior Softwareentwickler [2023]\n8b2e470 freiberuflich — Full-Stack [2018]\n5d91acc XAIN AG — Teamlead [2017]\n1c0ffee modotex — erster Commit [2013]",
+    "contactOut": "email:  groeger.david{'@'}gmail.com\nmobil:  0174 169 149 0",
+    "sudoOut": "[sudo] passwort wird nicht benötigt — vertrauen vorhanden ✓\nverfügbarkeit geprüft … ok\n→ berechtigung erteilt. schreib mir: groeger.david{'@'}gmail.com",
+    "startxOut": "DavidOS wird vorbereitet … kommt in v2.1 🤫",
+    "notFound": "befehl nicht gefunden: {cmd} — tipp: help"
+  },
   "stub": {
-    "work": "projekte — in arbeit (phase 3)",
-    "log": "werdegang als git-graph — in arbeit (phase 2)",
-    "contact": "kontakt-terminal — in arbeit (phase 2)"
+    "work": "projekte — in arbeit (phase 3)"
   }
 }

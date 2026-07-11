@@ -15,9 +15,79 @@
     "ctaWork": "→ view work",
     "ctaContact": "$ contact"
   },
+  "about": {
+    "eyebrow": "who's building here",
+    "title": "Hi, I'm David.",
+    "text": "Full-stack developer since 2013 — from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and I build my own platforms on the side. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
+    "alt": "Portrait of David Gröger at his desk",
+    "inspectHint": "Photo — hover reveals an element inspection",
+    "chip1": "10+ years of web",
+    "chip2": "senior {'@'} pflegehelden",
+    "chip3": "ai-optimized workflow"
+  },
+  "stack": {
+    "eyebrow": "tools",
+    "title": "The Stack",
+    "lede": "No percentage bars — everything listed here is what I use in real projects.",
+    "aiAgents": "AI agents",
+    "groups": {
+      "backend": "backend",
+      "frontend": "frontend",
+      "tooling": "tooling & ai"
+    }
+  },
+  "log": {
+    "title": "The Career",
+    "lede": "Ten years in one graph: jobs are commits, achievements are tags.",
+    "graphAlt": "Career as a git graph: from modotex 2013 via HTW Berlin and XAIN to Pflegehelden (HEAD, senior)",
+    "freelance": "freelance",
+    "freelanceTag": "tag: +200% revenue",
+    "archiveLabel": "// more stations:",
+    "archive": "Kochhaus (OXID, working student) · NewStore (test infrastructure) · Nosfair (CRM/ERP) · b.i.b. (IT specialist) — details in the CV.",
+    "stations": {
+      "ph": {
+        "hash": "a3f9c21 (HEAD → senior)",
+        "role": "Senior Software Engineer",
+        "where": "Pflegehelden Franchise GmbH · since 2023",
+        "what": "CRM development, Hubspot integration, legacy refactoring (jQuery → Livewire, Laravel 5 → 8), a matching module connecting caregivers and patients."
+      },
+      "free": {
+        "hash": "8b2e470",
+        "role": "Full-Stack Web Developer",
+        "where": "freelance · since 2018",
+        "what": "Complex web applications, e-commerce, SEO and performance: +200% revenue through marketing automation, CRM statistics 5× faster."
+      },
+      "xain": {
+        "hash": "5d91acc",
+        "role": "Full-Stack Developer & Team Lead",
+        "where": "XAIN AG · 2017–2018",
+        "what": "Led a team of four developers, client projects from concept to production, cloud migration that ended recurring server outages."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's build.",
+    "lede": "Working on a web project and need support? Drop me a line — or talk to the terminal.",
+    "direct": "Reach me directly",
+    "mobile": "mobile",
+    "cv": "Resume (PDF)",
+    "note": "Based in Bad Fallingbostel, working remotely across DE/AT/CH."
+  },
+  "term": {
+    "prompt": "guest{'@'}david-webdev",
+    "motd": "welcome. this terminal is real — try: help",
+    "inputLabel": "Terminal input",
+    "logCmd": "career",
+    "contactCmd": "contact",
+    "help": "available commands:\n  stack · career · contact\n  sudo hire-david · clear",
+    "stackOut": "backend:   PHP · Laravel · Python · Django · MySQL\nfrontend:  Vue · Nuxt · React · TypeScript · Tailwind\ntooling:   Git · Docker · CI/CD · AI agents",
+    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden — Senior Software Engineer [2023]\n8b2e470 freelance — full-stack [2018]\n5d91acc XAIN AG — team lead [2017]\n1c0ffee modotex — initial commit [2013]",
+    "contactOut": "email:   groeger.david{'@'}gmail.com\nmobile:  +49 174 169 149 0",
+    "sudoOut": "[sudo] no password required — trust established ✓\nchecking availability … ok\n→ permission granted. write me: groeger.david{'@'}gmail.com",
+    "startxOut": "preparing DavidOS … coming in v2.1 🤫",
+    "notFound": "command not found: {cmd} — try: help"
+  },
   "stub": {
-    "work": "work — in progress (phase 3)",
-    "log": "career as git graph — in progress (phase 2)",
-    "contact": "contact terminal — in progress (phase 2)"
+    "work": "work — in progress (phase 3)"
   }
 }

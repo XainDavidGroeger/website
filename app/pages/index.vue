@@ -62,16 +62,16 @@ onMounted(() => {
       <a href="#work" class="scroll-hint" aria-hidden="true">↓ scroll</a>
     </section>
 
-    <!-- Platzhalter für die kommenden Sektionen (Phase 2/3) -->
+    <SectionAbout />
+    <SectionStack />
+    <SectionLog />
+
+    <!-- Platzhalter: Case Studies folgen in Phase 3 -->
     <section id="work" class="stub wrap">
       <p class="eyebrow"><span class="tick">/* work */</span> {{ t('stub.work') }}</p>
     </section>
-    <section id="log" class="stub wrap">
-      <p class="eyebrow"><span class="tick">/* log */</span> {{ t('stub.log') }}</p>
-    </section>
-    <section id="init" class="stub wrap">
-      <p class="eyebrow"><span class="tick">/* init */</span> {{ t('stub.contact') }}</p>
-    </section>
+
+    <SectionContact />
   </div>
 </template>
 
