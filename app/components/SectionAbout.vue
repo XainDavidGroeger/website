@@ -1,12 +1,21 @@
 <script setup lang="ts">
 const { t } = useI18n()
+
+/* true, sobald das Partikel-Portrait läuft — dann übernimmt der Canvas Duotone + Hover */
+const particlesOn = ref(false)
 </script>
 
 <template>
   <section id="about" class="section">
     <div class="wrap grid">
-      <div v-reveal class="portrait" tabindex="0" :aria-label="t('about.inspectHint')">
-        <img src="/img/david.webp" :alt="t('about.alt')" width="900" height="1350" loading="lazy">
+      <div
+        v-reveal
+        class="portrait"
+        :class="{ 'canvas-on': particlesOn }"
+        tabindex="0"
+        :aria-label="t('about.inspectHint')"
+      >
+        <PortraitParticles src="/img/david.webp" :alt="t('about.alt')" @active="particlesOn = true" />
         <div class="duo" aria-hidden="true" />
         <div class="marquee" aria-hidden="true" />
         <span class="sel" aria-hidden="true">img.portrait</span>
@@ -46,29 +55,33 @@ const { t } = useI18n()
   overflow: hidden;
   cursor: crosshair;
 }
-.portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
+.portrait :deep(.pp img) {
   filter: grayscale(0.35) contrast(1.02);
-  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, opacity 0.3s ease;
 }
 
-/* Duotone-Ebene: Nachtblau/Bernstein — Hover „rendert“ zur echten Farbe */
+/* CSS-Duotone: nur Fallback (reduced-motion / bevor der Canvas übernimmt) */
 .duo {
   position: absolute;
   inset: 0;
   background: linear-gradient(160deg, rgba(255, 173, 59, 0.3), rgba(11, 15, 26, 0.62) 70%);
   mix-blend-mode: multiply;
   transition: opacity 0.5s ease;
+  pointer-events: none;
 }
-.portrait:hover img,
-.portrait:focus-visible img {
+.portrait:hover :deep(.pp img),
+.portrait:focus-visible :deep(.pp img) {
   filter: none;
 }
 .portrait:hover .duo,
 .portrait:focus-visible .duo {
   opacity: 0;
+}
+.portrait.canvas-on .duo {
+  display: none;
+}
+.portrait.canvas-on :deep(.pp img) {
+  filter: none;
 }
 
 /* DevTools-Inspektion bei Hover */
