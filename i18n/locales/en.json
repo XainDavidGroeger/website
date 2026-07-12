@@ -251,7 +251,7 @@
   "stack": {
     "eyebrow": "tools",
     "title": "The Stack",
-    "lede": "No percentage bars, everything listed here is what I use in real projects.",
+    "lede": "Everything listed here is what I use in real projects. Daily.",
     "aiAgents": "AI agents",
     "groups": {
       "backend": "backend",
