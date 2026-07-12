@@ -58,8 +58,9 @@ const lines: HarnessLine[] = [
   { text: '[iter 2] agent:code   TariffCalculator: include baseFee()', kind: 'dim', delay: 450 },
   { text: '[iter 2] running suite … 6 passed', kind: 'ok', delay: 600, tick: ['AC-4', 'AC-6'] },
   { text: '', delay: 200 },
-  { text: '→ docs: openapi.json in sync with contract ✓', kind: 'info', delay: 350 },
-  { text: '→ docs: README + sequence diagram updated ✓', kind: 'info', delay: 350 },
+  { text: '→ docs/api/openapi.json in sync with contract ✓', kind: 'info', delay: 350 },
+  { text: '→ docs/design/architecture.md · sequence updated ✓', kind: 'info', delay: 350 },
+  { text: '→ docs/specs/SPEC-042.md · status: approved → implemented ✓', kind: 'info', delay: 350 },
   { text: '', delay: 200 },
   { text: '● SPEC-042 green · 2 iterations · handed to david.review()', kind: 'done', delay: 400 },
 ]
@@ -139,6 +140,8 @@ const mappings = [
       <span class="stage-chip">{{ t('sandbox.spec.flowArtifacts') }}</span>
       <span class="flow-arrow">→</span>
       <span class="stage-chip amber">david.review()</span>
+      <span class="flow-arrow">→</span>
+      <span class="stage-chip mint">{{ t('sandbox.spec.flowResult') }}</span>
     </div>
 
     <!-- Split: Spec + Harness -->
@@ -163,8 +166,8 @@ const mappings = [
           </ul>
           <p class="h2">## API Contract</p>
           <p class="text mono">POST /api/v1/sessions {'{'} stationId, connectorType, estimatedKwh {'}'} → 201 | 422</p>
-          <p class="h2">## Tech Notes</p>
-          <p class="text">pricing single source: TariffCalculator (reused by billing worker) · SessionStarted event → realtime hub</p>
+          <p class="h2">## Technical Design</p>
+          <p class="text">layers: controller → action → TariffCalculator (single pricing source, reused by billing worker) · SessionStarted event → realtime hub · errors as dedicated exceptions → 422 field errors</p>
         </div>
       </div>
 
@@ -191,6 +194,37 @@ const mappings = [
           <span class="to">{{ t(`sandbox.spec.${mapping.toKey}`) }}</span>
           <span class="go">↗</span>
         </NuxtLinkLocale>
+      </div>
+    </section>
+
+    <!-- Das Ergebnis: voll dokumentiertes Projekt -->
+    <section v-reveal class="result">
+      <p class="sub">// {{ t('sandbox.spec.resultTitle') }}</p>
+      <div class="result-grid">
+        <div class="tree-panel">
+          <div class="bar">
+            <span class="dots"><i /><i /><i /></span>
+            <span class="title">~/voltgrid · repo</span>
+          </div>
+          <pre class="tree">voltgrid/
+├── <span class="dir">docs/</span>
+│   ├── <span class="dir">specs/</span>                    <span class="cmt">← requirements, versioned</span>
+│   │   ├── SPEC-041-station-filtering.md   <span class="ok">✓ implemented</span>
+│   │   ├── SPEC-042-start-charging.md      <span class="ok">✓ implemented</span>
+│   │   └── SPEC-043-invoice-pdf.md         <span class="wip">○ in progress</span>
+│   ├── <span class="dir">design/</span>                   <span class="cmt">← technical design + ADRs</span>
+│   │   ├── architecture.md
+│   │   └── <span class="dir">adr/</span>0007-queue-based-billing.md
+│   └── <span class="dir">api/</span>openapi.json          <span class="cmt">← always in sync</span>
+├── <span class="dir">app/</span> · <span class="dir">server/</span> · <span class="dir">tests/</span>          <span class="cmt">← the code, right next to it</span>
+└── README.md</pre>
+        </div>
+        <ul class="result-points">
+          <li>{{ t('sandbox.spec.r1') }}</li>
+          <li>{{ t('sandbox.spec.r2') }}</li>
+          <li>{{ t('sandbox.spec.r3') }}</li>
+          <li>{{ t('sandbox.spec.r4') }}</li>
+        </ul>
       </div>
     </section>
 
@@ -479,6 +513,71 @@ const mappings = [
   .map-row .from {
     grid-column: 1 / -1;
   }
+}
+
+/* ---------- Ergebnis: Repo-Baum ---------- */
+.result {
+  margin-top: 44px;
+}
+.result-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.tree-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+.tree {
+  margin: 0;
+  padding: 18px 20px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.95;
+  color: var(--muted);
+  overflow-x: auto;
+}
+.tree .dir {
+  color: var(--text);
+}
+.tree .cmt {
+  color: var(--faint);
+}
+.tree .ok {
+  color: var(--mint);
+}
+.tree .wip {
+  color: var(--amber);
+}
+.result-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.result-points li {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.7;
+  padding-left: 22px;
+  position: relative;
+}
+.result-points li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mint);
+  font-family: var(--font-mono);
 }
 
 /* ---------- Vorteile ---------- */
