@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * Code-Panel mit Mini-Syntax-Highlighter für kontrollierte Demo-Snippets
- * (PHP + TypeScript). Bewusst regex-basiert statt Shiki/Prism — die Snippets
+ * (PHP + TypeScript). Bewusst regex-basiert statt Shiki/Prism · die Snippets
  * sind handverlesen, dafür bleibt das Bundle klein.
  */
 const props = defineProps<{
@@ -55,7 +55,7 @@ const highlighted = computed(() => {
       <span class="title">{{ title }}</span>
       <span class="lang">{{ lang }}</span>
     </div>
-    <!-- eslint-disable-next-line vue/no-v-html — Quelle sind eigene, statische Snippets -->
+    <!-- eslint-disable-next-line vue/no-v-html · Quelle sind eigene, statische Snippets -->
     <pre><code v-html="highlighted" /></pre>
   </div>
 </template>

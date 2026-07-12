@@ -6,7 +6,7 @@ useSeoMeta({
   description: () => t('meta.description'),
 })
 
-/* Typing-Zeile im Hero — tippt die compile()-Zeile, dann steigt der Name auf */
+/* Typing-Zeile im Hero · tippt die compile()-Zeile, dann steigt der Name auf */
 const typed = ref('')
 const typingDone = ref(false)
 const typeTarget = 'const seite = compile("erfahrung", "handwerk", "ki-crew");'

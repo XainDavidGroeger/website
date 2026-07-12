@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.code.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.code.title')} · David Gröger`,
   description: () => t('sandbox.areas.code.desc'),
 })
 
@@ -73,7 +73,7 @@ const workerCode = `final class FinalizeSessionInvoice implements ShouldQueue
     public function handle(SessionCompleted $event): void
     {
         // derselbe TariffCalculator wie im Live-Estimate:
-        // ein Preis-Codepfad — Anzeige und Rechnung können nie abweichen
+        // ein Preis-Codepfad · Anzeige und Rechnung können nie abweichen
         $amount = $this->tariff->estimate($event->station, $event->chargedKwh);
 
         Invoice::issueFor($event->session, $amount);
@@ -88,7 +88,7 @@ export function extractFieldErrors(error: unknown): Record<string, string> {
     return error.data?.data?.errors ?? {}
   }
 
-  return { _global: 'unexpected error — please retry' }
+  return { _global: 'unexpected error, please retry' }
 }`
 
 const composableCode = `// composables/useChargingSession.ts

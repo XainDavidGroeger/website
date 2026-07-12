@@ -3,7 +3,7 @@
  * Idle, der Companion: klebt unten rechts, schläft bei Inaktivität,
  * wacht beim Scrollen auf und gibt per Klick einen Tipp zur aktuellen Sektion.
  * Posen: 1 schläft · 2 schreckt hoch · 5 kaffee · 6 salutiert
- * Versteckt sich in der Kontakt-Sektion — dort arbeitet schon Prompt (max. 1 Bot im Bild).
+ * Versteckt sich in der Kontakt-Sektion · dort arbeitet schon Prompt (max. 1 Bot im Bild).
  */
 const { t } = useI18n()
 

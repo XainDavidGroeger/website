@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.title')} — David Gröger`,
+  title: () => `${t('sandbox.title')} · David Gröger`,
   description: () => t('sandbox.lede'),
 })
 

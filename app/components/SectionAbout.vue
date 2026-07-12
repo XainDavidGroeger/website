@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-/* true, sobald das Partikel-Portrait läuft — dann übernimmt der Canvas Duotone + Hover */
+/* true, sobald das Partikel-Portrait läuft · dann übernimmt der Canvas Duotone + Hover */
 const particlesOn = ref(false)
 </script>
 

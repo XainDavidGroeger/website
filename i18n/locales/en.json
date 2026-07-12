@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "David Gröger — Web Developer",
-    "description": "Full-stack web developer since 2013 — I build platforms that bring people together. Laravel, Vue, Python, AI-powered workflows."
+    "title": "David Gröger · Web Developer",
+    "description": "Full-stack web developer since 2013. I build platforms that bring people together. Laravel, Vue, Python, AI-powered workflows."
   },
   "nav": {
     "label": "Main navigation",
@@ -15,62 +15,62 @@
   "sandboxTeaser": {
     "eyebrow": "hands-on over claims",
     "title": "See for yourself.",
-    "lede": "References are good — touching is better. That's why the sandbox exists: VoltGrid, an invented product, built out completely. From the spec through architecture, a running API and UI kit to tests and deployment — everything clickable, much of it actually running.",
+    "lede": "References are good, touching is better. That's why the sandbox exists: VoltGrid, an invented product, built out completely. From the spec through architecture, a running API and UI kit to tests and deployment, everything clickable, much of it actually running.",
     "cta": "→ open the sandbox",
     "ctaHint": "// 8 perspectives · one case study · real api"
   },
   "sandbox": {
     "eyebrow": "one case study, eight perspectives",
     "title": "VoltGrid",
-    "lede": "VoltGrid is an invented EV charging platform — 2,418 stations, real-time status, charging sessions, billing. Invented so I can show it end to end: the same platform as a running API with Swagger docs, as a UI kit you can assemble, and as an architecture diagram.",
-    "fictionalTag": "⚠ fictional product — invented as a work sample",
+    "lede": "VoltGrid is an invented EV charging platform, 2,418 stations, real-time status, charging sessions, billing. Invented so I can show it end to end: the same platform as a running API with Swagger docs, as a UI kit you can assemble, and as an architecture diagram.",
+    "fictionalTag": "⚠ fictional product, invented as a work sample",
     "open": "→ open",
     "areas": {
       "spec": {
         "title": "The Spec",
-        "desc": "Spec-driven with AI: requirements, docs and acceptance criteria first — then an agent loop works against them until everything is green. Watch it live."
+        "desc": "Spec-driven with AI: requirements, docs and acceptance criteria first, then an agent loop works against them until everything is green. Watch it live."
       },
       "api": {
         "title": "The API",
-        "desc": "The VoltGrid Charging API actually runs: filter stations, start charging sessions, provoke validation errors — complete with an OpenAPI spec and Swagger docs."
+        "desc": "The VoltGrid Charging API actually runs: filter stations, start charging sessions, provoke validation errors, complete with an OpenAPI spec and Swagger docs."
       },
       "ui": {
         "title": "The UI Kit",
-        "desc": "The building blocks of the VoltGrid dashboard — plus a composer where you assemble a dashboard from the components yourself."
+        "desc": "The building blocks of the VoltGrid dashboard, plus a composer where you assemble a dashboard from the components yourself."
       },
       "demo": {
         "title": "The Live Demo",
-        "desc": "The VoltGrid backoffice to operate yourself: manage stations, see them on the real map — KPIs, pins and event log react live to every action."
+        "desc": "The VoltGrid backoffice to operate yourself: manage stations, see them on the real map, KPIs, pins and event log react live to every action."
       },
       "arch": {
         "title": "The Architecture",
-        "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing — plus the journey of a charging session."
+        "desc": "The system behind VoltGrid as an interactive diagram: IoT gateway, realtime hub, queues, billing, plus the journey of a charging session."
       },
       "code": {
         "title": "The Code",
-        "desc": "Clean code from both worlds: a backend action (PHP) and a frontend composable (TypeScript) — with notes on why they look the way they do."
+        "desc": "Clean code from both worlds: a backend action (PHP) and a frontend composable (TypeScript), with notes on why they look the way they do."
       },
       "tests": {
         "title": "The Tests",
-        "desc": "The VoltGrid test suite runs demonstratively: 38 tests, coverage report, quality gate — this is what test culture looks like here."
+        "desc": "The VoltGrid test suite runs demonstratively: 38 tests, coverage report, quality gate, this is what test culture looks like here."
       },
       "deploy": {
         "title": "The Deployment",
-        "desc": "From git push to production in one pipeline: lint, tests, docker build, migrations, canary rollout — demonstratively in the console."
+        "desc": "From git push to production in one pipeline: lint, tests, docker build, migrations, canary rollout, demonstratively in the console."
       }
     },
     "api": {
       "title": "VoltGrid Charging API",
-      "lede": "Three endpoints that actually run: list and filter stations (city, status, connector, power), fetch details, start charging sessions — with proper validation. Tip: station 4 is under maintenance, station 2 is occupied — go provoke the 422s. Below: the full Swagger docs.",
+      "lede": "Three endpoints that actually run: list and filter stations (city, status, connector, power), fetch details, start charging sessions, with proper validation. Tip: station 4 is under maintenance, station 2 is occupied, go provoke the 422s. Below: the full Swagger docs.",
       "note": "// Demo API without persistence: sessions are confirmed but no station actually starts. Spec: /openapi.json",
-      "staticHint": "// On static hosting an in-browser mock answers the requests — with exactly the same validation logic (one shared source). The curl examples apply to server deploys."
+      "staticHint": "// On static hosting an in-browser mock answers the requests · with exactly the same validation logic (one shared source). The curl examples apply to server deploys."
     },
     "ui": {
       "title": "VoltGrid UI Kit",
-      "lede": "A few primitives (button, tag, window) compose into domain components like the station card — and those into full screens. In the composer below you can assemble the dashboard yourself.",
-      "galleryTitle": "the building blocks — as they appear on the page",
+      "lede": "A few primitives (button, tag, window) compose into domain components like the station card, and those into full screens. In the composer below you can assemble the dashboard yourself.",
+      "galleryTitle": "the building blocks, as they appear on the page",
       "composed": "← composed from DgTag + DgButton",
-      "composerTitle": "the composer — build your own dashboard",
+      "composerTitle": "the composer, build your own dashboard",
       "composerLede": "Click blocks on the left and they appear on the canvas. Hover a block to move it up/down or remove it. The component code below writes itself as you build.",
       "blocks": "blocks",
       "canvas": "canvas",
@@ -86,7 +86,7 @@
       "moveUp": "move up",
       "moveDown": "move down",
       "remove": "remove",
-      "empty": "// canvas empty — add blocks on the left",
+      "empty": "// canvas empty · add blocks on the left",
       "demoEyebrow": "operator dashboard",
       "demoTitle": "Network Overview",
       "demoCta": "add station",
@@ -94,32 +94,32 @@
       "kpiSessions": "active sessions",
       "kpiStations": "stations in network",
       "kpiUptime": "uptime 30d",
-      "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site — built once, consistent everywhere."
+      "note": "// The same primitives (DgButton, DgTag, DgWindow) power this entire portfolio site · built once, consistent everywhere."
     },
     "spec": {
       "title": "Spec-Driven with AI",
-      "lede": "This is how I work: the spec comes first — goal, acceptance criteria, API contract, tech notes. Then an agent loop harness works against it: implement, test, fix — until every criterion is green. On the left the spec of SPEC-042, on the right the loop. Watch the checkboxes get ticked.",
+      "lede": "This is how I work: the spec comes first, goal, acceptance criteria, API contract, tech notes. Then an agent loop harness works against it: implement, test, fix, until every criterion is green. On the left the spec of SPEC-042, on the right the loop. Watch the checkboxes get ticked.",
       "flowSpec": "spec + docs",
       "flowLoop": "agent loop until green",
       "flowArtifacts": "code · tests · openapi · docs",
-      "mappingTitle": "the spec is the source — every artifact in this sandbox derives from it",
+      "mappingTitle": "the spec is the source, every artifact in this sandbox derives from it",
       "mapTests": "acceptance criteria became the test suite's test names, 1:1",
       "mapApi": "the api contract became openapi.json and the swagger docs",
       "mapCode": "the tech notes became the service layer (TariffCalculator as the single pricing truth)",
-      "benefitsTitle": "why spec-driven — especially with ai",
-      "b1Title": "Docs come first — and never go stale",
-      "b1Text": "Requirements, API contract and technical docs exist before the first line of code. When requirements change, the spec changes — and the loop pulls code, tests and OpenAPI along. There is no second, outdated truth.",
+      "benefitsTitle": "why spec-driven, especially with ai",
+      "b1Title": "Docs come first, and never go stale",
+      "b1Text": "Requirements, API contract and technical docs exist before the first line of code. When requirements change, the spec changes, and the loop pulls code, tests and OpenAPI along. There is no second, outdated truth.",
       "b2Title": "Requirements become testable",
-      "b2Text": "Acceptance criteria are written so agents can derive tests from them directly. What the client signed off is literally what CI verifies — no translation loss between domain and code.",
+      "b2Text": "Acceptance criteria are written so agents can derive tests from them directly. What the client signed off is literally what CI verifies, no translation loss between domain and code.",
       "b3Title": "AI becomes productive instead of risky",
-      "b3Text": "Agents are fast, but only as good as their target. Against a precise spec with a loop harness they work until the criteria are green — a hallucination fails at the test gate instead of in production.",
+      "b3Text": "Agents are fast, but only as good as their target. Against a precise spec with a loop harness they work until the criteria are green, a hallucination fails at the test gate instead of in production.",
       "b4Title": "Review at the right level",
-      "b4Text": "I review the spec and the final diff — not every keystroke. Architecture and domain decisions stay with the human, the loop does the legwork. That's the speed gain without losing control.",
-      "note": "// This portfolio site was built exactly this way, by the way: concept spec first, then iterative implementation with AI agents — every line reviewed."
+      "b4Text": "I review the spec and the final diff, not every keystroke. Architecture and domain decisions stay with the human, the loop does the legwork. That's the speed gain without losing control.",
+      "note": "// This portfolio site was built exactly this way, by the way: concept spec first, then iterative implementation with AI agents · every line reviewed."
     },
     "demo": {
       "title": "VoltGrid Backoffice",
-      "lede": "The operator dashboard you can drive yourself: manage the stations on the left — activate maintenance, release, end sessions. KPIs, map pins and the backoffice log react live to every action. The map is real (MapLibre + OpenStreetMap): click a row and it flies to the station.",
+      "lede": "The operator dashboard you can drive yourself: manage the stations on the left, activate maintenance, release, end sessions. KPIs, map pins and the backoffice log react live to every action. The map is real (MapLibre + OpenStreetMap): click a row and it flies to the station.",
       "dashEyebrow": "operator dashboard",
       "dashTitle": "Network Overview",
       "kpiSessions": "active sessions",
@@ -141,56 +141,56 @@
       "logMaintenance": "maintenance activated",
       "logRelease": "released · back on grid",
       "logEndSession": "session ended · station available",
-      "logTitle": "~/voltgrid — backoffice log",
-      "logEmpty": "// no actions yet — manage a station on the left",
+      "logTitle": "~/voltgrid, backoffice log",
+      "logEmpty": "// no actions yet · manage a station on the left",
       "chartLabel": "grid load · 24h",
       "chartValue": "4.2 MW peak",
-      "note": "// Demo state lives in the browser, nothing is persisted. Everything here is built from the UI kit blocks (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL — map data © OpenStreetMap contributors, style © CARTO."
+      "note": "// Demo state lives in the browser, nothing is persisted. Everything here is built from the UI kit blocks (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL · map data © OpenStreetMap contributors, style © CARTO."
     },
     "code": {
       "title": "VoltGrid Code",
-      "lede": "Sustainable code is layered: HTTP stays thin, business logic lives in reusable services, and every layer is testable on its own. Here a request travels through the backend layers — and on the frontend, a util, a composable and a UI primitive compose into a button without anything existing twice.",
-      "backendTitle": "backend — a request travels through the layers",
+      "lede": "Sustainable code is layered: HTTP stays thin, business logic lives in reusable services, and every layer is testable on its own. Here a request travels through the backend layers, and on the frontend, a util, a composable and a UI primitive compose into a button without anything existing twice.",
+      "backendTitle": "backend, a request travels through the layers",
       "layerController": "The controller only translates HTTP: request in, resource out. No logic, nothing to mock.",
-      "layerAction": "The action is the use case: guards with dedicated exception classes, then delegation to the domain. Testable in isolation — exactly what the test suite page exercises.",
-      "layerService": "The service is the single source of truth for pricing: value objects in (KilowattHours), Money out. No framework imports — pure, reusable domain logic.",
-      "layerWorker": "The proof of reuse: the billing worker in the queue uses the exact same service — live estimate and invoice can never drift apart.",
+      "layerAction": "The action is the use case: guards with dedicated exception classes, then delegation to the domain. Testable in isolation, exactly what the test suite page exercises.",
+      "layerService": "The service is the single source of truth for pricing: value objects in (KilowattHours), Money out. No framework imports, pure, reusable domain logic.",
+      "layerWorker": "The proof of reuse: the billing worker in the queue uses the exact same service, live estimate and invoice can never drift apart.",
       "serviceReuse": "reused by: StartChargingSession · FinalizeSessionInvoice · GET /stations/{'{'}id{'}'}/price-preview",
       "delegates": "delegates to",
       "uses": "uses",
       "reusedBy": "reused by",
       "consumedBy": "consumed by",
-      "frontendTitle": "frontend — util → composable → component",
+      "frontendTitle": "frontend, util → composable → component",
       "layerUtil": "One util for every form: the API's 422 responses are translated into field errors in exactly one place.",
-      "layerComposable": "The composable encapsulates state as a discriminated union — impossible states cannot be represented, and any component can use it.",
+      "layerComposable": "The composable encapsulates state as a discriminated union, impossible states cannot be represented, and any component can use it.",
       "layerComponent": "The component only composes: logic from the composable, looks from the DgButton primitive. Seven lines, nothing duplicated.",
       "utilReuse": "reused by: useChargingSession · useStationFilter · useOperatorLogin",
-      "componentReuse": "DgButton is the same primitive used across this whole site — one style, one place to change it",
+      "componentReuse": "DgButton is the same primitive used across this whole site, one style, one place to change it",
       "note": "// Conventions from real projects: method parameters always type-hinted, errors as dedicated exception classes instead of generic try/catch, comments only where business logic needs explaining."
     },
     "tests": {
       "title": "VoltGrid Test Suite",
-      "lede": "This is the case study's test suite running: unit tests for the tariff logic, feature tests against the API (including the 422 cases from the sandbox API) — with a coverage report and quality gate at the end. The run below plays automatically, ↻ replays it.",
-      "factUnit": "Tariff math and connector matching are pure domain logic — tested without a database, which is why they finish in milliseconds.",
-      "factFeature": "The feature tests hit exactly the endpoints of the sandbox API — including the error cases: maintenance, occupied, invalid kWh.",
+      "lede": "This is the case study's test suite running: unit tests for the tariff logic, feature tests against the API (including the 422 cases from the sandbox API), with a coverage report and quality gate at the end. The run below plays automatically, ↻ replays it.",
+      "factUnit": "Tariff math and connector matching are pure domain logic, tested without a database, which is why they finish in milliseconds.",
+      "factFeature": "The feature tests hit exactly the endpoints of the sandbox API, including the error cases: maintenance, occupied, invalid kWh.",
       "factGate": "Below 90 % coverage the CI aborts. The gate is part of the pipeline, not up for negotiation.",
-      "note": "// Demonstrative run with realistic output — the same test culture (Pest/Vitest, gates) runs in real projects like schnappern.com."
+      "note": "// Demonstrative run with realistic output · the same test culture (Pest/Vitest, gates) runs in real projects like schnappern.com."
     },
     "deploy": {
       "title": "VoltGrid Deployment",
-      "lede": "One push to main and the pipeline takes over: lint and static analysis, tests with a coverage gate, docker build, migrations with a rollback plan, staging smoke tests — and a canary rollout that only goes to 100 % at 0 % error rate. The run below plays automatically.",
+      "lede": "One push to main and the pipeline takes over: lint and static analysis, tests with a coverage gate, docker build, migrations with a rollback plan, staging smoke tests, and a canary rollout that only goes to 100 % at 0 % error rate. The run below plays automatically.",
       "factGates": "Every stage is a gate: if lint, a test or the coverage minimum fails, nothing reaches production.",
-      "factCanary": "New versions see 10 %, then 50 % of traffic first — error rate and p95 latency decide the rest.",
-      "factRollback": "Migrations are applied with a rollback plan and the previous image stays in the registry — back in under a minute.",
-      "note": "// Demonstrative run — zero-downtime deploys with gates and canary are the standard I set up in projects."
+      "factCanary": "New versions see 10 %, then 50 % of traffic first, error rate and p95 latency decide the rest.",
+      "factRollback": "Migrations are applied with a rollback plan and the previous image stays in the registry, back in under a minute.",
+      "note": "// Demonstrative run · zero-downtime deploys with gates and canary are the standard I set up in projects."
     },
     "arch": {
       "title": "VoltGrid Architecture",
       "lede": "The system behind the platform: charging stations report via OCPP/MQTT to an IoT gateway, the realtime hub pushes live status into the apps, sessions flow asynchronously through queues into billing. Hover the nodes to see the data flows.",
       "d1Title": "system architecture",
-      "d1Note": "Two separate paths keep the system calm: the synchronous path (app → API → PostgreSQL) answers requests immediately, the asynchronous path (queue → billing worker) processes session completions and invoices without blocking the API. Telemetry flows separately into TimescaleDB — 2,418 stations send kW curves that never weigh down the session database. Payment data stays with the external PSP.",
+      "d1Note": "Two separate paths keep the system calm: the synchronous path (app → API → PostgreSQL) answers requests immediately, the asynchronous path (queue → billing worker) processes session completions and invoices without blocking the API. Telemetry flows separately into TimescaleDB, 2,418 stations send kW curves that never weigh down the session database. Payment data stays with the external PSP.",
       "d2Title": "one charging session, end to end",
-      "d2Note": "A session's journey through the system: the app starts it via REST, the gateway wakes the station over OCPP, the kW curve streams back into the app via WebSocket — and after unplugging, billing runs asynchronously. This exact flow powers the POST /api/v1/sessions in the sandbox API.",
+      "d2Note": "A session's journey through the system: the app starts it via REST, the gateway wakes the station over OCPP, the kW curve streams back into the app via WebSocket, and after unplugging, billing runs asynchronously. This exact flow powers the POST /api/v1/sessions in the sandbox API.",
       "hoverHint": "// hover the nodes",
       "legendSync": "synchronous (request/response)",
       "legendAsync": "asynchronous (queue/events)",
@@ -201,7 +201,7 @@
   "palette": {
     "aria": "Command palette",
     "placeholder": "Where to? Type or use arrows …",
-    "empty": "nothing found — esc to close",
+    "empty": "nothing found, esc to close",
     "work": "→ view work",
     "agents": "→ ai crew",
     "log": "→ career (git log)",
@@ -213,20 +213,20 @@
     "cv": "download resume (pdf)"
   },
   "companion": {
-    "aria": "Idle, the companion bot — click for a tip",
+    "aria": "Idle, the companion bot, click for a tip",
     "tips": {
-      "hero": "scroll on — this page compiles itself.",
+      "hero": "scroll on, this page compiles itself.",
       "about": "hover the photo: inspect mode.",
       "stack": "no percentage bars. everything here ships in real projects.",
       "agents": "that agent log over there is actually running.",
-      "log": "the career as a git graph — tags included.",
-      "work": "all platforms are live — click through.",
+      "log": "the career as a git graph, tags included.",
+      "work": "all platforms are live, click through.",
       "refs": "four reviews, four approvals ✓"
     }
   },
   "hero": {
     "eyebrow": "web developer · since 2013 · open for projects",
-    "sub": "I build web applications people enjoy using — from planning to production. Platforms that bring people together: to date, bid, sing, celebrate and work.",
+    "sub": "I build web applications people enjoy using, from planning to production. Platforms that bring people together: to date, bid, sing, celebrate and work.",
     "ctaWork": "→ view work",
     "ctaContact": "$ contact",
     "build": {
@@ -235,15 +235,15 @@
       "l2": "✓ platforms     7 live in production",
       "l3": "✓ stack         laravel · vue · python",
       "l4": "✓ ai crew       4 agents active",
-      "done": "● build successful — ready for your project"
+      "done": "● build successful · ready for your project"
     }
   },
   "about": {
     "eyebrow": "who's building here",
     "title": "Hi, I'm David.",
-    "text": "Full-stack developer since 2013 — from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and as a freelancer I build complete platforms from scratch. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
+    "text": "Full-stack developer since 2013, from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and as a freelancer I build complete platforms from scratch. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
     "alt": "Portrait of David Gröger at his desk",
-    "inspectHint": "Photo — hover reveals an element inspection",
+    "inspectHint": "Photo, hover reveals an element inspection",
     "chip1": "10+ years of web",
     "chip2": "senior {'@'} pflegehelden",
     "chip3": "ai-optimized workflow"
@@ -251,7 +251,7 @@
   "stack": {
     "eyebrow": "tools",
     "title": "The Stack",
-    "lede": "No percentage bars — everything listed here is what I use in real projects.",
+    "lede": "No percentage bars, everything listed here is what I use in real projects.",
     "aiAgents": "AI agents",
     "groups": {
       "backend": "backend",
@@ -261,13 +261,13 @@
   },
   "log": {
     "title": "The Career",
-    "lede": "Ten years in one graph: jobs are commits, achievements are tags — and the freelance branch was never closed.",
+    "lede": "Ten years in one graph: jobs are commits, achievements are tags, and the freelance branch was never closed.",
     "graphAlt": "Career as a git graph: from modotex 2013 via HTW Berlin and XAIN to Pflegehelden (HEAD, senior); in parallel the freelance branch, open since 2018",
     "freelance": "branch: freelance",
     "freelanceTag": "tag: +200% revenue",
     "branchActive": "// open since 2018",
     "archiveLabel": "// more stations:",
-    "archive": "Kochhaus (OXID, working student) · NewStore (test infrastructure) · Nosfair (CRM/ERP) · b.i.b. (IT specialist) — details in the CV.",
+    "archive": "Kochhaus (OXID, working student) · NewStore (test infrastructure) · Nosfair (CRM/ERP) · b.i.b. (IT specialist) · details in the CV.",
     "stations": {
       "ph": {
         "hash": "a3f9c21 (HEAD → senior)",
@@ -291,7 +291,7 @@
   },
   "contact": {
     "title": "Let's build.",
-    "lede": "Working on a web project and need support? Drop me a line — or talk to the terminal.",
+    "lede": "Working on a web project and need support? Drop me a line, or talk to the terminal.",
     "direct": "Reach me directly",
     "mobile": "mobile",
     "cv": "Resume (PDF)",
@@ -299,32 +299,32 @@
   },
   "term": {
     "prompt": "guest{'@'}david-webdev",
-    "motd": "welcome. this terminal is real — try: help",
+    "motd": "welcome. this terminal is real, try: help",
     "inputLabel": "Terminal input",
     "logCmd": "career",
     "contactCmd": "contact",
     "help": "available commands:\n  stack · career · contact\n  sudo hire-david · clear",
     "stackOut": "backend:   PHP · Laravel · Python · Django · MySQL\nfrontend:  Vue · Nuxt · React · TypeScript · Tailwind\ntooling:   Git · Docker · CI/CD · AI agents",
-    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden — Senior Software Engineer [2023]\n8b2e470 freelance — full-stack [2018]\n5d91acc XAIN AG — team lead [2017]\n1c0ffee modotex — initial commit [2013]",
+    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden · Senior Software Engineer [2023]\n8b2e470 freelance · full-stack [2018]\n5d91acc XAIN AG · team lead [2017]\n1c0ffee modotex · initial commit [2013]",
     "contactOut": "email:   groeger.david{'@'}gmail.com\nmobile:  +49 174 169 149 0",
-    "sudoOut": "[sudo] no password required — trust established ✓\nchecking availability … ok\n→ permission granted. write me: groeger.david{'@'}gmail.com",
+    "sudoOut": "[sudo] no password required · trust established ✓\nchecking availability … ok\n→ permission granted. write me: groeger.david{'@'}gmail.com",
     "startxOut": "preparing DavidOS … coming in v2.1 🤫",
-    "notFound": "command not found: {cmd} — try: help"
+    "notFound": "command not found: {cmd}, try: help"
   },
   "crew": {
-    "promptAlt": "Prompt, the terminal bot — reacts to your commands",
-    "idleAlt": "Psst, a bot is sleeping here — click to wake it"
+    "promptAlt": "Prompt, the terminal bot, reacts to your commands",
+    "idleAlt": "Psst, a bot is sleeping here, click to wake it"
   },
   "agents": {
     "eyebrow": "agent-optimized since 2023",
     "title": "The AI Crew",
-    "lede": "I don't just work with AI — I work with a crew. Agents refactor, test and document in the background while I own architecture, reviews and quality. That's how speed happens without care falling off the table.",
+    "lede": "I don't just work with AI, I work with a crew. Agents refactor, test and document in the background while I own architecture, reviews and quality. That's how speed happens without care falling off the table.",
     "pixelAlt": "Pixel, the guide bot, pointing at the running pipeline",
     "forgeAlt": "Forge, the worker bot, tightening the panel",
-    "logTitle": "~/crew — agent log · live",
-    "picAlt": "David with his AI bot crew at the laptop — illustration",
-    "picCaption": "// the crew and me — artwork from my own ai production",
-    "closing": "In practice: legacy migrations (jQuery → Livewire, Laravel 5 → 8), test coverage and docs run agent-assisted — and every line gets reviewed by me. The bots on this site are the same idea, just visible.",
+    "logTitle": "~/crew · agent log · live",
+    "picAlt": "David with his AI bot crew at the laptop, illustration",
+    "picCaption": "// the crew and me · artwork from my own ai production",
+    "closing": "In practice: legacy migrations (jQuery → Livewire, Laravel 5 → 8), test coverage and docs run agent-assisted, and every line gets reviewed by me. The bots on this site are the same idea, just visible.",
     "jobs": {
       "refactor": "migrated jQuery → Livewire · 12 files",
       "test": "42/42 tests green",
@@ -337,7 +337,7 @@
   "work": {
     "eyebrow": "selected projects",
     "title": "Platforms that bring people together",
-    "lede": "To date, bid, sing, taste wine and work: six platforms I built completely on my own as a freelancer — from the first line to production. Plus projects I took over and extended as a freelancer. Everything is live, everything can be visited.",
+    "lede": "To date, bid, sing, taste wine and work: six platforms I built completely on my own as a freelancer, from the first line to production. Plus projects I took over and extended as a freelancer. Everything is live, everything can be visited.",
     "shelfOwn": "built solo, from scratch",
     "shelfFreelance": "taken over & extended",
     "shelfArchive": "archive & stations",
@@ -355,24 +355,24 @@
       "schnappern": {
         "name": "schnappern.com",
         "desc": "Live auction platform: daily real-time auctions, automated bidding bot, payments and insured shipping.",
-        "about": "Schnappern is a live auction platform: real-time auctions on brand products run every day — bidding happens live, and an automated bidding bot (“Piri bot”) keeps bidding overnight if you want it to. Payments run through the usual providers, shipping is insured via DHL, DPD or UPS.",
-        "tasks": "Platform concept\nServer setup — domain registration\nReal-time auction logic over WebSockets (Laravel Reverb + Echo) including the bidding bot\nData structure implementation\nPayment integration (Braintree)\nAdmin tool — auctions, orders, shipping, statistics\nQueues and background jobs via Redis/Horizon\nTest coverage with Pest and Vitest\nOperations and ongoing development",
+        "about": "Schnappern is a live auction platform: real-time auctions on brand products run every day, bidding happens live, and an automated bidding bot (“Piri bot”) keeps bidding overnight if you want it to. Payments run through the usual providers, shipping is insured via DHL, DPD or UPS.",
+        "tasks": "Platform concept\nServer setup, domain registration\nReal-time auction logic over WebSockets (Laravel Reverb + Echo) including the bidding bot\nData structure implementation\nPayment integration (Braintree)\nAdmin tool, auctions, orders, shipping, statistics\nQueues and background jobs via Redis/Horizon\nTest coverage with Pest and Vitest\nOperations and ongoing development",
         "stack": "PHP 8.3, Laravel 11, Octane, Reverb (WebSockets), Livewire 3, Redis/Horizon, Vue 3, Vuetify, Tailwind, MySQL",
         "date": "in production"
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing — built and maintained by me for over 5 years.",
-        "about": "Socialmatch is a unique event series in bars where you meet new people over a board game created by the founders — a mix of questions, action tasks and entertainment, played solo or in teams. Six to ten participants per event, a balanced ratio, and a host guides the evening.",
-        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool — events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
+        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing, built and maintained by me for over 5 years.",
+        "about": "Socialmatch is a unique event series in bars where you meet new people over a board game created by the founders, a mix of questions, action tasks and entertainment, played solo or in teams. Six to ten participants per event, a balanced ratio, and a host guides the evening.",
+        "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool, events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
-        "date": "June 2015 — today"
+        "date": "June 2015, today"
       },
       "matchingnight": {
         "name": "Matching Night",
-        "desc": "Singles event for up to 250 participants: personality test, colored wristbands, Lock&Key icebreaker — bar atmosphere instead of a dating format.",
-        "about": "Matching Night is the big sister format of SpeedDating XXL: up to 250 singles in one evening in a relaxed bar atmosphere. A science-based personality test drives the matching via colored wristbands, and the Lock&Key game breaks the ice — organized mingling instead of random encounters.",
-        "tasks": "Concept and implementation of the format on the platform\nPersonality test and matching logic\nTicketing and booking flow\nAdmin tool — events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
+        "desc": "Singles event for up to 250 participants: personality test, colored wristbands, Lock&Key icebreaker, bar atmosphere instead of a dating format.",
+        "about": "Matching Night is the big sister format of SpeedDating XXL: up to 250 singles in one evening in a relaxed bar atmosphere. A science-based personality test drives the matching via colored wristbands, and the Lock&Key game breaks the ice, organized mingling instead of random encounters.",
+        "tasks": "Concept and implementation of the format on the platform\nPersonality test and matching logic\nTicketing and booking flow\nAdmin tool, events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
         "date": "in production"
       },
@@ -380,31 +380,31 @@
         "name": "speeddating-xxl.de",
         "desc": "Speed dating events across DE/AT: up to 20 dates per evening, ticketing and automated matching with contact exchange.",
         "about": "SpeedDating XXL brings far more singles together in one evening than classic speed dating: up to 20 dates, with fresh conversation starters in every round instead of stiff small talk. After the event, automated matching exchanges the contacts of mutual matches.",
-        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool — events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
+        "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool, events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
         "date": "since August 2019"
       },
       "teamevent": {
         "name": "mein-teamevent.de",
         "desc": "Team event marketplace for DE/AT: filters by budget, location and group size, 20+ formats, inquiry funnel.",
-        "about": "Mein Teamevent brokers team-building and corporate events across Germany and Austria — from quiz nights to wine tastings. Companies filter by group size, budget, category and location, and send non-binding inquiries directly through the platform.",
-        "tasks": "Platform concept\nServer setup — domain registration\nEvent search with filters (group size, budget, category, location)\nData structure implementation\nInquiry funnel including mail sequences\nAdmin tool — events, inquiries, statistics\nSEO optimization\nOperations and ongoing development",
+        "about": "Mein Teamevent brokers team-building and corporate events across Germany and Austria, from quiz nights to wine tastings. Companies filter by group size, budget, category and location, and send non-binding inquiries directly through the platform.",
+        "tasks": "Platform concept\nServer setup, domain registration\nEvent search with filters (group size, budget, category, location)\nData structure implementation\nInquiry funnel including mail sequences\nAdmin tool, events, inquiries, statistics\nSEO optimization\nOperations and ongoing development",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in production"
       },
       "singalong": {
         "name": "singalong.de",
         "desc": "Sing-along events in 15+ cities plus Vienna: ticketing, vouchers and themed formats from rock to Christmas.",
-        "about": "SingAlong is an event series where hundreds of participants sing along to well-known hits together — lyrics rolling on a big screen. Themed formats from rock to schlager to Christmas, bookable in over 15 German cities plus Vienna.",
-        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation\nTicketing and voucher system\nData structure and payment integration\nAdmin tool — events, bookings, marketing, statistics\nSEO optimization\nCity rollout and operations",
+        "about": "SingAlong is an event series where hundreds of participants sing along to well-known hits together, lyrics rolling on a big screen. Themed formats from rock to schlager to Christmas, bookable in over 15 German cities plus Vienna.",
+        "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation\nTicketing and voucher system\nData structure and payment integration\nAdmin tool, events, bookings, marketing, statistics\nSEO optimization\nCity rollout and operations",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in production"
       },
       "weinhopping": {
         "name": "weinhopping.com",
-        "desc": "Wine-tasting hopping across three locations per evening: ticket tiers, vouchers — from the Socialmatch family.",
-        "about": "Weinhopping takes you through three wine locations of a city in one evening — casual wine tastings where you meet new people along the way and support the local scene. Bookable in cities like Berlin, Hamburg, Düsseldorf, Frankfurt and Munich, with tiered ticket options.",
-        "tasks": "Platform concept\nServer setup — domain registration\nWebsite implementation\nTicket tiers (Standard, PLUS, DELUXE) and voucher system\nData structure and payment integration\nAdmin tool — events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
+        "desc": "Wine-tasting hopping across three locations per evening: ticket tiers, vouchers, from the Socialmatch family.",
+        "about": "Weinhopping takes you through three wine locations of a city in one evening, casual wine tastings where you meet new people along the way and support the local scene. Bookable in cities like Berlin, Hamburg, Düsseldorf, Frankfurt and Munich, with tiered ticket options.",
+        "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation\nTicket tiers (Standard, PLUS, DELUXE) and voucher system\nData structure and payment integration\nAdmin tool, events, bookings, statistics\nSEO optimization\nOperations and ongoing development",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in production"
       },
@@ -419,7 +419,7 @@
       "buggyfit": {
         "name": "buggyfit.de",
         "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education.",
-        "about": "buggyFit offers outdoor training for moms before and after pregnancy — with the baby in the stroller, in parks all over Germany. The platform bundles course booking, an online shop, health-insurance billing, a video channel and the training of new instructors.",
+        "about": "buggyFit offers outdoor training for moms before and after pregnancy, with the baby in the stroller, in parks all over Germany. The platform bundles course booking, an online shop, health-insurance billing, a video channel and the training of new instructors.",
         "tasks": "Takeover and ongoing development of the platform\nCourse booking improvements\nOnline shop\nSupport for health-insurance processes\nMaintenance, bug fixes and support",
         "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
         "date": "freelance engagement"
@@ -429,7 +429,7 @@
   "refs": {
     "eyebrow": "code reviews",
     "title": "Voices from projects",
-    "lede": "Four reviews from real collaboration — all approved.",
+    "lede": "Four reviews from real collaboration, all approved.",
     "approved": "Approved ✓",
     "reviews": {
       "patrick": {

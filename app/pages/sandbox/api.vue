@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.api.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.api.title')} · David Gröger`,
   description: () => t('sandbox.areas.api.desc'),
 })
 
@@ -10,7 +10,7 @@ const swaggerEl = ref<HTMLElement | null>(null)
 const origin = useRequestURL().origin
 
 onMounted(async () => {
-  // Swagger UI nur hier laden (~1 MB) — nicht ins Haupt-Bundle
+  // Swagger UI nur hier laden (~1 MB) · nicht ins Haupt-Bundle
   const [mod] = await Promise.all([
     // @ts-expect-error kein Typ-Paket für den ES-Bundle-Einstieg
     import('swagger-ui-dist/swagger-ui-es-bundle.js'),
@@ -39,7 +39,7 @@ onMounted(async () => {
     </div>
 
     <div v-reveal class="quick">
-      <DgWindow title="~/quickstart — curl">
+      <DgWindow title="~/quickstart · curl">
         <pre>curl "{{ origin }}/api/v1/stations?city=Hamburg&status=available"
 
 curl -X POST {{ origin }}/api/v1/sessions \

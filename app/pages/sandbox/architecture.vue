@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.arch.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.arch.title')} · David Gröger`,
   description: () => t('sandbox.areas.arch.desc'),
 })
 
@@ -27,7 +27,7 @@ function isHot(nodes: string) {
     <div v-reveal class="dia-wrap">
       <div class="bar">
         <span class="dots"><i /><i /><i /></span>
-        <span class="title">~/voltgrid — {{ t('sandbox.arch.d1Title') }}</span>
+        <span class="title">~/voltgrid · {{ t('sandbox.arch.d1Title') }}</span>
         <span class="hint">{{ t('sandbox.arch.hoverHint') }}</span>
       </div>
       <div class="dia-scroll">
@@ -131,7 +131,7 @@ function isHot(nodes: string) {
     <div v-reveal class="dia-wrap second">
       <div class="bar">
         <span class="dots"><i /><i /><i /></span>
-        <span class="title">~/voltgrid — {{ t('sandbox.arch.d2Title') }}</span>
+        <span class="title">~/voltgrid · {{ t('sandbox.arch.d2Title') }}</span>
       </div>
       <div class="dia-scroll">
         <svg viewBox="0 0 960 190" width="960" height="190" class="dia">

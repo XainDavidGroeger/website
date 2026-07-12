@@ -51,7 +51,7 @@ onMounted(() => {
       <div class="panel">
         <div class="bar">
           <span class="dots"><i /><i /><i /></span>
-          <span class="title">~/david-webdev — build</span>
+          <span class="title">~/david-webdev · build</span>
         </div>
         <div class="body">
           <p

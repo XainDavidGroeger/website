@@ -69,7 +69,7 @@ onUnmounted(() => {
             height="120"
           >
           <div class="holo" aria-hidden="true">
-            <div class="holo-head">~/pipeline — running <span class="pulse">●</span></div>
+            <div class="holo-head">~/pipeline · running <span class="pulse">●</span></div>
             <pre class="holo-code"><span class="kw">while</span> (project.<span class="fn">isRunning</span>()) {
   crew.<span class="fn">refactor</span>(<span class="str">"legacy"</span>)
   crew.<span class="fn">test</span>({ coverage: <span class="str">"high"</span> })

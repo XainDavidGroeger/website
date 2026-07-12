@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.spec.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.spec.title')} · David Gröger`,
   description: () => t('sandbox.areas.spec.desc'),
 })
 
@@ -51,8 +51,8 @@ const lines: HarnessLine[] = [
   { text: '[iter 1] agent:test   derives 6 tests from acceptance criteria', kind: 'dim', delay: 450 },
   { text: '[iter 1] agent:docs   drafts openapi.json from api contract', kind: 'dim', delay: 450 },
   { text: '[iter 1] running suite … 4 passed · 2 failed', kind: 'info', delay: 600, tick: ['AC-1', 'AC-2', 'AC-3', 'AC-5'], fail: ['AC-4', 'AC-6'] },
-  { text: '  ✗ AC-4 unsupported connector — got 500, want 422', kind: 'fail', delay: 350 },
-  { text: '  ✗ AC-6 estimated cost — base fee missing in calculation', kind: 'fail', delay: 350 },
+  { text: '  ✗ AC-4 unsupported connector · got 500, want 422', kind: 'fail', delay: 350 },
+  { text: '  ✗ AC-6 estimated cost · base fee missing in calculation', kind: 'fail', delay: 350 },
   { text: '', delay: 200 },
   { text: '[iter 2] agent:code   adds UnsupportedConnectorException guard', kind: 'dim', delay: 500 },
   { text: '[iter 2] agent:code   TariffCalculator: include baseFee()', kind: 'dim', delay: 450 },
@@ -61,7 +61,7 @@ const lines: HarnessLine[] = [
   { text: '→ docs: openapi.json in sync with contract ✓', kind: 'info', delay: 350 },
   { text: '→ docs: README + sequence diagram updated ✓', kind: 'info', delay: 350 },
   { text: '', delay: 200 },
-  { text: '● SPEC-042 green — 2 iterations · handed to david.review()', kind: 'done', delay: 400 },
+  { text: '● SPEC-042 green · 2 iterations · handed to david.review()', kind: 'done', delay: 400 },
 ]
 
 const shown = ref(0)
@@ -149,7 +149,7 @@ const mappings = [
           <span class="title">specs/SPEC-042-start-charging-session.md</span>
         </div>
         <div class="spec-body">
-          <p class="h1"># SPEC-042 — Start Charging Session</p>
+          <p class="h1"># SPEC-042 · Start Charging Session</p>
           <p class="meta">status: approved · owner: david · agents: enabled</p>
           <p class="h2">## Goal</p>
           <p class="text">Drivers start a charging session from the app; pricing is estimated upfront and billing can never drift from the live estimate.</p>
@@ -171,7 +171,7 @@ const mappings = [
       <div class="harness">
         <div class="bar">
           <span class="dots"><i /><i /><i /></span>
-          <span class="title">~/voltgrid — agent-harness · loop</span>
+          <span class="title">~/voltgrid · agent-harness · loop</span>
           <button class="replay" type="button" aria-label="Replay" @click="play">↻ replay</button>
         </div>
         <div class="console">

@@ -4,11 +4,11 @@ import type { ConsoleLine } from '~/components/ConsolePlayer.vue'
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.deploy.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.deploy.title')} · David Gröger`,
   description: () => t('sandbox.areas.deploy.desc'),
 })
 
-/* Konsolen-Output bleibt bewusst englisch — wie echte Pipeline-Logs */
+/* Konsolen-Output bleibt bewusst englisch · wie echte Pipeline-Logs */
 const deployRun: ConsoleLine[] = [
   { text: '$ git push origin main', kind: 'cmd', delay: 700 },
   { text: '→ pipeline #482 triggered · commit 4f2a9c1 "fix: tariff rounding"', kind: 'info', delay: 500 },
@@ -34,7 +34,7 @@ const deployRun: ConsoleLine[] = [
   { text: '  → canary 50 % … error rate 0.00 % · p95 84 ms', kind: 'info', delay: 900 },
   { text: '  ✓ rollout 100 % · 6 pods rolling · zero downtime', kind: 'ok', delay: 600 },
   { text: '', delay: 250 },
-  { text: '  ● deployment live — 3m 41s from push to production 🚀', kind: 'done', delay: 400 },
+  { text: '  ● deployment live · 3m 41s from push to production 🚀', kind: 'done', delay: 400 },
 ]
 </script>
 
@@ -49,7 +49,7 @@ const deployRun: ConsoleLine[] = [
     </div>
 
     <div v-reveal>
-      <ConsolePlayer title="~/voltgrid — ci/cd · pipeline #482" :lines="deployRun" />
+      <ConsolePlayer title="~/voltgrid · ci/cd · pipeline #482" :lines="deployRun" />
     </div>
 
     <div v-reveal class="facts">

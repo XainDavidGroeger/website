@@ -4,11 +4,11 @@ import type { ConsoleLine } from '~/components/ConsolePlayer.vue'
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.tests.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.tests.title')} · David Gröger`,
   description: () => t('sandbox.areas.tests.desc'),
 })
 
-/* Konsolen-Output bleibt bewusst englisch — wie echte Test-Logs */
+/* Konsolen-Output bleibt bewusst englisch · wie echte Test-Logs */
 const testRun: ConsoleLine[] = [
   { text: '$ pest --coverage --parallel', kind: 'cmd', delay: 700 },
   { text: '', delay: 150 },
@@ -39,7 +39,7 @@ const testRun: ConsoleLine[] = [
   { text: '  Services ................. 98.1 %', kind: 'info', delay: 220 },
   { text: '  Domain/Tariff ........... 100.0 %', kind: 'info', delay: 220 },
   { text: '', delay: 200 },
-  { text: '  ● Total Coverage: 94.7 % — gate ≥ 90 % passed ✓', kind: 'done', delay: 400 },
+  { text: '  ● Total Coverage: 94.7 % · gate ≥ 90 % passed ✓', kind: 'done', delay: 400 },
 ]
 </script>
 
@@ -54,7 +54,7 @@ const testRun: ConsoleLine[] = [
     </div>
 
     <div v-reveal>
-      <ConsolePlayer title="~/voltgrid — pest · coverage" :lines="testRun" />
+      <ConsolePlayer title="~/voltgrid · pest · coverage" :lines="testRun" />
     </div>
 
     <div v-reveal class="facts">

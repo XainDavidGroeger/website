@@ -1,9 +1,9 @@
 <script setup lang="ts">
 /**
  * Partikel-Portrait: zerlegt das Foto in ein Raster aus „Pixeln“ (Canvas).
- * — Beim ersten Scroll-Kontakt fliegen die Partikel zusammen (Assemble)
- * — Der Cursor schiebt sie auseinander, losgelassen „heilt“ das Bild
- * — Ruhezustand im Nachtblau/Bernstein-Duotone, Hover blendet pro Partikel
+ * · Beim ersten Scroll-Kontakt fliegen die Partikel zusammen (Assemble)
+ * · Der Cursor schiebt sie auseinander, losgelassen „heilt“ das Bild
+ * · Ruhezustand im Nachtblau/Bernstein-Duotone, Hover blendet pro Partikel
  *   zur echten Farbe („source → render“, auf das Foto angewendet)
  * Bei prefers-reduced-motion bleibt das normale <img> samt CSS-Duotone aktiv.
  */

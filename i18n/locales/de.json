@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "David Gröger — Webentwickler",
-    "description": "Full-Stack-Webentwickler seit 2013 — ich baue Plattformen, die Menschen zusammenbringen. Laravel, Vue, Python, KI-gestützte Workflows."
+    "title": "David Gröger · Webentwickler",
+    "description": "Full-Stack-Webentwickler seit 2013. Ich baue Plattformen, die Menschen zusammenbringen. Laravel, Vue, Python, KI-gestützte Workflows."
   },
   "nav": {
     "label": "Hauptnavigation",
@@ -15,62 +15,62 @@
   "sandboxTeaser": {
     "eyebrow": "anfassen statt behaupten",
     "title": "Überzeug dich selbst.",
-    "lede": "Referenzen sind gut — Anfassen ist besser. Deshalb gibt es die Sandbox: VoltGrid, ein erfundenes Produkt, einmal komplett durchgebaut. Von der Spec über Architektur, laufende API und UI-Kit bis zu Tests und Deployment — alles klickbar, vieles läuft wirklich.",
+    "lede": "Referenzen sind gut, Anfassen ist besser. Deshalb gibt es die Sandbox: VoltGrid, ein erfundenes Produkt, einmal komplett durchgebaut. Von der Spec über Architektur, laufende API und UI-Kit bis zu Tests und Deployment, alles klickbar, vieles läuft wirklich.",
     "cta": "→ sandbox öffnen",
     "ctaHint": "// 8 perspektiven · ein fallbeispiel · echte api"
   },
   "sandbox": {
     "eyebrow": "ein fallbeispiel, acht perspektiven",
     "title": "VoltGrid",
-    "lede": "VoltGrid ist eine erfundene E-Ladesäulen-Plattform — 2.418 Säulen, Echtzeit-Status, Lade-Sessions, Abrechnung. Erfunden, damit ich sie komplett zeigen kann: dieselbe Plattform als laufende API mit Swagger-Doku, als UI-Kit zum Zusammenbauen und als Architektur-Diagramm.",
-    "fictionalTag": "⚠ fiktives produkt — als arbeitsprobe erdacht",
+    "lede": "VoltGrid ist eine erfundene E-Ladesäulen-Plattform, 2.418 Säulen, Echtzeit-Status, Lade-Sessions, Abrechnung. Erfunden, damit ich sie komplett zeigen kann: dieselbe Plattform als laufende API mit Swagger-Doku, als UI-Kit zum Zusammenbauen und als Architektur-Diagramm.",
+    "fictionalTag": "⚠ fiktives produkt, als arbeitsprobe erdacht",
     "open": "→ öffnen",
     "areas": {
       "spec": {
         "title": "Die Spec",
-        "desc": "Spec-Driven mit KI: Anforderungen, Doku und Akzeptanzkriterien zuerst — dann arbeitet ein Agenten-Loop dagegen, bis alles grün ist. Live zu sehen."
+        "desc": "Spec-Driven mit KI: Anforderungen, Doku und Akzeptanzkriterien zuerst, dann arbeitet ein Agenten-Loop dagegen, bis alles grün ist. Live zu sehen."
       },
       "api": {
         "title": "Die API",
-        "desc": "Die VoltGrid Charging API läuft wirklich: Säulen filtern, Lade-Sessions starten, Validierungsfehler provozieren — komplett mit OpenAPI-Spec und Swagger-Doku."
+        "desc": "Die VoltGrid Charging API läuft wirklich: Säulen filtern, Lade-Sessions starten, Validierungsfehler provozieren, komplett mit OpenAPI-Spec und Swagger-Doku."
       },
       "ui": {
         "title": "Das UI-Kit",
-        "desc": "Die Bausteine des VoltGrid-Dashboards — und ein Composer, in dem du dir aus den Komponenten selbst ein Dashboard zusammenbaust."
+        "desc": "Die Bausteine des VoltGrid-Dashboards, und ein Composer, in dem du dir aus den Komponenten selbst ein Dashboard zusammenbaust."
       },
       "demo": {
         "title": "Die Live-Demo",
-        "desc": "Das VoltGrid-Backoffice zum Bedienen: Säulen verwalten, auf der echten Karte sehen — KPIs, Pins und Event-Log reagieren live auf jede Aktion."
+        "desc": "Das VoltGrid-Backoffice zum Bedienen: Säulen verwalten, auf der echten Karte sehen, KPIs, Pins und Event-Log reagieren live auf jede Aktion."
       },
       "arch": {
         "title": "Die Architektur",
-        "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing — plus der Weg einer Lade-Session."
+        "desc": "Das System hinter VoltGrid als interaktives Diagramm: IoT-Gateway, Realtime-Hub, Queues, Billing, plus der Weg einer Lade-Session."
       },
       "code": {
         "title": "Der Code",
-        "desc": "Sauberer Code aus beiden Welten: eine Backend-Action (PHP) und ein Frontend-Composable (TypeScript) — mit Anmerkungen, warum sie so aussehen."
+        "desc": "Sauberer Code aus beiden Welten: eine Backend-Action (PHP) und ein Frontend-Composable (TypeScript), mit Anmerkungen, warum sie so aussehen."
       },
       "tests": {
         "title": "Die Tests",
-        "desc": "Die VoltGrid-Testsuite läuft demonstrativ durch: 38 Tests, Coverage-Report, Quality-Gate — so sieht Testkultur bei mir aus."
+        "desc": "Die VoltGrid-Testsuite läuft demonstrativ durch: 38 Tests, Coverage-Report, Quality-Gate, so sieht Testkultur bei mir aus."
       },
       "deploy": {
         "title": "Das Deployment",
-        "desc": "Vom git push bis production in einer Pipeline: Lint, Tests, Docker-Build, Migrationen, Canary-Rollout — demonstrativ in der Konsole."
+        "desc": "Vom git push bis production in einer Pipeline: Lint, Tests, Docker-Build, Migrationen, Canary-Rollout, demonstrativ in der Konsole."
       }
     },
     "api": {
       "title": "VoltGrid Charging API",
-      "lede": "Drei Endpunkte, die wirklich laufen: Säulen listen und filtern (Stadt, Status, Stecker, Leistung), Details abrufen, Lade-Sessions starten — mit sauberer Validierung. Tipp: Säule 4 ist in Wartung, Säule 2 besetzt — provozier die 422er. Unten die vollständige Swagger-Doku.",
+      "lede": "Drei Endpunkte, die wirklich laufen: Säulen listen und filtern (Stadt, Status, Stecker, Leistung), Details abrufen, Lade-Sessions starten, mit sauberer Validierung. Tipp: Säule 4 ist in Wartung, Säule 2 besetzt, provozier die 422er. Unten die vollständige Swagger-Doku.",
       "note": "// Demo-API ohne Persistenz: Sessions werden bestätigt, aber keine Säule startet wirklich. Spec: /openapi.json",
-      "staticHint": "// Auf statischem Hosting beantwortet ein In-Browser-Mock die Requests — mit exakt derselben Validierungslogik (eine gemeinsame Quelle). Die curl-Beispiele gelten für Server-Deploys."
+      "staticHint": "// Auf statischem Hosting beantwortet ein In-Browser-Mock die Requests · mit exakt derselben Validierungslogik (eine gemeinsame Quelle). Die curl-Beispiele gelten für Server-Deploys."
     },
     "ui": {
       "title": "VoltGrid UI-Kit",
-      "lede": "Aus wenigen Primitiven (Button, Tag, Window) entstehen Fach-Komponenten wie die Säulen-Karte — und daraus ganze Screens. Unten im Composer kannst du dir das Dashboard selbst zusammenbauen.",
-      "galleryTitle": "die bausteine — so sehen sie auf der seite aus",
+      "lede": "Aus wenigen Primitiven (Button, Tag, Window) entstehen Fach-Komponenten wie die Säulen-Karte, und daraus ganze Screens. Unten im Composer kannst du dir das Dashboard selbst zusammenbauen.",
+      "galleryTitle": "die bausteine, so sehen sie auf der seite aus",
       "composed": "← komponiert aus DgTag + DgButton",
-      "composerTitle": "der composer — bau dir dein dashboard",
+      "composerTitle": "der composer, bau dir dein dashboard",
       "composerLede": "Links Bausteine anklicken, sie erscheinen auf der Leinwand. Hover über einen Block: nach oben/unten schieben oder entfernen. Unten schreibt sich der Komponenten-Code live mit.",
       "blocks": "bausteine",
       "canvas": "leinwand",
@@ -86,7 +86,7 @@
       "moveUp": "nach oben",
       "moveDown": "nach unten",
       "remove": "entfernen",
-      "empty": "// leinwand leer — links bausteine hinzufügen",
+      "empty": "// leinwand leer · links bausteine hinzufügen",
       "demoEyebrow": "betreiber-dashboard",
       "demoTitle": "Netz-Übersicht",
       "demoCta": "säule hinzufügen",
@@ -94,32 +94,32 @@
       "kpiSessions": "aktive sessions",
       "kpiStations": "säulen im netz",
       "kpiUptime": "uptime 30d",
-      "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite — einmal gebaut, überall konsistent."
+      "note": "// Dieselben Primitiven (DgButton, DgTag, DgWindow) stecken überall auf dieser Portfolio-Seite · einmal gebaut, überall konsistent."
     },
     "spec": {
       "title": "Spec-Driven mit KI",
-      "lede": "So arbeite ich: Erst die Spec — Ziel, Akzeptanzkriterien, API-Vertrag, technische Notizen. Dann arbeitet ein Agenten-Loop-Harness dagegen: implementieren, testen, nachbessern — bis jedes Kriterium grün ist. Links die Spec von SPEC-042, rechts der Loop. Schau zu, wie die Checkboxen abgehakt werden.",
+      "lede": "So arbeite ich: Erst die Spec, Ziel, Akzeptanzkriterien, API-Vertrag, technische Notizen. Dann arbeitet ein Agenten-Loop-Harness dagegen: implementieren, testen, nachbessern, bis jedes Kriterium grün ist. Links die Spec von SPEC-042, rechts der Loop. Schau zu, wie die Checkboxen abgehakt werden.",
       "flowSpec": "spec + doku",
       "flowLoop": "agenten-loop bis grün",
       "flowArtifacts": "code · tests · openapi · doku",
-      "mappingTitle": "die spec ist die quelle — jedes artefakt dieser sandbox stammt aus ihr",
+      "mappingTitle": "die spec ist die quelle, jedes artefakt dieser sandbox stammt aus ihr",
       "mapTests": "Akzeptanzkriterien wurden 1:1 die Testnamen der Testsuite",
       "mapApi": "der API-Vertrag wurde openapi.json und die Swagger-Doku",
       "mapCode": "die Tech-Notes wurden der Service-Layer (TariffCalculator als eine Preis-Wahrheit)",
-      "benefitsTitle": "warum spec-driven — gerade mit ki",
-      "b1Title": "Doku entsteht zuerst — und veraltet nie",
-      "b1Text": "Requirements, API-Vertrag und technische Doku stehen vor der ersten Codezeile. Ändert sich die Anforderung, ändert sich die Spec — und der Loop zieht Code, Tests und OpenAPI nach. Es gibt keine zweite, veraltete Wahrheit.",
+      "benefitsTitle": "warum spec-driven, gerade mit ki",
+      "b1Title": "Doku entsteht zuerst, und veraltet nie",
+      "b1Text": "Requirements, API-Vertrag und technische Doku stehen vor der ersten Codezeile. Ändert sich die Anforderung, ändert sich die Spec, und der Loop zieht Code, Tests und OpenAPI nach. Es gibt keine zweite, veraltete Wahrheit.",
       "b2Title": "Anforderungen werden testbar",
-      "b2Text": "Akzeptanzkriterien sind so formuliert, dass Agenten daraus direkt Tests ableiten. Was der Kunde abgenommen hat, ist wortwörtlich das, was die CI prüft — keine Übersetzungsverluste zwischen Fachlichkeit und Code.",
+      "b2Text": "Akzeptanzkriterien sind so formuliert, dass Agenten daraus direkt Tests ableiten. Was der Kunde abgenommen hat, ist wortwörtlich das, was die CI prüft, keine Übersetzungsverluste zwischen Fachlichkeit und Code.",
       "b3Title": "KI wird produktiv statt riskant",
-      "b3Text": "Agenten sind schnell, aber nur so gut wie ihr Ziel. Gegen eine präzise Spec mit Loop-Harness arbeiten sie, bis die Kriterien grün sind — eine Halluzination scheitert am Test-Gate statt in Produktion.",
+      "b3Text": "Agenten sind schnell, aber nur so gut wie ihr Ziel. Gegen eine präzise Spec mit Loop-Harness arbeiten sie, bis die Kriterien grün sind, eine Halluzination scheitert am Test-Gate statt in Produktion.",
       "b4Title": "Review auf der richtigen Ebene",
-      "b4Text": "Ich reviewe Spec und finalen Diff — nicht jeden Tastendruck. Architektur- und Fachentscheidungen bleiben beim Menschen, die Fleißarbeit übernimmt der Loop. Das ist der Tempo-Gewinn ohne Kontrollverlust.",
-      "note": "// Genau so ist übrigens diese Portfolio-Seite entstanden: Konzept-Spec zuerst, dann iterative Umsetzung mit KI-Agenten — jede Zeile reviewed."
+      "b4Text": "Ich reviewe Spec und finalen Diff, nicht jeden Tastendruck. Architektur- und Fachentscheidungen bleiben beim Menschen, die Fleißarbeit übernimmt der Loop. Das ist der Tempo-Gewinn ohne Kontrollverlust.",
+      "note": "// Genau so ist übrigens diese Portfolio-Seite entstanden: Konzept-Spec zuerst, dann iterative Umsetzung mit KI-Agenten · jede Zeile reviewed."
     },
     "demo": {
       "title": "VoltGrid Backoffice",
-      "lede": "Das Betreiber-Dashboard zum Selbst-Bedienen: Links verwaltest du die Säulen — Wartung aktivieren, freigeben, Sessions beenden. KPIs, Karten-Pins und das Backoffice-Log reagieren live auf jede Aktion. Die Karte ist echt (MapLibre + OpenStreetMap): Klick auf eine Zeile, und sie fliegt zur Säule.",
+      "lede": "Das Betreiber-Dashboard zum Selbst-Bedienen: Links verwaltest du die Säulen, Wartung aktivieren, freigeben, Sessions beenden. KPIs, Karten-Pins und das Backoffice-Log reagieren live auf jede Aktion. Die Karte ist echt (MapLibre + OpenStreetMap): Klick auf eine Zeile, und sie fliegt zur Säule.",
       "dashEyebrow": "betreiber-dashboard",
       "dashTitle": "Netz-Übersicht",
       "kpiSessions": "aktive sessions",
@@ -141,56 +141,56 @@
       "logMaintenance": "wartung aktiviert",
       "logRelease": "freigegeben · wieder am netz",
       "logEndSession": "session beendet · säule frei",
-      "logTitle": "~/voltgrid — backoffice-log",
-      "logEmpty": "// noch keine aktionen — verwalte links eine säule",
+      "logTitle": "~/voltgrid, backoffice-log",
+      "logEmpty": "// noch keine aktionen · verwalte links eine säule",
       "chartLabel": "netzlast · 24h",
       "chartValue": "4,2 MW peak",
-      "note": "// Demo-State lebt im Browser, nichts wird persistiert. Alles hier sind die Bausteine aus dem UI-Kit (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL — Kartendaten © OpenStreetMap-Mitwirkende, Style © CARTO."
+      "note": "// Demo-State lebt im Browser, nichts wird persistiert. Alles hier sind die Bausteine aus dem UI-Kit (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL · Kartendaten © OpenStreetMap-Mitwirkende, Style © CARTO."
     },
     "code": {
       "title": "VoltGrid Code",
-      "lede": "Nachhaltiger Code ist geschichtet: HTTP bleibt dünn, Geschäftslogik lebt in wiederverwendbaren Services, und jede Schicht ist einzeln testbar. Hier wandert ein Request durch die Backend-Schichten — und im Frontend entsteht aus Util, Composable und UI-Primitive ein Button, ohne dass irgendetwas doppelt existiert.",
-      "backendTitle": "backend — ein request wandert durch die schichten",
+      "lede": "Nachhaltiger Code ist geschichtet: HTTP bleibt dünn, Geschäftslogik lebt in wiederverwendbaren Services, und jede Schicht ist einzeln testbar. Hier wandert ein Request durch die Backend-Schichten, und im Frontend entsteht aus Util, Composable und UI-Primitive ein Button, ohne dass irgendetwas doppelt existiert.",
+      "backendTitle": "backend, ein request wandert durch die schichten",
       "layerController": "Der Controller übersetzt nur HTTP: Request rein, Resource raus. Keine Logik, nichts zu mocken.",
-      "layerAction": "Die Action ist der Use-Case: Guards mit eigenen Exception-Klassen, dann Delegation an die Domäne. Isoliert testbar — genau das prüft die Testsuite-Seite.",
-      "layerService": "Der Service ist die eine Wahrheit für Preise: Value Objects rein (KilowattHours), Money raus. Kein Framework-Import — pure, wiederverwendbare Domänen-Logik.",
-      "layerWorker": "Der Beweis der Wiederverwendung: Der Billing-Worker in der Queue nutzt exakt denselben Service — Live-Anzeige und Rechnung können nie auseinanderlaufen.",
+      "layerAction": "Die Action ist der Use-Case: Guards mit eigenen Exception-Klassen, dann Delegation an die Domäne. Isoliert testbar, genau das prüft die Testsuite-Seite.",
+      "layerService": "Der Service ist die eine Wahrheit für Preise: Value Objects rein (KilowattHours), Money raus. Kein Framework-Import, pure, wiederverwendbare Domänen-Logik.",
+      "layerWorker": "Der Beweis der Wiederverwendung: Der Billing-Worker in der Queue nutzt exakt denselben Service, Live-Anzeige und Rechnung können nie auseinanderlaufen.",
       "serviceReuse": "wiederverwendet von: StartChargingSession · FinalizeSessionInvoice · GET /stations/{'{'}id{'}'}/price-preview",
       "delegates": "delegiert an",
       "uses": "nutzt",
       "reusedBy": "wiederverwendet von",
       "consumedBy": "konsumiert von",
-      "frontendTitle": "frontend — util → composable → komponente",
+      "frontendTitle": "frontend, util → composable → komponente",
       "layerUtil": "Ein Util für alle Formulare: 422-Antworten der API werden einmal zentral in Feldfehler übersetzt.",
-      "layerComposable": "Das Composable kapselt den Zustand als Discriminated Union — unmögliche Zustände sind nicht darstellbar, und jede Komponente kann es nutzen.",
+      "layerComposable": "Das Composable kapselt den Zustand als Discriminated Union, unmögliche Zustände sind nicht darstellbar, und jede Komponente kann es nutzen.",
       "layerComponent": "Die Komponente komponiert nur noch: Logik aus dem Composable, Optik aus der DgButton-Primitive. Sieben Zeilen, nichts doppelt.",
       "utilReuse": "wiederverwendet von: useChargingSession · useStationFilter · useOperatorLogin",
-      "componentReuse": "DgButton ist dieselbe Primitive wie überall auf dieser Seite — ein Stil, ein Ort für Änderungen",
+      "componentReuse": "DgButton ist dieselbe Primitive wie überall auf dieser Seite, ein Stil, ein Ort für Änderungen",
       "note": "// Konventionen aus echten Projekten: Methoden-Parameter immer mit Type-Hints, Fehler als eigene Exception-Klassen statt generischem try/catch, Kommentare nur wo Business-Logik erklärungsbedürftig ist."
     },
     "tests": {
       "title": "VoltGrid Testsuite",
-      "lede": "So läuft die Testsuite des Fallbeispiels durch: Unit-Tests für die Tarif-Logik, Feature-Tests gegen die API (inklusive der 422-Fälle aus der Sandbox-API) — am Ende Coverage-Report und Quality-Gate. Der Lauf unten spielt automatisch ab, ↻ wiederholt ihn.",
-      "factUnit": "Tarif-Rechnung und Stecker-Matching sind pure Domänen-Logik — ohne Datenbank getestet, deshalb in Millisekunden durch.",
-      "factFeature": "Die Feature-Tests treffen exakt die Endpunkte der Sandbox-API — auch die Fehlerfälle: Wartung, besetzt, ungültige kWh.",
+      "lede": "So läuft die Testsuite des Fallbeispiels durch: Unit-Tests für die Tarif-Logik, Feature-Tests gegen die API (inklusive der 422-Fälle aus der Sandbox-API), am Ende Coverage-Report und Quality-Gate. Der Lauf unten spielt automatisch ab, ↻ wiederholt ihn.",
+      "factUnit": "Tarif-Rechnung und Stecker-Matching sind pure Domänen-Logik, ohne Datenbank getestet, deshalb in Millisekunden durch.",
+      "factFeature": "Die Feature-Tests treffen exakt die Endpunkte der Sandbox-API, auch die Fehlerfälle: Wartung, besetzt, ungültige kWh.",
       "factGate": "Unter 90 % Coverage bricht die CI ab. Das Gate ist Teil der Pipeline, nicht Verhandlungssache.",
-      "note": "// Demonstrativer Lauf mit realistischem Output — dieselbe Testkultur (Pest/Vitest, Gates) fahre ich in echten Projekten wie schnappern.com."
+      "note": "// Demonstrativer Lauf mit realistischem Output · dieselbe Testkultur (Pest/Vitest, Gates) fahre ich in echten Projekten wie schnappern.com."
     },
     "deploy": {
       "title": "VoltGrid Deployment",
-      "lede": "Ein Push auf main, und die Pipeline übernimmt: Lint und statische Analyse, Tests mit Coverage-Gate, Docker-Build, Migrationen mit Rollback-Plan, Staging-Smoke-Tests — und ein Canary-Rollout, der erst bei 0 % Fehlerrate auf 100 % dreht. Der Lauf unten spielt automatisch ab.",
+      "lede": "Ein Push auf main, und die Pipeline übernimmt: Lint und statische Analyse, Tests mit Coverage-Gate, Docker-Build, Migrationen mit Rollback-Plan, Staging-Smoke-Tests, und ein Canary-Rollout, der erst bei 0 % Fehlerrate auf 100 % dreht. Der Lauf unten spielt automatisch ab.",
       "factGates": "Jede Stufe ist ein Gate: schlägt Lint, ein Test oder das Coverage-Minimum fehl, kommt nichts in Produktion.",
-      "factCanary": "Neue Versionen sehen erst 10 %, dann 50 % des Traffics — Fehlerrate und p95-Latenz entscheiden über den Rest.",
-      "factRollback": "Migrationen werden mit Rollback-Plan angewendet, das vorherige Image bleibt im Registry — zurück in unter einer Minute.",
-      "note": "// Demonstrativer Lauf — Zero-Downtime-Deploys mit Gates und Canary sind der Standard, den ich in Projekten aufsetze."
+      "factCanary": "Neue Versionen sehen erst 10 %, dann 50 % des Traffics, Fehlerrate und p95-Latenz entscheiden über den Rest.",
+      "factRollback": "Migrationen werden mit Rollback-Plan angewendet, das vorherige Image bleibt im Registry, zurück in unter einer Minute.",
+      "note": "// Demonstrativer Lauf · Zero-Downtime-Deploys mit Gates und Canary sind der Standard, den ich in Projekten aufsetze."
     },
     "arch": {
       "title": "VoltGrid Architektur",
       "lede": "Das System hinter der Plattform: Ladesäulen melden über OCPP/MQTT an ein IoT-Gateway, der Realtime-Hub pusht Status live in Apps, Sessions laufen asynchron über Queues in die Abrechnung. Hover über die Knoten zeigt die Datenflüsse.",
       "d1Title": "systemarchitektur",
-      "d1Note": "Zwei getrennte Pfade halten das System ruhig: Der synchrone Pfad (App → API → PostgreSQL) beantwortet Anfragen sofort, der asynchrone Pfad (Queue → Billing-Worker) verarbeitet Session-Abschlüsse und Rechnungen, ohne die API zu blockieren. Telemetrie fließt getrennt in TimescaleDB — 2.418 Säulen senden kW-Kurven, die niemals die Session-Datenbank belasten. Zahlungsdaten bleiben beim externen PSP.",
+      "d1Note": "Zwei getrennte Pfade halten das System ruhig: Der synchrone Pfad (App → API → PostgreSQL) beantwortet Anfragen sofort, der asynchrone Pfad (Queue → Billing-Worker) verarbeitet Session-Abschlüsse und Rechnungen, ohne die API zu blockieren. Telemetrie fließt getrennt in TimescaleDB, 2.418 Säulen senden kW-Kurven, die niemals die Session-Datenbank belasten. Zahlungsdaten bleiben beim externen PSP.",
       "d2Title": "eine lade-session, ende zu ende",
-      "d2Note": "Der Weg einer Session durchs System: Die App startet per REST, das Gateway weckt die Säule über OCPP, die kW-Kurve kommt live per WebSocket zurück in die App — und nach dem Abstecken wird asynchron abgerechnet. Genau dieser Flow steckt auch hinter dem POST /api/v1/sessions in der Sandbox-API.",
+      "d2Note": "Der Weg einer Session durchs System: Die App startet per REST, das Gateway weckt die Säule über OCPP, die kW-Kurve kommt live per WebSocket zurück in die App, und nach dem Abstecken wird asynchron abgerechnet. Genau dieser Flow steckt auch hinter dem POST /api/v1/sessions in der Sandbox-API.",
       "hoverHint": "// hover über die knoten",
       "legendSync": "synchron (request/response)",
       "legendAsync": "asynchron (queue/events)",
@@ -201,7 +201,7 @@
   "palette": {
     "aria": "Befehlspalette",
     "placeholder": "Wohin? Tippen oder Pfeiltasten …",
-    "empty": "nichts gefunden — esc zum Schließen",
+    "empty": "nichts gefunden, esc zum Schließen",
     "work": "→ projekte ansehen",
     "agents": "→ ki-crew",
     "log": "→ werdegang (git log)",
@@ -213,20 +213,20 @@
     "cv": "lebenslauf herunterladen (pdf)"
   },
   "companion": {
-    "aria": "Idle, der Begleiter-Bot — anklicken für einen Tipp",
+    "aria": "Idle, der Begleiter-Bot, anklicken für einen Tipp",
     "tips": {
-      "hero": "scroll mal an — die seite kompiliert sich selbst.",
+      "hero": "scroll mal an, die seite kompiliert sich selbst.",
       "about": "beweg die maus übers foto: inspect-mode.",
       "stack": "keine prozentbalken. alles hier steckt in echten projekten.",
       "agents": "das agenten-log da drüben läuft wirklich.",
-      "log": "der werdegang als git-graph — tags inklusive.",
-      "work": "die plattformen sind alle live — klick rein.",
+      "log": "der werdegang als git-graph, tags inklusive.",
+      "work": "die plattformen sind alle live, klick rein.",
       "refs": "vier reviews, vier mal approved ✓"
     }
   },
   "hero": {
     "eyebrow": "webentwickler · seit 2013 · offen für projekte",
-    "sub": "Ich baue Webanwendungen, die man gern benutzt — von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Daten, Bieten, Singen, Feiern und Arbeiten.",
+    "sub": "Ich baue Webanwendungen, die man gern benutzt, von der Planung bis zum Betrieb. Plattformen, die Menschen zusammenbringen: zum Daten, Bieten, Singen, Feiern und Arbeiten.",
     "ctaWork": "→ projekte ansehen",
     "ctaContact": "$ kontakt",
     "build": {
@@ -235,15 +235,15 @@
       "l2": "✓ plattformen    7 live in betrieb",
       "l3": "✓ stack          laravel · vue · python",
       "l4": "✓ ki-crew        4 agenten aktiv",
-      "done": "● build successful — bereit für dein projekt"
+      "done": "● build successful · bereit für dein projekt"
     }
   },
   "about": {
     "eyebrow": "wer hier baut",
     "title": "Hi, ich bin David.",
-    "text": "Full-Stack-Entwickler seit 2013 — vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue als Freelancer komplette Plattformen von Grund auf. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
+    "text": "Full-Stack-Entwickler seit 2013, vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue als Freelancer komplette Plattformen von Grund auf. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
     "alt": "Porträt von David Gröger an seinem Schreibtisch",
-    "inspectHint": "Foto — Hover zeigt eine Element-Inspektion",
+    "inspectHint": "Foto, Hover zeigt eine Element-Inspektion",
     "chip1": "10+ jahre web",
     "chip2": "senior {'@'} pflegehelden",
     "chip3": "ki-optimierter workflow"
@@ -251,7 +251,7 @@
   "stack": {
     "eyebrow": "werkzeuge",
     "title": "Der Stack",
-    "lede": "Keine Prozentbalken — was hier steht, setze ich in echten Projekten ein.",
+    "lede": "Keine Prozentbalken, was hier steht, setze ich in echten Projekten ein.",
     "aiAgents": "KI-Agenten",
     "groups": {
       "backend": "backend",
@@ -261,13 +261,13 @@
   },
   "log": {
     "title": "Der Werdegang",
-    "lede": "Zehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags — und der Freelance-Branch wurde nie geschlossen.",
+    "lede": "Zehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags, und der Freelance-Branch wurde nie geschlossen.",
     "graphAlt": "Werdegang als Git-Graph: von modotex 2013 über HTW Berlin und XAIN bis Pflegehelden (HEAD, senior); parallel dazu der seit 2018 offene Freelance-Branch",
     "freelance": "branch: freelance",
     "freelanceTag": "tag: +200% umsatz",
     "branchActive": "// seit 2018 offen",
     "archiveLabel": "// weitere stationen:",
-    "archive": "Kochhaus (OXID, Werkstudent) · NewStore (Test-Infrastruktur) · Nosfair (CRM/WaWi) · b.i.b. (Fachinformatiker) — Details im Lebenslauf.",
+    "archive": "Kochhaus (OXID, Werkstudent) · NewStore (Test-Infrastruktur) · Nosfair (CRM/WaWi) · b.i.b. (Fachinformatiker) · Details im Lebenslauf.",
     "stations": {
       "ph": {
         "hash": "a3f9c21 (HEAD → senior)",
@@ -291,7 +291,7 @@
   },
   "contact": {
     "title": "Lass uns bauen.",
-    "lede": "Du arbeitest an einem Webprojekt und brauchst Unterstützung? Schreib mir — oder red mit dem Terminal.",
+    "lede": "Du arbeitest an einem Webprojekt und brauchst Unterstützung? Schreib mir, oder red mit dem Terminal.",
     "direct": "Direkt erreichen",
     "mobile": "mobil",
     "cv": "Lebenslauf (PDF)",
@@ -299,32 +299,32 @@
   },
   "term": {
     "prompt": "gast{'@'}david-webdev",
-    "motd": "willkommen. dieses terminal ist echt — tipp: help",
+    "motd": "willkommen. dieses terminal ist echt, tipp: help",
     "inputLabel": "Terminal-Eingabe",
     "logCmd": "werdegang",
     "contactCmd": "kontakt",
     "help": "verfügbare befehle:\n  stack · werdegang · kontakt\n  sudo hire-david · clear",
     "stackOut": "backend:   PHP · Laravel · Python · Django · MySQL\nfrontend:  Vue · Nuxt · React · TypeScript · Tailwind\ntooling:   Git · Docker · CI/CD · KI-Agenten",
-    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden — Senior Softwareentwickler [2023]\n8b2e470 freiberuflich — Full-Stack [2018]\n5d91acc XAIN AG — Teamlead [2017]\n1c0ffee modotex — erster Commit [2013]",
+    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden · Senior Softwareentwickler [2023]\n8b2e470 freiberuflich · Full-Stack [2018]\n5d91acc XAIN AG · Teamlead [2017]\n1c0ffee modotex · erster Commit [2013]",
     "contactOut": "email:  groeger.david{'@'}gmail.com\nmobil:  0174 169 149 0",
-    "sudoOut": "[sudo] passwort wird nicht benötigt — vertrauen vorhanden ✓\nverfügbarkeit geprüft … ok\n→ berechtigung erteilt. schreib mir: groeger.david{'@'}gmail.com",
+    "sudoOut": "[sudo] passwort wird nicht benötigt · vertrauen vorhanden ✓\nverfügbarkeit geprüft … ok\n→ berechtigung erteilt. schreib mir: groeger.david{'@'}gmail.com",
     "startxOut": "DavidOS wird vorbereitet … kommt in v2.1 🤫",
-    "notFound": "befehl nicht gefunden: {cmd} — tipp: help"
+    "notFound": "befehl nicht gefunden: {cmd}, tipp: help"
   },
   "crew": {
-    "promptAlt": "Prompt, der Terminal-Bot — reagiert auf deine Befehle",
-    "idleAlt": "Psst, hier schläft ein Bot — anklicken zum Wecken"
+    "promptAlt": "Prompt, der Terminal-Bot, reagiert auf deine Befehle",
+    "idleAlt": "Psst, hier schläft ein Bot, anklicken zum Wecken"
   },
   "agents": {
     "eyebrow": "agentenoptimiert seit 2023",
     "title": "Die KI-Crew",
-    "lede": "Ich arbeite nicht nur mit KI — ich arbeite mit einer Crew. Agenten refactoren, testen und dokumentieren im Hintergrund, während ich Architektur, Reviews und Qualität verantworte. So entsteht Tempo, ohne dass Sorgfalt hinten runterfällt.",
+    "lede": "Ich arbeite nicht nur mit KI, ich arbeite mit einer Crew. Agenten refactoren, testen und dokumentieren im Hintergrund, während ich Architektur, Reviews und Qualität verantworte. So entsteht Tempo, ohne dass Sorgfalt hinten runterfällt.",
     "pixelAlt": "Pixel, der Guide-Bot, zeigt auf die laufende Pipeline",
     "forgeAlt": "Forge, der Worker-Bot, schraubt am Panel",
-    "logTitle": "~/crew — agenten-log · live",
-    "picAlt": "David mit seiner KI-Bot-Crew am Laptop — Illustration",
-    "picCaption": "// die crew und ich — artwork aus eigener ki-produktion",
-    "closing": "Konkret heißt das: Legacy-Migrationen (jQuery → Livewire, Laravel 5 → 8), Testabdeckung und Doku laufen agentengestützt — reviewed wird jede Zeile von mir. Die Bots hier auf der Seite sind übrigens dieselbe Idee, nur sichtbar.",
+    "logTitle": "~/crew · agenten-log · live",
+    "picAlt": "David mit seiner KI-Bot-Crew am Laptop, Illustration",
+    "picCaption": "// die crew und ich · artwork aus eigener ki-produktion",
+    "closing": "Konkret heißt das: Legacy-Migrationen (jQuery → Livewire, Laravel 5 → 8), Testabdeckung und Doku laufen agentengestützt, reviewed wird jede Zeile von mir. Die Bots hier auf der Seite sind übrigens dieselbe Idee, nur sichtbar.",
     "jobs": {
       "refactor": "jQuery → Livewire migriert · 12 dateien",
       "test": "42/42 tests grün",
@@ -337,7 +337,7 @@
   "work": {
     "eyebrow": "ausgewählte projekte",
     "title": "Plattformen, die Menschen zusammenbringen",
-    "lede": "Zum Daten, Bieten, Singen, Weintrinken und Arbeiten: Sechs Plattformen, die ich als Freelancer komplett allein aufgebaut habe — von der ersten Zeile bis zum Betrieb. Dazu Projekte, die ich als Freelancer übernommen und weiterentwickelt habe. Alles live, alles besuchbar.",
+    "lede": "Zum Daten, Bieten, Singen, Weintrinken und Arbeiten: Sechs Plattformen, die ich als Freelancer komplett allein aufgebaut habe, von der ersten Zeile bis zum Betrieb. Dazu Projekte, die ich als Freelancer übernommen und weiterentwickelt habe. Alles live, alles besuchbar.",
     "shelfOwn": "komplett allein aufgebaut",
     "shelfFreelance": "übernommen & weiterentwickelt",
     "shelfArchive": "archiv & stationen",
@@ -355,24 +355,24 @@
       "schnappern": {
         "name": "schnappern.com",
         "desc": "Live-Auktionsplattform: tägliche Echtzeit-Auktionen, automatischer Gebots-Bot, Payments und versicherter Versand.",
-        "about": "Schnappern ist eine Live-Auktionsplattform: Täglich laufen Echtzeit-Auktionen auf Markenprodukte — geboten wird live, ein automatischer Gebots-Bot („Piri-Bot“) bietet auf Wunsch auch nachts mit. Bezahlt wird sicher über gängige Zahlungsarten, versendet versichert per DHL, DPD oder UPS.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nEchtzeit-Auktionslogik über WebSockets (Laravel Reverb + Echo) inklusive Gebots-Bot\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Braintree)\nUmsetzung des Administrationstools — Auktionen, Bestellungen, Versand, Statistik\nQueues und Hintergrund-Jobs über Redis/Horizon\nTestabdeckung mit Pest und Vitest\nBetrieb und Weiterentwicklung",
+        "about": "Schnappern ist eine Live-Auktionsplattform: Täglich laufen Echtzeit-Auktionen auf Markenprodukte, geboten wird live, ein automatischer Gebots-Bot („Piri-Bot“) bietet auf Wunsch auch nachts mit. Bezahlt wird sicher über gängige Zahlungsarten, versendet versichert per DHL, DPD oder UPS.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nEchtzeit-Auktionslogik über WebSockets (Laravel Reverb + Echo) inklusive Gebots-Bot\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Braintree)\nUmsetzung des Administrationstools, Auktionen, Bestellungen, Versand, Statistik\nQueues und Hintergrund-Jobs über Redis/Horizon\nTestabdeckung mit Pest und Vitest\nBetrieb und Weiterentwicklung",
         "stack": "PHP 8.3, Laravel 11, Octane, Reverb (WebSockets), Livewire 3, Redis/Horizon, Vue 3, Vuetify, Tailwind, MySQL",
         "date": "in Betrieb"
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing — seit über 5 Jahren von mir gebaut und betreut.",
-        "about": "Socialmatch steht für eine einzigartige Veranstaltungsreihe in Bars, bei der man neue Leute bei einem von den Gründern kreierten Brettspiel kennenlernt — eine Mischung aus Fragen, Aktionsaufgaben und Unterhaltung, allein oder im Team. Sechs bis zehn Teilnehmer pro Event, ausgewogenes Verhältnis, ein Spielleiter führt durch den Abend.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools — Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
+        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing, seit über 5 Jahren von mir gebaut und betreut.",
+        "about": "Socialmatch steht für eine einzigartige Veranstaltungsreihe in Bars, bei der man neue Leute bei einem von den Gründern kreierten Brettspiel kennenlernt, eine Mischung aus Fragen, Aktionsaufgaben und Unterhaltung, allein oder im Team. Sechs bis zehn Teilnehmer pro Event, ausgewogenes Verhältnis, ein Spielleiter führt durch den Abend.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools, Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
-        "date": "Juni 2015 — heute"
+        "date": "Juni 2015, heute"
       },
       "matchingnight": {
         "name": "Matching Night",
-        "desc": "Single-Event für bis zu 250 Teilnehmer: Persönlichkeitstest, farbige Armbänder, Lock&Key-Icebreaker — Bar-Atmosphäre statt Dating-Format.",
-        "about": "Matching Night ist das große Schwester-Format von SpeedDating XXL: bis zu 250 Singles an einem Abend in lockerer Bar-Atmosphäre. Ein wissenschaftlich fundierter Persönlichkeitstest steuert das Matching über farbige Armbänder, das Lock&Key-Spiel bricht das Eis — organisiertes Kennenlernen statt Zufallsbegegnung.",
-        "tasks": "Konzeption und Umsetzung des Formats auf der Plattform\nPersönlichkeitstest und Matching-Logik\nTicketing und Buchungsstrecke\nUmsetzung des Administrationstools — Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "desc": "Single-Event für bis zu 250 Teilnehmer: Persönlichkeitstest, farbige Armbänder, Lock&Key-Icebreaker, Bar-Atmosphäre statt Dating-Format.",
+        "about": "Matching Night ist das große Schwester-Format von SpeedDating XXL: bis zu 250 Singles an einem Abend in lockerer Bar-Atmosphäre. Ein wissenschaftlich fundierter Persönlichkeitstest steuert das Matching über farbige Armbänder, das Lock&Key-Spiel bricht das Eis, organisiertes Kennenlernen statt Zufallsbegegnung.",
+        "tasks": "Konzeption und Umsetzung des Formats auf der Plattform\nPersönlichkeitstest und Matching-Logik\nTicketing und Buchungsstrecke\nUmsetzung des Administrationstools, Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
         "date": "in Betrieb"
       },
@@ -380,31 +380,31 @@
         "name": "speeddating-xxl.de",
         "desc": "Speed-Dating-Events in DE/AT: bis zu 20 Dates pro Abend, Ticketing und automatisches Matching mit Kontakt-Austausch.",
         "about": "SpeedDating XXL bringt deutlich mehr Singles an einen Abend zusammen als klassisches Speed-Dating: bis zu 20 Dates, in jeder Runde neue Einstiegsfragen gegen steifen Smalltalk. Nach dem Event tauscht ein automatisches Matching die Kontakte der beidseitigen Treffer aus.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools — Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools, Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
         "date": "seit August 2019"
       },
       "teamevent": {
         "name": "mein-teamevent.de",
         "desc": "Teamevent-Vermittlung für DE/AT: Filter nach Budget, Ort und Teilnehmerzahl, 20+ Formate, Anfrage-Funnel.",
-        "about": "Mein Teamevent vermittelt Teambuilding- und Firmenevents in Deutschland und Österreich — vom Quizabend bis zum Weintasting. Firmen filtern nach Teilnehmerzahl, Budget, Kategorie und Ort und stellen unverbindliche Anfragen direkt über die Plattform.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nUmsetzung der Event-Suche mit Filtern (Teilnehmer, Budget, Kategorie, Ort)\nImplementierung der Datenstruktur\nUmsetzung des Anfrage-Funnels inklusive Mail-Strecken\nUmsetzung des Administrationstools — Events, Anfragen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "about": "Mein Teamevent vermittelt Teambuilding- und Firmenevents in Deutschland und Österreich, vom Quizabend bis zum Weintasting. Firmen filtern nach Teilnehmerzahl, Budget, Kategorie und Ort und stellen unverbindliche Anfragen direkt über die Plattform.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nUmsetzung der Event-Suche mit Filtern (Teilnehmer, Budget, Kategorie, Ort)\nImplementierung der Datenstruktur\nUmsetzung des Anfrage-Funnels inklusive Mail-Strecken\nUmsetzung des Administrationstools, Events, Anfragen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in Betrieb"
       },
       "singalong": {
         "name": "singalong.de",
         "desc": "Mitsing-Events in 15+ Städten und Wien: Ticketing, Gutscheine und Themen-Formate von Rock bis Weihnachten.",
-        "about": "SingAlong ist eine Eventreihe, bei der Hunderte Teilnehmer gemeinsam zu bekannten Hits singen — die Songtexte laufen auf großer Leinwand mit. Themen-Formate von Rock über Schlager bis Weihnachten, buchbar in über 15 deutschen Städten und Wien.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite\nTicketing und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools — Events, Buchungen, Marketing, Statistik\nSEO-Optimierungen\nStädte-Rollout und Betrieb",
+        "about": "SingAlong ist eine Eventreihe, bei der Hunderte Teilnehmer gemeinsam zu bekannten Hits singen, die Songtexte laufen auf großer Leinwand mit. Themen-Formate von Rock über Schlager bis Weihnachten, buchbar in über 15 deutschen Städten und Wien.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite\nTicketing und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools, Events, Buchungen, Marketing, Statistik\nSEO-Optimierungen\nStädte-Rollout und Betrieb",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in Betrieb"
       },
       "weinhopping": {
         "name": "weinhopping.com",
-        "desc": "Weintasting-Hopping durch drei Locations pro Abend: Ticket-Stufen, Gutscheine — aus dem Socialmatch-Umfeld.",
-        "about": "Weinhopping führt an einem Abend durch drei Weinlocations einer Stadt — Weintastings in lockerer Atmosphäre, bei denen man nebenbei neue Leute kennenlernt und die lokale Gastroszene unterstützt. Buchbar in Städten wie Berlin, Hamburg, Düsseldorf, Frankfurt und München, mit gestaffelten Ticket-Varianten.",
-        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server — Registrierung der Domain\nRealisierung der Webseite\nTicket-Stufen (Standard, PLUS, DELUXE) und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools — Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
+        "desc": "Weintasting-Hopping durch drei Locations pro Abend: Ticket-Stufen, Gutscheine, aus dem Socialmatch-Umfeld.",
+        "about": "Weinhopping führt an einem Abend durch drei Weinlocations einer Stadt, Weintastings in lockerer Atmosphäre, bei denen man nebenbei neue Leute kennenlernt und die lokale Gastroszene unterstützt. Buchbar in Städten wie Berlin, Hamburg, Düsseldorf, Frankfurt und München, mit gestaffelten Ticket-Varianten.",
+        "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite\nTicket-Stufen (Standard, PLUS, DELUXE) und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools, Events, Buchungen, Statistik\nSEO-Optimierungen\nBetrieb und Weiterentwicklung",
         "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
         "date": "in Betrieb"
       },
@@ -419,7 +419,7 @@
       "buggyfit": {
         "name": "buggyfit.de",
         "desc": "Fitness-Plattform für Mütter: Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Trainer-Ausbildung.",
-        "about": "buggyFit bietet Outdoor-Training für Mamas vor und nach der Schwangerschaft — mit Baby im Kinderwagen, in Parks in ganz Deutschland. Die Plattform bündelt Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Video-Channel und die Ausbildung neuer Trainerinnen.",
+        "about": "buggyFit bietet Outdoor-Training für Mamas vor und nach der Schwangerschaft, mit Baby im Kinderwagen, in Parks in ganz Deutschland. Die Plattform bündelt Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Video-Channel und die Ausbildung neuer Trainerinnen.",
         "tasks": "Übernahme und Weiterentwicklung der Plattform\nWeiterentwicklung der Kursbuchung\nOnline-Shop\nUnterstützung der Krankenkassen-Prozesse\nWartung, Bugfixes und Support",
         "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
         "date": "Freelance-Einsatz"
@@ -429,7 +429,7 @@
   "refs": {
     "eyebrow": "code reviews",
     "title": "Stimmen aus Projekten",
-    "lede": "Vier Reviews aus echter Zusammenarbeit — alle approved.",
+    "lede": "Vier Reviews aus echter Zusammenarbeit, alle approved.",
     "approved": "Approved ✓",
     "reviews": {
       "patrick": {

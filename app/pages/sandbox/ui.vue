@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: () => `${t('sandbox.areas.ui.title')} — David Gröger`,
+  title: () => `${t('sandbox.areas.ui.title')} · David Gröger`,
   description: () => t('sandbox.areas.ui.desc'),
 })
 
@@ -23,7 +23,7 @@ const blockDefs: { kind: BlockKind, code: string }[] = [
   { kind: 'station', code: '<VgStationCard :station="station" />' },
   { kind: 'stationRow', code: '<VgStationCard v-for="s in stations" … />' },
   { kind: 'actions', code: '<DgButton>…</DgButton> <DgButton variant="ghost">…</DgButton>' },
-  { kind: 'terminal', code: '<DgWindow title="~/voltgrid — events">…</DgWindow>' },
+  { kind: 'terminal', code: '<DgWindow title="~/voltgrid · events">…</DgWindow>' },
 ]
 
 let nextUid = 1
@@ -161,7 +161,7 @@ const generatedCode = computed(() => {
                 <DgButton>→ {{ t('sandbox.ui.demoCta') }}</DgButton>
                 <DgButton variant="ghost">{{ t('sandbox.ui.demoCta2') }}</DgButton>
               </div>
-              <DgWindow v-else-if="block.kind === 'terminal'" title="~/voltgrid — events">
+              <DgWindow v-else-if="block.kind === 'terminal'" title="~/voltgrid · events">
                 <p>21:14:03 station#2 → session chg_a81x gestartet (CCS · 300 kW)</p>
                 <p>21:14:41 station#6 → 74 % geladen · 18,2 kWh</p>
                 <p>21:15:09 station#4 → wartung gemeldet · ticket #4711</p>
