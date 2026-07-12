@@ -233,7 +233,7 @@
       "cmd": "$ nuxt build --with ai-crew",
       "l1": "✓ experience    10+ years of web",
       "l2": "✓ platforms     7 live in production",
-      "l3": "✓ stack         laravel · vue · python",
+      "l3": "✓ stack         php · vue · python",
       "l4": "✓ ai crew       4 agents active",
       "done": "● build successful · ready for your project"
     }

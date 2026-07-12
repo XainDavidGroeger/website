@@ -233,7 +233,7 @@
       "cmd": "$ nuxt build --with ki-crew",
       "l1": "✓ erfahrung      10+ jahre web",
       "l2": "✓ plattformen    7 live in betrieb",
-      "l3": "✓ stack          laravel · vue · python",
+      "l3": "✓ stack          php · vue · python",
       "l4": "✓ ki-crew        4 agenten aktiv",
       "done": "● build successful · bereit für dein projekt"
     }
