@@ -324,7 +324,7 @@
     "logTitle": "~/crew · agent log · live",
     "picAlt": "David with his AI bot crew at the laptop, illustration",
     "picCaption": "// the crew and me · artwork from my own ai production",
-    "closing": "In practice: legacy migrations (jQuery → Livewire, Laravel 5 → 8), test coverage and docs run agent-assisted, and every line gets reviewed by me. The bots on this site are the same idea, just visible.",
+    "closing": "In practice: legacy migrations (jQuery → Livewire, Laravel 5 → 8), test coverage and docs run agent-assisted, and every line gets reviewed by me.",
     "jobs": {
       "refactor": "migrated jQuery → Livewire · 12 files",
       "test": "42/42 tests green",
