@@ -38,9 +38,9 @@
         "title": "The UI Kit",
         "desc": "The building blocks of the VoltGrid dashboard — plus a composer where you assemble a dashboard from the components yourself."
       },
-      "map": {
-        "title": "The Map",
-        "desc": "The station network as an interactive map: click markers with live status, view details — and start a session against the real API right from the modal."
+      "demo": {
+        "title": "The Live Demo",
+        "desc": "The VoltGrid backoffice to operate yourself: manage stations, see them on the real map — KPIs, pins and event log react live to every action."
       },
       "arch": {
         "title": "The Architecture",
@@ -117,28 +117,35 @@
       "b4Text": "I review the spec and the final diff — not every keystroke. Architecture and domain decisions stay with the human, the loop does the legwork. That's the speed gain without losing control.",
       "note": "// This portfolio site was built exactly this way, by the way: concept spec first, then iterative implementation with AI agents — every line reviewed."
     },
-    "map": {
-      "title": "VoltGrid Network Map",
-      "lede": "The station network on a real interactive map (MapLibre GL + OpenStreetMap data): zoom, pan, dive down to street level. The markers come live from GET /api/v1/stations — clicking a station opens its details, and the session button fires a real POST: station 4 (maintenance) and station 2 (occupied) answer with 422.",
-      "mapAria": "Interactive map of Germany with clickable charging station markers",
-      "legend": "status",
-      "statusAvailable": "available — pulses mint",
-      "statusCharging": "charging — pulses amber",
-      "statusMaintenance": "maintenance — dashed",
-      "hint": "Click a marker to open station details with live data from the API.",
-      "kpiLabel": "stations loaded via api",
-      "kpiDelta": "live",
+    "demo": {
+      "title": "VoltGrid Backoffice",
+      "lede": "The operator dashboard you can drive yourself: manage the stations on the left — activate maintenance, release, end sessions. KPIs, map pins and the backoffice log react live to every action. The map is real (MapLibre + OpenStreetMap): click a row and it flies to the station.",
+      "dashEyebrow": "operator dashboard",
+      "dashTitle": "Network Overview",
+      "kpiSessions": "active sessions",
+      "kpiFree": "stations available",
+      "kpiMaintenance": "in maintenance",
+      "kpiUtilization": "utilization",
+      "kpiLive": "live",
+      "listTitle": "manage stations",
+      "selectHint": "// click a row → the map flies to the station · click a pin → the row gets highlighted",
+      "mapAria": "Interactive map of Germany with charging station pins",
       "status": {
         "available": "available",
         "charging": "charging",
         "maintenance": "maintenance"
       },
-      "connectors": "choose connector",
-      "startSession": "→ start session (40 kWh)",
-      "startHint": "real POST /api/v1/sessions",
-      "estCost": "estimated",
-      "unknownError": "unexpected error — please retry",
-      "note": "// Map: MapLibre GL (no API key, free) · map data © OpenStreetMap contributors, style © CARTO. Modal and session start use the same building blocks as the rest of this site — and the real sandbox API."
+      "actMaintenance": "→ maintenance",
+      "actRelease": "→ release",
+      "actEndSession": "→ end session",
+      "logMaintenance": "maintenance activated",
+      "logRelease": "released · back on grid",
+      "logEndSession": "session ended · station available",
+      "logTitle": "~/voltgrid — backoffice log",
+      "logEmpty": "// no actions yet — manage a station on the left",
+      "chartLabel": "grid load · 24h",
+      "chartValue": "4.2 MW peak",
+      "note": "// Demo state lives in the browser, nothing is persisted. Everything here is built from the UI kit blocks (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL — map data © OpenStreetMap contributors, style © CARTO."
     },
     "code": {
       "title": "VoltGrid Code",

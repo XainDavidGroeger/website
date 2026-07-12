@@ -7,7 +7,7 @@ const areas = [
   { key: 'api', to: '/sandbox/api', icon: '{ }' },
   { key: 'code', to: '/sandbox/code', icon: '</>' },
   { key: 'ui', to: '/sandbox/ui', icon: '<∕>' },
-  { key: 'map', to: '/sandbox/map', icon: '◉' },
+  { key: 'demo', to: '/sandbox/demo', icon: '▶' },
   { key: 'tests', to: '/sandbox/tests', icon: '✓' },
   { key: 'deploy', to: '/sandbox/deploy', icon: '↥' },
 ]

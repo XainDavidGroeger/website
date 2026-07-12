@@ -38,9 +38,9 @@
         "title": "Das UI-Kit",
         "desc": "Die Bausteine des VoltGrid-Dashboards — und ein Composer, in dem du dir aus den Komponenten selbst ein Dashboard zusammenbaust."
       },
-      "map": {
-        "title": "Die Karte",
-        "desc": "Das Säulen-Netz als interaktive Karte: Marker mit Live-Status anklicken, Details ansehen — und direkt aus dem Modal eine Session gegen die echte API starten."
+      "demo": {
+        "title": "Die Live-Demo",
+        "desc": "Das VoltGrid-Backoffice zum Bedienen: Säulen verwalten, auf der echten Karte sehen — KPIs, Pins und Event-Log reagieren live auf jede Aktion."
       },
       "arch": {
         "title": "Die Architektur",
@@ -117,28 +117,35 @@
       "b4Text": "Ich reviewe Spec und finalen Diff — nicht jeden Tastendruck. Architektur- und Fachentscheidungen bleiben beim Menschen, die Fleißarbeit übernimmt der Loop. Das ist der Tempo-Gewinn ohne Kontrollverlust.",
       "note": "// Genau so ist übrigens diese Portfolio-Seite entstanden: Konzept-Spec zuerst, dann iterative Umsetzung mit KI-Agenten — jede Zeile reviewed."
     },
-    "map": {
-      "title": "VoltGrid Netzkarte",
-      "lede": "Das Säulen-Netz auf einer echten interaktiven Karte (MapLibre GL + OpenStreetMap-Daten): zoomen, verschieben, reinfahren bis auf Straßenebene. Die Marker kommen live aus GET /api/v1/stations — Klick öffnet die Details, und der Session-Button feuert einen echten POST: Säule 4 (Wartung) und Säule 2 (besetzt) antworten mit 422.",
-      "mapAria": "Interaktive Deutschland-Karte mit klickbaren Ladesäulen-Markern",
-      "legend": "status",
-      "statusAvailable": "frei — pulsiert mint",
-      "statusCharging": "lädt — pulsiert bernstein",
-      "statusMaintenance": "wartung — gestrichelt",
-      "hint": "Klick auf einen Marker öffnet die Säulen-Details mit Live-Daten aus der API.",
-      "kpiLabel": "säulen geladen via api",
-      "kpiDelta": "live",
+    "demo": {
+      "title": "VoltGrid Backoffice",
+      "lede": "Das Betreiber-Dashboard zum Selbst-Bedienen: Links verwaltest du die Säulen — Wartung aktivieren, freigeben, Sessions beenden. KPIs, Karten-Pins und das Backoffice-Log reagieren live auf jede Aktion. Die Karte ist echt (MapLibre + OpenStreetMap): Klick auf eine Zeile, und sie fliegt zur Säule.",
+      "dashEyebrow": "betreiber-dashboard",
+      "dashTitle": "Netz-Übersicht",
+      "kpiSessions": "aktive sessions",
+      "kpiFree": "säulen frei",
+      "kpiMaintenance": "in wartung",
+      "kpiUtilization": "auslastung",
+      "kpiLive": "live",
+      "listTitle": "säulen verwalten",
+      "selectHint": "// zeile anklicken → die karte fliegt zur säule · pin anklicken → zeile wird markiert",
+      "mapAria": "Interaktive Deutschland-Karte mit Ladesäulen-Pins",
       "status": {
         "available": "frei",
         "charging": "lädt",
         "maintenance": "wartung"
       },
-      "connectors": "stecker wählen",
-      "startSession": "→ session starten (40 kWh)",
-      "startHint": "echter POST /api/v1/sessions",
-      "estCost": "geschätzt",
-      "unknownError": "unerwarteter fehler — nochmal versuchen",
-      "note": "// Karte: MapLibre GL (kein API-Key, kostenlos) · Kartendaten © OpenStreetMap-Mitwirkende, Style © CARTO. Modal und Session-Start nutzen dieselben Bausteine wie der Rest der Seite — und die echte Sandbox-API."
+      "actMaintenance": "→ wartung",
+      "actRelease": "→ freigeben",
+      "actEndSession": "→ session beenden",
+      "logMaintenance": "wartung aktiviert",
+      "logRelease": "freigegeben · wieder am netz",
+      "logEndSession": "session beendet · säule frei",
+      "logTitle": "~/voltgrid — backoffice-log",
+      "logEmpty": "// noch keine aktionen — verwalte links eine säule",
+      "chartLabel": "netzlast · 24h",
+      "chartValue": "4,2 MW peak",
+      "note": "// Demo-State lebt im Browser, nichts wird persistiert. Alles hier sind die Bausteine aus dem UI-Kit (VgStatTile, VgLoadChart, DgTag, DgWindow) plus MapLibre GL — Kartendaten © OpenStreetMap-Mitwirkende, Style © CARTO."
     },
     "code": {
       "title": "VoltGrid Code",
