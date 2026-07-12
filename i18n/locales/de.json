@@ -119,8 +119,8 @@
     },
     "map": {
       "title": "VoltGrid Netzkarte",
-      "lede": "Das Säulen-Netz des Fallbeispiels auf einer Karte — die Marker kommen live aus GET /api/v1/stations. Klick auf eine Säule öffnet die Details, und der Session-Button feuert einen echten POST gegen die Sandbox-API: Säule 4 (Wartung) und Säule 2 (besetzt) antworten mit 422.",
-      "mapAria": "Stilisierte Deutschland-Karte mit klickbaren Ladesäulen-Markern",
+      "lede": "Das Säulen-Netz auf einer echten interaktiven Karte (MapLibre GL + OpenStreetMap-Daten): zoomen, verschieben, reinfahren bis auf Straßenebene. Die Marker kommen live aus GET /api/v1/stations — Klick öffnet die Details, und der Session-Button feuert einen echten POST: Säule 4 (Wartung) und Säule 2 (besetzt) antworten mit 422.",
+      "mapAria": "Interaktive Deutschland-Karte mit klickbaren Ladesäulen-Markern",
       "legend": "status",
       "statusAvailable": "frei — pulsiert mint",
       "statusCharging": "lädt — pulsiert bernstein",
@@ -138,7 +138,7 @@
       "startHint": "echter POST /api/v1/sessions",
       "estCost": "geschätzt",
       "unknownError": "unerwarteter fehler — nochmal versuchen",
-      "note": "// Karte, Modal und Session-Start nutzen dieselben Bausteine wie der Rest der Seite: DgTag, DgButton, VgStatTile — und die echte Sandbox-API."
+      "note": "// Karte: MapLibre GL (kein API-Key, kostenlos) · Kartendaten © OpenStreetMap-Mitwirkende, Style © CARTO. Modal und Session-Start nutzen dieselben Bausteine wie der Rest der Seite — und die echte Sandbox-API."
     },
     "code": {
       "title": "VoltGrid Code",

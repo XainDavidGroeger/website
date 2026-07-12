@@ -21,6 +21,8 @@ interface Station {
   connectors: Connector[]
   pricePerKwhCents: number
   uptimePercent: number
+  lng: number
+  lat: number
 }
 
 /* server/prerender: interner $fetch · client: window.fetch (läuft durch den
@@ -32,53 +34,47 @@ const { data: stationsRes } = await useAsyncData<{ data: Station[] }>('voltgrid-
 const stations = computed(() => stationsRes.value?.data ?? [])
 
 /* ------------------------------------------------------------------ */
-/*  Projektion: vereinfachtes Low-Poly-Deutschland                     */
+/*  MapLibre GL: echte interaktive Karte (OSM-Daten, Dark-Style)       */
+/*  lazy geladen — das Bundle (~250 kB gzip) betrifft nur diese Seite  */
 /* ------------------------------------------------------------------ */
-const W = 480
-const H = 640
+const mapEl = ref<HTMLDivElement | null>(null)
+let map: { remove: () => void } | null = null
 
-function project(lon: number, lat: number): { x: number, y: number } {
-  return {
-    x: ((lon - 5.5) / 10) * W,
-    y: ((55.2 - lat) / 8.2) * H,
+onMounted(async () => {
+  if (!mapEl.value || !stations.value.length) return
+
+  const [{ default: maplibregl }] = await Promise.all([
+    import('maplibre-gl'),
+    // @ts-expect-error CSS-Import
+    import('maplibre-gl/dist/maplibre-gl.css'),
+  ])
+
+  const instance = new maplibregl.Map({
+    container: mapEl.value,
+    style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+    center: [10.3, 51.2],
+    zoom: 5.1,
+    minZoom: 4.5,
+    maxZoom: 16,
+    maxBounds: [[1.5, 45.0], [19.5, 57.5]],
+    attributionControl: { compact: true },
+  })
+  map = instance
+
+  instance.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
+
+  for (const station of stations.value) {
+    const el = document.createElement('button')
+    el.type = 'button'
+    el.className = `vg-marker ${station.status}`
+    el.title = `${station.name} · ${station.city}`
+    el.setAttribute('aria-label', `${station.name} · ${station.city}`)
+    el.addEventListener('click', () => openStation(station))
+    new maplibregl.Marker({ element: el }).setLngLat([station.lng, station.lat]).addTo(instance)
   }
-}
-
-const OUTLINE: [number, number][] = [
-  [7.0, 53.7], [8.5, 54.0], [8.3, 54.9], [9.9, 54.8], [10.9, 54.0],
-  [12.5, 54.4], [13.8, 54.1], [14.2, 53.7], [14.1, 52.8], [14.7, 52.5],
-  [14.6, 51.8], [15.0, 51.3], [14.3, 51.0], [12.1, 50.3], [12.5, 49.7],
-  [13.8, 48.7], [13.0, 48.3], [12.9, 47.7], [11.6, 47.5], [10.2, 47.3],
-  [9.5, 47.6], [8.5, 47.6], [7.5, 47.6], [7.6, 48.5], [8.1, 49.0],
-  [6.7, 49.2], [6.1, 49.6], [6.0, 50.3], [5.9, 51.0], [6.8, 51.9],
-  [7.0, 52.4], [6.7, 53.0],
-]
-
-const outlinePath = OUTLINE
-  .map(([lon, lat], i) => {
-    const { x, y } = project(lon, lat)
-    return `${i === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`
-  })
-  .join(' ') + ' Z'
-
-const CITY_COORDS: Record<string, [number, number]> = {
-  Hamburg: [10.0, 53.55],
-  Berlin: [13.4, 52.52],
-  Köln: [6.96, 50.94],
-  Hannover: [9.73, 52.37],
-  München: [11.58, 48.14],
-}
-
-const markers = computed(() => {
-  const seen: Record<string, number> = {}
-  return stations.value.map((station) => {
-    const coords = CITY_COORDS[station.city] ?? [10.4, 51.2]
-    const { x, y } = project(coords[0], coords[1])
-    // mehrere Säulen in einer Stadt leicht versetzen
-    const offset = (seen[station.city] = (seen[station.city] ?? 0) + 1) - 1
-    return { station, x: x + offset * 20, y: y + offset * 10 }
-  })
 })
+
+onUnmounted(() => map?.remove())
 
 /* ------------------------------------------------------------------ */
 /*  Modal + Session-Start gegen die echte API                          */
@@ -167,40 +163,7 @@ function euro(cents: number): string {
 
     <div v-reveal class="map-wrap">
       <div class="map-stage">
-        <svg :viewBox="`0 0 ${W} ${H}`" class="map" role="img" :aria-label="t('sandbox.map.mapAria')">
-          <path :d="outlinePath" class="country" />
-          <g v-for="marker in markers" :key="marker.station.id">
-            <circle
-              v-if="marker.station.status !== 'maintenance'"
-              class="pulse"
-              :class="marker.station.status"
-              :cx="marker.x"
-              :cy="marker.y"
-              r="8"
-            />
-            <circle
-              class="marker"
-              :class="marker.station.status"
-              :cx="marker.x"
-              :cy="marker.y"
-              r="7"
-              tabindex="0"
-              role="button"
-              :aria-label="`${marker.station.name} · ${marker.station.city}`"
-              @click="openStation(marker.station)"
-              @keydown.enter="openStation(marker.station)"
-            >
-              <title>{{ marker.station.name }} · {{ marker.station.city }}</title>
-            </circle>
-          </g>
-          <text
-            v-for="(coords, city) in CITY_COORDS"
-            :key="city"
-            :x="project(coords[0], coords[1]).x + 14"
-            :y="project(coords[0], coords[1]).y + 4"
-            class="city-label"
-          >{{ city }}</text>
-        </svg>
+        <div ref="mapEl" class="map-el" role="application" :aria-label="t('sandbox.map.mapAria')" />
       </div>
 
       <div class="side">
@@ -295,65 +258,53 @@ function euro(cents: number): string {
 }
 
 .map-stage {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background:
-    linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 100% 44px,
-    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 44px 100%;
-  background-color: var(--bg-deep);
-  padding: 26px;
+  overflow: hidden;
+  background: var(--bg-deep);
+  height: 580px;
 }
-.map {
-  display: block;
-  width: 100%;
-  max-width: 440px;
-  height: auto;
-  margin: 0 auto;
+.map-el {
+  position: absolute;
+  inset: 0;
 }
 
-.country {
-  fill: color-mix(in srgb, var(--surface-2) 70%, transparent);
-  stroke: var(--line);
-  stroke-width: 2;
-  stroke-linejoin: round;
-}
-
-.marker {
-  stroke-width: 2.5;
+/* Säulen-Marker (DOM-Elemente in MapLibre) */
+.map-el :deep(.vg-marker) {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--mint);
+  background: var(--bg);
+  padding: 0;
   cursor: pointer;
-  transition: r 0.15s ease;
+  position: relative;
+  transition: transform 0.15s ease;
 }
-.marker:hover,
-.marker:focus-visible {
-  r: 9;
+.map-el :deep(.vg-marker:hover),
+.map-el :deep(.vg-marker:focus-visible) {
+  transform: scale(1.3);
+  z-index: 3;
 }
-.marker.available {
-  fill: var(--bg);
-  stroke: var(--mint);
+.map-el :deep(.vg-marker.charging) {
+  border-color: var(--amber);
 }
-.marker.charging {
-  fill: var(--bg);
-  stroke: var(--amber);
+.map-el :deep(.vg-marker.maintenance) {
+  border-color: var(--faint);
+  border-style: dashed;
 }
-.marker.maintenance {
-  fill: var(--bg);
-  stroke: var(--faint);
-  stroke-dasharray: 3 3;
-}
-
-.pulse {
-  fill: none;
-  stroke-width: 2;
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
+.map-el :deep(.vg-marker.available)::after,
+.map-el :deep(.vg-marker.charging)::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--mint);
   animation: map-pulse 2.6s ease-out infinite;
 }
-.pulse.available {
-  stroke: var(--mint);
-}
-.pulse.charging {
-  stroke: var(--amber);
+.map-el :deep(.vg-marker.charging)::after {
+  border-color: var(--amber);
   animation-duration: 1.6s;
 }
 @keyframes map-pulse {
@@ -363,20 +314,40 @@ function euro(cents: number): string {
   }
   70%,
   100% {
-    transform: scale(2.6);
+    transform: scale(2.4);
     opacity: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pulse {
+  .map-el :deep(.vg-marker)::after {
+    animation: none;
     display: none;
   }
 }
 
-.city-label {
+/* MapLibre-Controls aufs Design-System einfärben */
+.map-el :deep(.maplibregl-ctrl-group) {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: none;
+}
+.map-el :deep(.maplibregl-ctrl-group button) {
+  background: transparent;
+}
+.map-el :deep(.maplibregl-ctrl-group button + button) {
+  border-top: 1px solid var(--line);
+}
+.map-el :deep(.maplibregl-ctrl button .maplibregl-ctrl-icon) {
+  filter: invert(0.7);
+}
+.map-el :deep(.maplibregl-ctrl-attrib) {
+  background: color-mix(in srgb, var(--bg-deep) 80%, transparent);
   font-family: var(--font-mono);
-  font-size: 11px;
-  fill: var(--faint);
+  font-size: 10px;
+}
+.map-el :deep(.maplibregl-ctrl-attrib a) {
+  color: var(--muted);
 }
 
 .side {

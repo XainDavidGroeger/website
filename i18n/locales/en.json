@@ -119,8 +119,8 @@
     },
     "map": {
       "title": "VoltGrid Network Map",
-      "lede": "The case study's station network on a map — the markers come live from GET /api/v1/stations. Clicking a station opens its details, and the session button fires a real POST against the sandbox API: station 4 (maintenance) and station 2 (occupied) answer with 422.",
-      "mapAria": "Stylized map of Germany with clickable charging station markers",
+      "lede": "The station network on a real interactive map (MapLibre GL + OpenStreetMap data): zoom, pan, dive down to street level. The markers come live from GET /api/v1/stations — clicking a station opens its details, and the session button fires a real POST: station 4 (maintenance) and station 2 (occupied) answer with 422.",
+      "mapAria": "Interactive map of Germany with clickable charging station markers",
       "legend": "status",
       "statusAvailable": "available — pulses mint",
       "statusCharging": "charging — pulses amber",
@@ -138,7 +138,7 @@
       "startHint": "real POST /api/v1/sessions",
       "estCost": "estimated",
       "unknownError": "unexpected error — please retry",
-      "note": "// Map, modal and session start use the same building blocks as the rest of this site: DgTag, DgButton, VgStatTile — and the real sandbox API."
+      "note": "// Map: MapLibre GL (no API key, free) · map data © OpenStreetMap contributors, style © CARTO. Modal and session start use the same building blocks as the rest of this site — and the real sandbox API."
     },
     "code": {
       "title": "VoltGrid Code",

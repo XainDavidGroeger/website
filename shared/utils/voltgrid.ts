@@ -17,15 +17,17 @@ export interface VoltStation {
   connectors: VoltConnector[]
   pricePerKwhCents: number
   uptimePercent: number
+  lng: number
+  lat: number
 }
 
 export const voltStations: VoltStation[] = [
-  { id: 1, name: 'Hafenstraße 12', city: 'Hamburg', status: 'available', connectors: [{ type: 'CCS', powerKw: 150 }, { type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 49, uptimePercent: 99.2 },
-  { id: 2, name: 'Parkhaus Mitte, Deck 2', city: 'Berlin', status: 'charging', connectors: [{ type: 'CCS', powerKw: 300 }], pricePerKwhCents: 59, uptimePercent: 98.7 },
-  { id: 3, name: 'Rewe Südring', city: 'Köln', status: 'available', connectors: [{ type: 'Typ2', powerKw: 11 }, { type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 39, uptimePercent: 99.8 },
-  { id: 4, name: 'Autohof A7 Nord', city: 'Hannover', status: 'maintenance', connectors: [{ type: 'CCS', powerKw: 350 }, { type: 'CHAdeMO', powerKw: 50 }], pricePerKwhCents: 64, uptimePercent: 92.1 },
-  { id: 5, name: 'Technologiepark T3', city: 'München', status: 'available', connectors: [{ type: 'CCS', powerKw: 150 }], pricePerKwhCents: 52, uptimePercent: 99.5 },
-  { id: 6, name: 'Stadtwerke Campus', city: 'Hamburg', status: 'charging', connectors: [{ type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 42, uptimePercent: 99.9 },
+  { id: 1, name: 'Hafenstraße 12', city: 'Hamburg', status: 'available', connectors: [{ type: 'CCS', powerKw: 150 }, { type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 49, uptimePercent: 99.2, lng: 9.9605, lat: 53.5461 },
+  { id: 2, name: 'Parkhaus Mitte, Deck 2', city: 'Berlin', status: 'charging', connectors: [{ type: 'CCS', powerKw: 300 }], pricePerKwhCents: 59, uptimePercent: 98.7, lng: 13.4021, lat: 52.5232 },
+  { id: 3, name: 'Rewe Südring', city: 'Köln', status: 'available', connectors: [{ type: 'Typ2', powerKw: 11 }, { type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 39, uptimePercent: 99.8, lng: 6.9425, lat: 50.9188 },
+  { id: 4, name: 'Autohof A7 Nord', city: 'Hannover', status: 'maintenance', connectors: [{ type: 'CCS', powerKw: 350 }, { type: 'CHAdeMO', powerKw: 50 }], pricePerKwhCents: 64, uptimePercent: 92.1, lng: 9.7218, lat: 52.4432 },
+  { id: 5, name: 'Technologiepark T3', city: 'München', status: 'available', connectors: [{ type: 'CCS', powerKw: 150 }], pricePerKwhCents: 52, uptimePercent: 99.5, lng: 11.6015, lat: 48.1122 },
+  { id: 6, name: 'Stadtwerke Campus', city: 'Hamburg', status: 'charging', connectors: [{ type: 'Typ2', powerKw: 22 }], pricePerKwhCents: 42, uptimePercent: 99.9, lng: 10.0219, lat: 53.5713 },
 ]
 
 export interface StationQuery {
