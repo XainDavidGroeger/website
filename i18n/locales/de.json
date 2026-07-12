@@ -322,6 +322,8 @@
     "pixelAlt": "Pixel, der Guide-Bot, zeigt auf die laufende Pipeline",
     "forgeAlt": "Forge, der Worker-Bot, schraubt am Panel",
     "logTitle": "~/crew — agenten-log · live",
+    "picAlt": "David mit seiner KI-Bot-Crew am Laptop — Illustration",
+    "picCaption": "// die crew und ich — artwork aus eigener ki-produktion",
     "closing": "Konkret heißt das: Legacy-Migrationen (jQuery → Livewire, Laravel 5 → 8), Testabdeckung und Doku laufen agentengestützt — reviewed wird jede Zeile von mir. Die Bots hier auf der Seite sind übrigens dieselbe Idee, nur sichtbar.",
     "jobs": {
       "refactor": "jQuery → Livewire migriert · 12 dateien",

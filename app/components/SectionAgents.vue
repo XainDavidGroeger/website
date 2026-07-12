@@ -89,7 +89,13 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <p v-reveal class="closing">{{ t('agents.closing') }}</p>
+      <div v-reveal class="closing-grid">
+        <figure class="crew-pic">
+          <img src="/img/crew/david-crew.webp" :alt="t('agents.picAlt')" width="1000" height="666" loading="lazy">
+          <figcaption>{{ t('agents.picCaption') }}</figcaption>
+        </figure>
+        <p class="closing">{{ t('agents.closing') }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -225,8 +231,44 @@ onUnmounted(() => {
   display: none;
 }
 
+.closing-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: minmax(260px, 440px) 1fr;
+  gap: 34px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .closing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.crew-pic {
+  margin: 0;
+  position: relative;
+}
+.crew-pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+  transform: rotate(-1.2deg);
+  transition: transform 0.25s ease;
+}
+.crew-pic:hover img {
+  transform: rotate(0deg) scale(1.015);
+}
+.crew-pic figcaption {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--faint);
+}
+
 .closing {
-  margin-top: 30px;
   color: var(--muted);
   max-width: 62ch;
 }
