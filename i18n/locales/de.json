@@ -62,7 +62,8 @@
     "api": {
       "title": "VoltGrid Charging API",
       "lede": "Drei Endpunkte, die wirklich laufen: Säulen listen und filtern (Stadt, Status, Stecker, Leistung), Details abrufen, Lade-Sessions starten — mit sauberer Validierung. Tipp: Säule 4 ist in Wartung, Säule 2 besetzt — provozier die 422er. Unten die vollständige Swagger-Doku.",
-      "note": "// Demo-API ohne Persistenz: Sessions werden bestätigt, aber keine Säule startet wirklich. Spec: /openapi.json"
+      "note": "// Demo-API ohne Persistenz: Sessions werden bestätigt, aber keine Säule startet wirklich. Spec: /openapi.json",
+      "staticHint": "// Auf statischem Hosting beantwortet ein In-Browser-Mock die Requests — mit exakt derselben Validierungslogik (eine gemeinsame Quelle). Die curl-Beispiele gelten für Server-Deploys."
     },
     "ui": {
       "title": "VoltGrid UI-Kit",

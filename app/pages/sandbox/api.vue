@@ -56,6 +56,7 @@ curl -X POST {{ origin }}/api/v1/sessions \
     </ClientOnly>
 
     <p v-reveal class="note">{{ t('sandbox.api.note') }}</p>
+    <p v-reveal class="note">{{ t('sandbox.api.staticHint') }}</p>
   </div>
 </template>
 

@@ -1,8 +1,8 @@
-import { stations } from '../../../utils/sandboxData'
+import { findStation } from '../../../../shared/utils/voltgrid'
 
 export default defineEventHandler((event) => {
   const id = Number(getRouterParam(event, 'id'))
-  const found = stations.find(s => s.id === id)
+  const found = findStation(id)
 
   if (!found) {
     throw createError({

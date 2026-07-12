@@ -62,7 +62,8 @@
     "api": {
       "title": "VoltGrid Charging API",
       "lede": "Three endpoints that actually run: list and filter stations (city, status, connector, power), fetch details, start charging sessions — with proper validation. Tip: station 4 is under maintenance, station 2 is occupied — go provoke the 422s. Below: the full Swagger docs.",
-      "note": "// Demo API without persistence: sessions are confirmed but no station actually starts. Spec: /openapi.json"
+      "note": "// Demo API without persistence: sessions are confirmed but no station actually starts. Spec: /openapi.json",
+      "staticHint": "// On static hosting an in-browser mock answers the requests — with exactly the same validation logic (one shared source). The curl examples apply to server deploys."
     },
     "ui": {
       "title": "VoltGrid UI Kit",

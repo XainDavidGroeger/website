@@ -23,7 +23,12 @@ interface Station {
   uptimePercent: number
 }
 
-const { data: stationsRes } = await useFetch<{ data: Station[] }>('/api/v1/stations')
+/* server/prerender: interner $fetch · client: window.fetch (läuft durch den
+   api-mock-Interceptor und funktioniert damit auch auf statischem Hosting) */
+const { data: stationsRes } = await useAsyncData<{ data: Station[] }>('voltgrid-stations', () => {
+  if (import.meta.server) return $fetch('/api/v1/stations')
+  return window.fetch('/api/v1/stations').then(res => res.json())
+})
 const stations = computed(() => stationsRes.value?.data ?? [])
 
 /* ------------------------------------------------------------------ */
@@ -103,22 +108,29 @@ async function startSession() {
   starting.value = true
   sessionResult.value = null
   try {
-    const res = await $fetch<{ data: { sessionId: string, estimatedCostCents: number } }>('/api/v1/sessions', {
+    // window.fetch statt $fetch: läuft durch den api-mock-Interceptor
+    const response = await window.fetch('/api/v1/sessions', {
       method: 'POST',
-      body: {
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         stationId: selected.value.id,
         connectorType: selectedConnector.value,
         estimatedKwh: 40,
-      },
+      }),
     })
-    sessionResult.value = { ok: true, receipt: res.data }
-  }
-  catch (error: unknown) {
-    const fetchError = error as { statusCode?: number, data?: { data?: { errors?: Record<string, string> } } }
-    sessionResult.value = {
-      ok: false,
-      errors: fetchError.data?.data?.errors ?? { _global: t('sandbox.map.unknownError') },
+    const payload = await response.json()
+    if (response.status === 201) {
+      sessionResult.value = { ok: true, receipt: payload.data }
     }
+    else {
+      sessionResult.value = {
+        ok: false,
+        errors: payload.data?.errors ?? { _global: t('sandbox.map.unknownError') },
+      }
+    }
+  }
+  catch {
+    sessionResult.value = { ok: false, errors: { _global: t('sandbox.map.unknownError') } }
   }
   finally {
     starting.value = false
