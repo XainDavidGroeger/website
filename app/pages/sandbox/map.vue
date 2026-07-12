@@ -63,14 +63,34 @@ onMounted(async () => {
 
   instance.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
 
+  // native MapLibre-Pins (klassischer Tropfen), pro Status eingefärbt
+  const STATUS_COLOR: Record<Station['status'], string> = {
+    available: '#6FE3C2',
+    charging: '#FFAD3B',
+    maintenance: '#5C6B8A',
+  }
+
   for (const station of stations.value) {
-    const el = document.createElement('button')
-    el.type = 'button'
-    el.className = `vg-marker ${station.status}`
-    el.title = `${station.name} · ${station.city}`
+    const marker = new maplibregl.Marker({ color: STATUS_COLOR[station.status] })
+      .setLngLat([station.lng, station.lat])
+      .addTo(instance)
+
+    const el = marker.getElement()
+    el.classList.add('vg-pin', station.status)
+    el.setAttribute('role', 'button')
+    el.setAttribute('tabindex', '0')
     el.setAttribute('aria-label', `${station.name} · ${station.city}`)
+    el.title = `${station.name} · ${station.city}`
     el.addEventListener('click', () => openStation(station))
-    new maplibregl.Marker({ element: el }).setLngLat([station.lng, station.lat]).addTo(instance)
+    el.addEventListener('keydown', (ev: KeyboardEvent) => {
+      if (ev.key === 'Enter') openStation(station)
+    })
+
+    if (station.status !== 'maintenance') {
+      const pulse = document.createElement('span')
+      pulse.className = 'vg-pin-pulse'
+      el.appendChild(pulse)
+    }
   }
 })
 
@@ -270,57 +290,54 @@ function euro(cents: number): string {
   inset: 0;
 }
 
-/* Säulen-Marker (DOM-Elemente in MapLibre) */
-.map-el :deep(.vg-marker) {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 3px solid var(--mint);
-  background: var(--bg);
-  padding: 0;
+/* native MapLibre-Pins: Hover-Zoom auf dem SVG (nicht dem Element —
+   dessen transform nutzt MapLibre für die Positionierung) */
+.map-el :deep(.vg-pin) {
   cursor: pointer;
-  position: relative;
+}
+.map-el :deep(.vg-pin svg) {
   transition: transform 0.15s ease;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
 }
-.map-el :deep(.vg-marker:hover),
-.map-el :deep(.vg-marker:focus-visible) {
-  transform: scale(1.3);
-  z-index: 3;
+.map-el :deep(.vg-pin:hover svg),
+.map-el :deep(.vg-pin:focus-visible svg) {
+  transform: scale(1.18);
 }
-.map-el :deep(.vg-marker.charging) {
-  border-color: var(--amber);
+.map-el :deep(.vg-pin.maintenance svg) {
+  opacity: 0.75;
 }
-.map-el :deep(.vg-marker.maintenance) {
-  border-color: var(--faint);
-  border-style: dashed;
-}
-.map-el :deep(.vg-marker.available)::after,
-.map-el :deep(.vg-marker.charging)::after {
-  content: '';
+
+/* Status-Puls am Fußpunkt des Pins */
+.map-el :deep(.vg-pin-pulse) {
   position: absolute;
-  inset: -3px;
+  left: 50%;
+  bottom: -5px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
   border-radius: 50%;
   border: 2px solid var(--mint);
+  pointer-events: none;
   animation: map-pulse 2.6s ease-out infinite;
 }
-.map-el :deep(.vg-marker.charging)::after {
+.map-el :deep(.vg-pin.charging .vg-pin-pulse) {
   border-color: var(--amber);
   animation-duration: 1.6s;
 }
 @keyframes map-pulse {
   0% {
-    transform: scale(1);
+    transform: scale(0.6);
     opacity: 0.8;
   }
   70%,
   100% {
-    transform: scale(2.4);
+    transform: scale(2.2);
     opacity: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .map-el :deep(.vg-marker)::after {
-    animation: none;
+  .map-el :deep(.vg-pin-pulse) {
     display: none;
   }
 }
