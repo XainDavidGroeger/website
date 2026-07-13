@@ -31,6 +31,7 @@ const reviews = [
           <blockquote>{{ t(`refs.reviews.${review.key}.text`) }}</blockquote>
         </article>
       </div>
+      <p class="swipe-hint" aria-hidden="true">{{ t('refs.swipeHint') }}</p>
     </div>
   </section>
 </template>
@@ -40,6 +41,38 @@ const reviews = [
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 16px;
+}
+
+.swipe-hint {
+  display: none;
+}
+
+/* Mobil: Stimmen als Swipe-Karussell */
+@media (max-width: 720px) {
+  .reviews {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -18px;
+    padding: 4px 18px 10px;
+    scrollbar-width: none;
+  }
+  .reviews::-webkit-scrollbar {
+    display: none;
+  }
+  .reviews > * {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+  .swipe-hint {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--faint);
+    text-align: center;
+  }
 }
 
 .review {

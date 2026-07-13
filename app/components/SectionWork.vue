@@ -102,6 +102,8 @@ const selectedTasks = computed(() =>
         </button>
       </div>
 
+      <p class="swipe-hint" aria-hidden="true">{{ t('work.swipeHint') }}</p>
+
       <p v-reveal class="archive">
         <span class="label">// {{ t('work.shelfArchive') }}:</span>
         {{ t('work.archive') }}
@@ -174,6 +176,41 @@ const selectedTasks = computed(() =>
 }
 .cases.two {
   max-width: 720px;
+}
+
+.swipe-hint {
+  display: none;
+}
+
+/* Mobil: Karten als Swipe-Karussell (natives Scroll-Snap) */
+@media (max-width: 720px) {
+  .cases {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -18px;
+    padding: 4px 18px 10px;
+    scrollbar-width: none;
+  }
+  .cases::-webkit-scrollbar {
+    display: none;
+  }
+  .cases > * {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+  .cases.two > * {
+    flex-basis: 82%;
+  }
+  .swipe-hint {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--faint);
+    text-align: center;
+  }
 }
 
 .case {

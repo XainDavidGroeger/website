@@ -350,6 +350,7 @@
     "tagOwn": "live",
     "tagFreelance": "übernommen · freelance",
     "visit": "→ live ansehen",
+    "swipeHint": "→ wischen für mehr projekte",
     "recCaption": "// scroll durch die live-plattform",
     "recAlt": "Scroll-Aufnahme der Plattform im Laptop-Mockup",
     "details": "→ details",
@@ -439,6 +440,7 @@
     "title": "Stimmen aus Projekten",
     "lede": "Vier Reviews aus echter Zusammenarbeit, alle approved.",
     "approved": "Approved ✓",
+    "swipeHint": "→ wischen für mehr stimmen",
     "reviews": {
       "patrick": {
         "name": "Patrick Kuhlmann",
