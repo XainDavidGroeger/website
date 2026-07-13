@@ -87,6 +87,8 @@ body {
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  /* Sicherheitsnetz gegen horizontales Wackeln durch absolut positionierte Deko (Bots etc.) */
+  overflow-x: hidden;
 }
 
 h1,
@@ -177,5 +179,24 @@ a {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Mobil: kompaktere Abstände                                         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+  .wrap {
+    padding-inline: 18px;
+  }
+  .section {
+    padding-block: 64px;
+  }
+  .sec-head {
+    margin-bottom: 30px;
+  }
+  /* Sandbox-Seiten (scoped .page-Regeln überstimmen) */
+  .page {
+    padding-block: 64px !important;
   }
 }

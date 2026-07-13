@@ -282,4 +282,26 @@ onUnmounted(() => {
     transition: none;
   }
 }
+
+@media (max-width: 640px) {
+  .panel-wrap {
+    padding: 44px 8px 8px 24px;
+  }
+  .bot-pixel {
+    left: -2px;
+    bottom: 16px;
+    height: 84px;
+  }
+  .bot-forge {
+    right: 2px;
+    top: 2px;
+    height: 64px;
+  }
+  .holo-code {
+    font-size: 11.5px;
+  }
+  .closing-grid {
+    gap: 22px;
+  }
+}
 </style>

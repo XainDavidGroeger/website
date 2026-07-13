@@ -429,6 +429,19 @@ const selectedTasks = computed(() =>
   font-weight: 600;
 }
 
+@media (max-width: 640px) {
+  .overlay {
+    padding: 14px 10px 20px;
+  }
+  .modal {
+    padding: 20px 16px;
+    gap: 14px;
+  }
+  .tasks {
+    font-size: 13.5px;
+  }
+}
+
 .wmodal-enter-active,
 .wmodal-leave-active {
   transition: opacity 0.2s ease;

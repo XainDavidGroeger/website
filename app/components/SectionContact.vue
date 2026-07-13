@@ -247,4 +247,19 @@ function run() {
     animation: none;
   }
 }
+
+@media (max-width: 640px) {
+  .term-bot {
+    height: 62px;
+    top: -34px;
+    right: 8px;
+  }
+  .term {
+    padding: 14px 14px;
+    font-size: 12.5px;
+  }
+  .card {
+    padding: 18px;
+  }
+}
 </style>

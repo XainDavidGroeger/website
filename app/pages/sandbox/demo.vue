@@ -432,6 +432,19 @@ const statusColorName = { available: 'mint', charging: 'amber', maintenance: 'mu
   color: var(--faint);
 }
 
+@media (max-width: 640px) {
+  .dash {
+    padding: 14px;
+    gap: 14px;
+  }
+  .map-stage {
+    min-height: 360px;
+  }
+  .station-list {
+    max-height: 340px;
+  }
+}
+
 /* ---------- MapLibre-Pins (wie /sandbox-Karte) ---------- */
 .map-el :deep(.vg-pin) {
   cursor: pointer;

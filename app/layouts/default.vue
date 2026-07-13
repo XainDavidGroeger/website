@@ -137,6 +137,24 @@ main {
   }
 }
 
+/* Mobil: Nav darf umbrechen und wird kompakter */
+@media (max-width: 640px) {
+  .bar {
+    flex-wrap: wrap;
+    row-gap: 2px;
+    padding-block: 10px;
+  }
+  .nav {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 12.5px;
+    justify-content: flex-end;
+  }
+  .lang {
+    padding: 2px 7px;
+  }
+}
+
 .site-foot {
   border-top: 1px solid var(--line);
   font-family: var(--font-mono);

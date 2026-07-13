@@ -245,4 +245,17 @@ h1 .outline {
     animation: none;
   }
 }
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero-inner {
+    padding-block: 64px 88px;
+    gap: 22px;
+  }
+  .scroll-hint {
+    bottom: 14px;
+  }
+}
 </style>
