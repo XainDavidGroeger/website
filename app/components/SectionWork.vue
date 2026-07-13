@@ -7,12 +7,14 @@ interface Project {
   logo?: string
   /* Fallback-Wasserzeichen, wenn kein Logo vorliegt */
   mark?: string
+  /* Scroll-Aufnahme fürs Laptop-Mockup im Detail-Modal */
+  rec?: string
 }
 
 const featured: Project[] = [
-  { key: 'schnappern', url: 'https://schnappern.com', logo: '/img/work/schnappern.webp' },
-  { key: 'singalong', url: 'https://singalong.de', logo: '/img/work/singalong.webp' },
-  { key: 'teamevent', url: 'https://mein-teamevent.de', logo: '/img/work/teamevent.webp' },
+  { key: 'schnappern', url: 'https://schnappern.com', logo: '/img/work/schnappern.webp', rec: '/img/work/rec/schnappern.gif' },
+  { key: 'singalong', url: 'https://singalong.de', logo: '/img/work/singalong.webp', rec: '/img/work/rec/singalong.gif' },
+  { key: 'teamevent', url: 'https://mein-teamevent.de', logo: '/img/work/teamevent.webp', rec: '/img/work/rec/teamevent.gif' },
   { key: 'weinhopping', url: 'https://www.weinhopping.com', logo: '/img/work/weinhopping.webp' },
   { key: 'matchingnight', url: 'https://speeddating-xxl.de/matching-night', mark: 'MN' },
   { key: 'speeddating', url: 'https://speeddating-xxl.de', mark: 'XXL' },
@@ -121,6 +123,13 @@ const selectedTasks = computed(() =>
               </div>
               <button class="close" type="button" :aria-label="t('work.close')" @click="closeModal">✕</button>
             </header>
+
+            <!-- Scroll-Aufnahme im Laptop-Mockup (Screen-Position exakt vermessen) -->
+            <figure v-if="selected.rec" class="device">
+              <img class="device-frame" src="/img/work/laptop-frame.webp" alt="" width="1400" height="788">
+              <img class="device-screen" :src="selected.rec" :alt="t('work.recAlt')" loading="lazy">
+              <figcaption>{{ t('work.recCaption') }}</figcaption>
+            </figure>
 
             <p class="about">{{ t(`work.cases.${selected.key}.about`) }}</p>
 
@@ -316,6 +325,39 @@ const selectedTasks = computed(() =>
 .modal .close:hover {
   color: var(--amber);
   border-color: var(--amber);
+}
+
+/* Laptop-Mockup mit Scroll-Aufnahme: Screen-Öffnung per Pixel-Vermessung
+   (scripts/measure-screen.mjs) — Werte gelten für laptop-frame.webp */
+.device {
+  margin: 0;
+  position: relative;
+}
+.device-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.device-screen {
+  position: absolute;
+  left: 10.79%;
+  top: 8.51%;
+  width: 78.37%;
+  height: 63.45%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  border-radius: 4px;
+}
+.device figcaption {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--faint);
+  text-align: center;
 }
 
 .modal .about {
