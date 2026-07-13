@@ -14,8 +14,51 @@ const stations = ['ph', 'free', 'xain'] as const
       </div>
 
       <div v-reveal class="git-wrap">
+        <!-- Mobil: vertikaler Graph (kein horizontales Scrollen) -->
         <svg
-          class="git-svg"
+          class="git-svg vertical"
+          viewBox="0 0 340 540"
+          role="img"
+          :aria-label="t('log.graphAlt')"
+        >
+          <line class="lane" x1="36" y1="20" x2="36" y2="520" stroke-dasharray="3 6" />
+
+          <path class="commitline main-draw-v" d="M 36 48 L 36 128 L 76 168 L 76 208 L 36 248 L 36 480" />
+          <path class="branchline branch-draw-v" d="M 36 288 C 36 316 120 302 120 336 L 120 452" />
+          <path class="branch-tip-v" d="M 112 444 L 120 460 L 128 444" />
+
+          <circle class="node" style="--d: 0.25s" cx="36" cy="48" r="7" />
+          <circle class="node" style="--d: 0.5s" cx="36" cy="128" r="7" />
+          <circle class="node" style="--d: 0.75s" cx="76" cy="188" r="7" />
+          <circle class="node mint" style="--d: 1.7s" cx="120" cy="356" r="7" />
+          <circle class="head-ring" cx="36" cy="480" r="9" />
+          <circle class="node head" style="--d: 1.5s" cx="36" cy="480" r="8" />
+
+          <g class="lbl" style="--d: 0.35s">
+            <text x="56" y="46">modotex</text>
+            <text class="year" x="56" y="62">2013</text>
+          </g>
+          <g class="lbl" style="--d: 0.6s">
+            <text x="56" y="126">HTW Berlin</text>
+            <text class="year" x="56" y="142">B.Sc. 2017</text>
+          </g>
+          <g class="lbl" style="--d: 0.85s">
+            <text x="96" y="186">XAIN AG</text>
+            <text class="tag" x="96" y="202">tag: teamlead</text>
+          </g>
+          <g class="lbl" style="--d: 1.8s">
+            <text x="140" y="340">{{ t('log.freelance') }}</text>
+            <text class="tag" x="140" y="356">{{ t('log.freelanceTag') }}</text>
+            <text class="year" x="140" y="372">{{ t('log.branchActive') }}</text>
+          </g>
+          <g class="lbl" style="--d: 1.6s">
+            <text x="56" y="478">Pflegehelden</text>
+            <text class="tag" x="56" y="494">HEAD → senior</text>
+          </g>
+        </svg>
+
+        <svg
+          class="git-svg horizontal"
           viewBox="0 0 920 250"
           width="920"
           height="250"
@@ -98,10 +141,29 @@ const stations = ['ph', 'free', 'xain'] as const
   margin-bottom: 28px;
 }
 
-.git-svg {
+.git-svg.horizontal {
   display: block;
   min-width: 880px;
   margin: 0 auto;
+}
+.git-svg.vertical {
+  display: none;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+/* Mobil: vertikaler Graph statt horizontalem Scrollen */
+@media (max-width: 720px) {
+  .git-svg.horizontal {
+    display: none;
+  }
+  .git-svg.vertical {
+    display: block;
+  }
+  .git-wrap {
+    overflow-x: visible;
+    padding: 20px 14px;
+  }
 }
 .git-svg .lane {
   stroke: var(--line);
@@ -192,6 +254,31 @@ const stations = ['ph', 'free', 'xain'] as const
 }
 .reveal.in .branch-tip {
   animation: fade-in 0.4s ease 2.3s forwards;
+}
+
+/* vertikale Variante: gleiche Choreo, eigene Pfadlängen */
+.git-svg .main-draw-v {
+  stroke-dasharray: 560;
+  stroke-dashoffset: 560;
+}
+.reveal.in .main-draw-v {
+  animation: dash 1.7s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+.git-svg .branch-draw-v {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+}
+.reveal.in .branch-draw-v {
+  animation: dash 1s cubic-bezier(0.4, 0, 0.2, 1) 1.35s forwards;
+}
+.git-svg .branch-tip-v {
+  stroke: var(--mint);
+  stroke-width: 2.5;
+  fill: none;
+  opacity: 0;
+}
+.reveal.in .branch-tip-v {
+  animation: fade-in 0.4s ease 2.2s forwards;
 }
 .reveal.in .comet {
   animation: comet 1.7s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
@@ -308,7 +395,9 @@ const stations = ['ph', 'free', 'xain'] as const
 
 @media (prefers-reduced-motion: reduce) {
   .git-svg .main-draw,
-  .git-svg .branch-draw {
+  .git-svg .branch-draw,
+  .git-svg .main-draw-v,
+  .git-svg .branch-draw-v {
     stroke-dashoffset: 0;
     animation: none !important;
   }
@@ -317,7 +406,8 @@ const stations = ['ph', 'free', 'xain'] as const
     animation: none !important;
   }
   .git-svg .lbl,
-  .git-svg .branch-tip {
+  .git-svg .branch-tip,
+  .git-svg .branch-tip-v {
     opacity: 1;
     transform: none;
     animation: none !important;

@@ -176,11 +176,19 @@ onMounted(() => {
     build()
     active.value = true
     emit('active')
+    const coarse = window.matchMedia('(pointer: coarse)').matches
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           assembled = true
           io.disconnect()
+          // Touch-Geräte haben kein Hover: Farbe blendet nach dem
+          // Zusammenfliegen automatisch ein
+          if (coarse) {
+            setTimeout(() => {
+              hovering = true
+            }, 1400)
+          }
         }
       }
     }, { threshold: 0.25 })
