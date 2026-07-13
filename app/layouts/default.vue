@@ -42,6 +42,11 @@ const otherLocale = computed(() =>
     <footer class="site-foot">
       <div class="wrap bar">
         <span>© {{ new Date().getFullYear() }} David Gröger</span>
+        <span class="foot-links">
+          <NuxtLinkLocale to="/impressum">impressum</NuxtLinkLocale>
+          ·
+          <NuxtLinkLocale to="/datenschutz">datenschutz</NuxtLinkLocale>
+        </span>
         <span class="dim">// build successful ✓</span>
       </div>
     </footer>
@@ -163,5 +168,14 @@ main {
 }
 .site-foot .dim {
   color: var(--mint);
+}
+.foot-links {
+  color: var(--faint);
+}
+.foot-links a {
+  color: var(--muted);
+}
+.foot-links a:hover {
+  color: var(--amber);
 }
 </style>
