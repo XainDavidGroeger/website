@@ -330,8 +330,9 @@ const selectedTasks = computed(() =>
 /* Laptop-Mockup mit Scroll-Aufnahme: Screen-Öffnung per Pixel-Vermessung
    (scripts/measure-screen.mjs) — Werte gelten für laptop-frame.webp */
 .device {
-  margin: 0;
+  margin: 0 auto;
   position: relative;
+  max-width: 430px;
 }
 .device-frame {
   display: block;
