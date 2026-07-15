@@ -15,15 +15,15 @@ const featured: Project[] = [
   { key: 'schnappern', url: 'https://schnappern.com', logo: '/img/work/schnappern.webp', rec: '/img/work/rec/schnappern.gif' },
   { key: 'singalong', url: 'https://singalong.de', logo: '/img/work/singalong.webp', rec: '/img/work/rec/singalong.gif' },
   { key: 'teamevent', url: 'https://mein-teamevent.de', logo: '/img/work/teamevent.webp', rec: '/img/work/rec/teamevent.gif' },
-  { key: 'weinhopping', url: 'https://www.weinhopping.com', logo: '/img/work/weinhopping.webp' },
-  { key: 'matchingnight', url: 'https://speeddating-xxl.de/matching-night', mark: 'MN' },
-  { key: 'speeddating', url: 'https://speeddating-xxl.de', mark: 'XXL' },
-  { key: 'socialmatch', url: 'https://socialmatch.de', logo: '/img/work/socialmatch.webp' },
+  { key: 'weinhopping', url: 'https://www.weinhopping.com', logo: '/img/work/weinhopping.webp', rec: '/img/work/rec/weinhopping.gif' },
+  { key: 'matchingnight', url: 'https://speeddating-xxl.de/matching-night', mark: 'MN', rec: '/img/work/rec/matchingnight.gif' },
+  { key: 'speeddating', url: 'https://speeddating-xxl.de', mark: 'XXL', rec: '/img/work/rec/speeddating.gif' },
+  { key: 'socialmatch', url: 'https://socialmatch.de', logo: '/img/work/socialmatch.webp', rec: '/img/work/rec/socialmatch.gif' },
 ]
 
 const freelance: Project[] = [
-  { key: 'muziqme', url: 'https://self-booking.muziqme.de', logo: '/img/work/muziqme.webp' },
-  { key: 'buggyfit', url: 'https://www.buggyfit.de', logo: '/img/work/buggyfit.webp' },
+  { key: 'muziqme', url: 'https://self-booking.muziqme.de', logo: '/img/work/muziqme.webp', rec: '/img/work/rec/muziqme.gif' },
+  { key: 'buggyfit', url: 'https://www.buggyfit.de', logo: '/img/work/buggyfit.webp', rec: '/img/work/rec/buggyfit.gif' },
 ]
 
 const all = [...featured, ...freelance]
