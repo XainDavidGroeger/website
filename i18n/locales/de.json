@@ -330,7 +330,7 @@
     "logTitle": "~/crew · agenten-log · live",
     "picAlt": "David mit seiner KI-Bot-Crew am Laptop, Illustration",
     "picCaption": "// die crew und ich · artwork aus eigener ki-produktion",
-    "closing": "Konkret heißt das: Legacy-Migrationen (jQuery → Livewire, Laravel 5 → 8), Testabdeckung und Doku laufen agentengestützt, reviewed wird jede Zeile von mir.",
+    "closing": "Konkret heißt das: Ich arbeite spec-driven. Anforderungen und Akzeptanzkriterien stehen zuerst, dagegen arbeitet ein Agenten-Loop-Harness mit den neuesten LLMs, bis alles grün ist — Tests und Doku inklusive. Reviewed wird jede Zeile von mir.",
     "jobs": {
       "refactor": "jQuery → Livewire migriert · 12 dateien",
       "test": "42/42 tests grün",
