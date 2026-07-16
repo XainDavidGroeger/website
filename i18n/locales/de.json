@@ -430,7 +430,7 @@
         "desc": "Fitness-Plattform für Mütter: Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Trainer-Ausbildung.",
         "about": "buggyFit bietet Outdoor-Training für Mamas vor und nach der Schwangerschaft, mit Baby im Kinderwagen, in Parks in ganz Deutschland. Die Plattform bündelt Kursbuchung, Online-Shop, Krankenkassen-Abrechnung, Video-Channel und die Ausbildung neuer Trainerinnen.",
         "tasks": "Übernahme und Weiterentwicklung der Plattform\nWeiterentwicklung der Kursbuchung\nOnline-Shop\nUnterstützung der Krankenkassen-Prozesse\nWartung, Bugfixes und Support",
-        "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
+        "stack": "PHP, WordPress, Elementor Pro, WooCommerce, jQuery, MySQL",
         "date": "Freelance-Einsatz"
       }
     }

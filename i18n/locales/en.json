@@ -430,7 +430,7 @@
         "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education.",
         "about": "buggyFit offers outdoor training for moms before and after pregnancy, with the baby in the stroller, in parks all over Germany. The platform bundles course booking, an online shop, health-insurance billing, a video channel and the training of new instructors.",
         "tasks": "Takeover and ongoing development of the platform\nCourse booking improvements\nOnline shop\nSupport for health-insurance processes\nMaintenance, bug fixes and support",
-        "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
+        "stack": "PHP, WordPress, Elementor Pro, WooCommerce, jQuery, MySQL",
         "date": "freelance engagement"
       }
     }
