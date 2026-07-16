@@ -421,7 +421,7 @@
         "name": "muziqme · self-booking",
         "desc": "Self-Booking-Plattform für Live-Musik: Künstler-Registrierung, Direktbuchung für Events, Ticketing.",
         "about": "muziqme ist eine Agentur für Live-Musik mit angeschlossener Self-Booking-Plattform: Private und geschäftliche Veranstalter buchen dort direkt die passende Live-Musik, Musikschaffende registrieren sich kostenlos mit eigenem Profil.",
-        "tasks": "Bugfixes, Wartung und technische Beratung",
+        "tasks": "Weiterentwicklung, Bugfixes, Wartung und technische Beratung",
         "stack": "PHP, Laravel, GraphQL, Vue 3, Apollo, Tailwind CSS, Vite, Stripe, MySQL",
         "date": "Freelance-Einsatz"
       },
