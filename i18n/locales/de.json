@@ -267,7 +267,7 @@
   },
   "log": {
     "title": "Der Werdegang",
-    "lede": "Zehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags, und der Freelance-Branch wurde nie geschlossen.",
+    "lede": "Dreizehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags, und der Freelance-Branch wurde nie geschlossen.",
     "graphAlt": "Werdegang als Git-Graph: von modotex 2013 über HTW Berlin und XAIN bis Pflegehelden (HEAD, senior); parallel dazu der seit 2018 offene Freelance-Branch",
     "freelance": "branch: freelance",
     "freelanceTag": "tag: 7 plattformen live",

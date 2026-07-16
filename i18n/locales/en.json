@@ -267,7 +267,7 @@
   },
   "log": {
     "title": "The Career",
-    "lede": "Ten years in one graph: jobs are commits, achievements are tags, and the freelance branch was never closed.",
+    "lede": "Thirteen years in one graph: jobs are commits, achievements are tags, and the freelance branch was never closed.",
     "graphAlt": "Career as a git graph: from modotex 2013 via HTW Berlin and XAIN to Pflegehelden (HEAD, senior); in parallel the freelance branch, open since 2018",
     "freelance": "branch: freelance",
     "freelanceTag": "tag: 7 platforms live",
