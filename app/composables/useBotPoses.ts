@@ -38,15 +38,19 @@ export function useBotPoses(
     if (clickTimer || holdTimer) return
     pose.value = poses.base
   }
-  function onClick() {
-    pose.value = poses.click
+  /* Pose von außen setzen (z. B. Terminal-Befehle); hat Vorrang vor Hover */
+  function set(p: number, ms = revertMs) {
+    pose.value = p
     if (holdTimer) clearTimeout(holdTimer)
     holdTimer = null
     if (clickTimer) clearTimeout(clickTimer)
     clickTimer = setTimeout(() => {
       clickTimer = null
       pose.value = poses.base
-    }, revertMs)
+    }, ms)
+  }
+  function onClick() {
+    set(poses.click)
   }
 
   onUnmounted(() => {
@@ -54,5 +58,5 @@ export function useBotPoses(
     if (holdTimer) clearTimeout(holdTimer)
   })
 
-  return { src, onEnter, onLeave, onClick }
+  return { src, onEnter, onLeave, onClick, set }
 }

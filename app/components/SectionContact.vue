@@ -12,18 +12,9 @@ const outEl = ref<HTMLElement | null>(null)
 const inputEl = ref<HTMLInputElement | null>(null)
 const lines = ref<TermLine[]>([])
 
-/* Prompt-Bot: 1 neutral · 4 antwortet · 5 ratlos (?) · 6 erfolg (✓✓) */
-const botPose = ref(1)
-let botTimer: ReturnType<typeof setTimeout> | null = null
-function setBotPose(pose: number) {
-  botPose.value = pose
-  if (botTimer) clearTimeout(botTimer)
-  if (pose !== 1) {
-    botTimer = setTimeout(() => {
-      botPose.value = 1
-    }, 2800)
-  }
-}
+/* Prompt-Bot: 1 neutral · 2 tippt (Hover) · 4 antwortet · 5 ratlos (?) · 6 erfolg (✓✓)
+   Terminal-Befehle setzen die Pose über set(), Hover/Klick laufen übers Composable */
+const { src: botSrc, onEnter: botEnter, onLeave: botLeave, onClick: botClick, set: setBotPose } = useBotPoses('prompt', { base: 1, hover: 2, click: 6 }, 2800)
 
 onMounted(() => {
   lines.value = [{ cmd: 'motd' }, { res: t('term.motd') }]
@@ -76,9 +67,12 @@ function run() {
         <div v-reveal class="term" @click="inputEl?.focus()">
           <img
             class="term-bot"
-            :src="`/img/crew/prompt-${botPose}.webp`"
+            :src="botSrc"
             :alt="t('crew.promptAlt')"
             height="84"
+            @pointerenter="botEnter"
+            @pointerleave="botLeave"
+            @click="botClick"
           >
           <div ref="outEl" class="term-out">
             <template v-for="(line, i) in lines" :key="i">
@@ -157,7 +151,7 @@ function run() {
   height: 84px;
   width: auto;
   animation: bot-float 3.4s ease-in-out infinite;
-  pointer-events: none;
+  cursor: pointer;
 }
 @keyframes bot-float {
   0%,

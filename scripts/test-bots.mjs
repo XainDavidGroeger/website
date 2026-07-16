@@ -34,5 +34,6 @@ async function testBot(label, selector) {
 await testBot('hero-pixel', '.build .bot')
 await testBot('agents-pixel', '#agents .bot-pixel')
 await testBot('agents-forge', '#agents .bot-forge')
+await testBot('term-prompt', '#init .term-bot')
 
 await browser.close()
