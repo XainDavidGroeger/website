@@ -268,7 +268,7 @@
   "log": {
     "title": "Der Werdegang",
     "lede": "Dreizehn Jahre in einem Graph: Stationen sind Commits, Erfolge sind Tags, und der Freelance-Branch wurde nie geschlossen.",
-    "graphAlt": "Werdegang als Git-Graph: von modotex 2013 über HTW Berlin und XAIN bis Pflegehelden (HEAD, senior); parallel dazu der seit 2018 offene Freelance-Branch",
+    "graphAlt": "Werdegang als Git-Graph: von der Ausbildung zum Fachinformatiker für Anwendungsentwicklung 2013 über die HTW Berlin (B.Sc. Angewandte Informatik) und XAIN bis Pflegehelden (HEAD, senior); parallel dazu der seit 2018 offene Freelance-Branch",
     "freelance": "branch: freelance",
     "freelanceTag": "tag: 7 plattformen live",
     "branchActive": "// seit 2018 offen",
@@ -311,7 +311,7 @@
     "contactCmd": "kontakt",
     "help": "verfügbare befehle:\n  stack · werdegang · kontakt\n  sudo hire-david · clear",
     "stackOut": "backend:   PHP · Laravel · Python · Django · MySQL\nfrontend:  Vue · Nuxt · React · TypeScript · Tailwind\ntooling:   Git · Docker · CI/CD · KI-Agenten",
-    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden · Senior Softwareentwickler [2023]\n8b2e470 freiberuflich · Full-Stack [2018]\n5d91acc XAIN AG · Teamlead [2017]\n1c0ffee modotex · erster Commit [2013]",
+    "logOut": "a3f9c21 (HEAD → senior) Pflegehelden · Senior Softwareentwickler [2023]\n8b2e470 freiberuflich · Full-Stack [2018]\n5d91acc XAIN AG · Teamlead [2017]\n1c0ffee Fachinformatiker Anwendungsentwicklung · erster Commit [2013]",
     "contactOut": "email:  groeger.david{'@'}gmail.com\nmobil:  0174 169 149 0",
     "sudoOut": "[sudo] passwort wird nicht benötigt · vertrauen vorhanden ✓\nverfügbarkeit geprüft … ok\n→ berechtigung erteilt. schreib mir: groeger.david{'@'}gmail.com",
     "startxOut": "DavidOS wird vorbereitet … kommt in v2.1 🤫",

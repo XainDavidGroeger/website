@@ -18,6 +18,9 @@ const lines = computed(() => [
 const shown = ref(0)
 const panelEl = ref<HTMLElement | null>(null)
 
+/* Pixel reagiert: Hover = winken (5), Klick = Daumen hoch (6), Basis = zeigen (2) */
+const { src: botSrc, onEnter: botEnter, onLeave: botLeave, onClick: botClick } = useBotPoses('pixel', { base: 2, hover: 5, click: 6 })
+
 onMounted(() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (reduced) {
@@ -47,7 +50,15 @@ onMounted(() => {
 <template>
   <div class="build" aria-hidden="true">
     <div ref="panelEl" class="panel-wrap">
-      <img class="bot" src="/img/crew/pixel-2.webp" alt="" height="120">
+      <img
+        class="bot"
+        :src="botSrc"
+        alt=""
+        height="120"
+        @pointerenter="botEnter"
+        @pointerleave="botLeave"
+        @click="botClick"
+      >
       <div class="panel">
         <div class="bar">
           <span class="dots"><i /><i /><i /></span>
@@ -100,6 +111,7 @@ onMounted(() => {
   z-index: 2;
   animation: bot-float 3.6s ease-in-out infinite;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+  cursor: pointer;
 }
 @keyframes bot-float {
   0%,

@@ -17,6 +17,10 @@ let jobIndex = 0
 let timer: ReturnType<typeof setInterval> | null = null
 let observer: IntersectionObserver | null = null
 
+/* Bots reagieren: Pixel hebt den Finger (3) / Daumen hoch (6), Forge schweißt (4) / OK-Zeichen (6) */
+const { src: pixelSrc, onEnter: pixelEnter, onLeave: pixelLeave, onClick: pixelClick } = useBotPoses('pixel', { base: 2, hover: 3, click: 6 })
+const { src: forgeSrc, onEnter: forgeEnter, onLeave: forgeLeave, onClick: forgeClick } = useBotPoses('forge', { base: 2, hover: 4, click: 6 })
+
 function addLine() {
   const job = jobs.value[jobIndex++ % jobs.value.length]!
   logLines.value.push(job)
@@ -58,15 +62,21 @@ onUnmounted(() => {
         <div v-reveal class="panel-wrap">
           <img
             class="bot bot-pixel"
-            src="/img/crew/pixel-2.webp"
+            :src="pixelSrc"
             :alt="t('agents.pixelAlt')"
             height="140"
+            @pointerenter="pixelEnter"
+            @pointerleave="pixelLeave"
+            @click="pixelClick"
           >
           <img
             class="bot bot-forge"
-            src="/img/crew/forge-2.webp"
+            :src="forgeSrc"
             :alt="t('agents.forgeAlt')"
             height="120"
+            @pointerenter="forgeEnter"
+            @pointerleave="forgeLeave"
+            @click="forgeClick"
           >
           <div class="holo" aria-hidden="true">
             <div class="holo-head">~/pipeline · running <span class="pulse">●</span></div>
@@ -123,6 +133,7 @@ onUnmounted(() => {
   width: auto;
   z-index: 2;
   animation: crew-float 3.6s ease-in-out infinite;
+  cursor: pointer;
 }
 .bot-pixel {
   left: -34px;

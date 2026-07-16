@@ -35,12 +35,14 @@ const stations = ['ph', 'free', 'xain'] as const
           <circle class="node head" style="--d: 1.5s" cx="36" cy="480" r="8" />
 
           <g class="lbl" style="--d: 0.35s">
-            <text x="56" y="46">modotex</text>
-            <text class="year" x="56" y="62">2013</text>
+            <text x="56" y="40">Fachinformatiker</text>
+            <text x="56" y="56">Anwendungsentwicklung</text>
+            <text class="year" x="56" y="72">2013</text>
           </g>
           <g class="lbl" style="--d: 0.6s">
-            <text x="56" y="126">HTW Berlin</text>
-            <text class="year" x="56" y="142">B.Sc. 2017</text>
+            <text x="56" y="112">HTW Berlin</text>
+            <text x="56" y="128">Angewandte Informatik</text>
+            <text class="year" x="56" y="144">B.Sc. 2017</text>
           </g>
           <g class="lbl" style="--d: 0.85s">
             <text x="96" y="186">XAIN AG</text>
@@ -87,12 +89,14 @@ const stations = ['ph', 'free', 'xain'] as const
 
           <!-- Labels (gestaffelt einblendend) -->
           <g class="lbl" style="--d: 0.35s">
-            <text x="60" y="198" text-anchor="middle">modotex</text>
-            <text class="year" x="60" y="214" text-anchor="middle">2013</text>
+            <text x="72" y="198" text-anchor="middle">Fachinformatiker</text>
+            <text x="72" y="214" text-anchor="middle" style="font-size: 10.5px">Anwendungsentwicklung</text>
+            <text class="year" x="72" y="230" text-anchor="middle">2013</text>
           </g>
           <g class="lbl" style="--d: 0.6s">
             <text x="240" y="198" text-anchor="middle">HTW Berlin</text>
-            <text class="year" x="240" y="214" text-anchor="middle">B.Sc. 2017</text>
+            <text x="240" y="214" text-anchor="middle" style="font-size: 10.5px">Angewandte Informatik</text>
+            <text class="year" x="240" y="230" text-anchor="middle">B.Sc. 2017</text>
           </g>
           <g class="lbl" style="--d: 0.85s">
             <text x="370" y="72" text-anchor="middle">XAIN AG</text>
