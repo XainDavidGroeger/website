@@ -237,7 +237,7 @@
     "ctaContact": "$ kontakt",
     "build": {
       "cmd": "$ nuxt build --with ki-crew",
-      "l1": "✓ erfahrung      10+ jahre web",
+      "l1": "✓ erfahrung      13+ jahre softwareentwicklung",
       "l2": "✓ plattformen    7 live in betrieb",
       "l3": "✓ stack          php · vue · python",
       "l4": "✓ ki-crew        4 agenten aktiv",
@@ -250,7 +250,7 @@
     "text": "Full-Stack-Entwickler seit 2013, vom Kindergarten-Onepager bis zur Enterprise-Lösung. Heute entwickle ich als Senior bei Pflegehelden CRM-Systeme weiter und baue als Freelancer komplette Plattformen von Grund auf. Ich arbeite KI- und agentenoptimiert: Routine erledigen meine Agenten, Architektur und Qualität bleiben bei mir.",
     "alt": "Porträt von David Gröger an seinem Schreibtisch",
     "inspectHint": "Foto, Hover zeigt eine Element-Inspektion",
-    "chip1": "10+ jahre web",
+    "chip1": "13+ jahre softwareentwicklung",
     "chip2": "senior {'@'} pflegehelden",
     "chip3": "ki-optimierter workflow"
   },

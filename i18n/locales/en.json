@@ -237,7 +237,7 @@
     "ctaContact": "$ contact",
     "build": {
       "cmd": "$ nuxt build --with ai-crew",
-      "l1": "✓ experience    10+ years of web",
+      "l1": "✓ experience    13+ years of software development",
       "l2": "✓ platforms     7 live in production",
       "l3": "✓ stack         php · vue · python",
       "l4": "✓ ai crew       4 agents active",
@@ -250,7 +250,7 @@
     "text": "Full-stack developer since 2013, from tiny one-pagers to enterprise solutions. Today I'm a senior engineer at Pflegehelden working on CRM systems, and as a freelancer I build complete platforms from scratch. My workflow is AI- and agent-optimized: agents handle the routine, architecture and quality stay with me.",
     "alt": "Portrait of David Gröger at his desk",
     "inspectHint": "Photo, hover reveals an element inspection",
-    "chip1": "10+ years of web",
+    "chip1": "13+ years of software development",
     "chip2": "senior {'@'} pflegehelden",
     "chip3": "ai-optimized workflow"
   },
