@@ -330,7 +330,7 @@
     "logTitle": "~/crew · agent log · live",
     "picAlt": "David with his AI bot crew at the laptop, illustration",
     "picCaption": "// the crew and me · artwork from my own ai production",
-    "closing": "In practice: I work spec-driven. Requirements and acceptance criteria come first, then an agent loop harness powered by the latest LLMs works against them until everything is green — tests and docs included. Every line still gets reviewed by me.",
+    "closing": "In practice: I work spec-driven. Requirements and acceptance criteria come first, then an agent loop harness powered by the latest LLMs works against them until everything is green, tests and docs included. Every line still gets reviewed by me.",
     "jobs": {
       "refactor": "migrated jQuery → Livewire · 12 files",
       "test": "42/42 tests green",
