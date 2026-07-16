@@ -406,7 +406,7 @@
         "desc": "Sing-along events in 15+ cities plus Vienna: ticketing, vouchers and themed formats from rock to Christmas.",
         "about": "SingAlong is an event series where hundreds of participants sing along to well-known hits together, lyrics rolling on a big screen. Themed formats from rock to schlager to Christmas, bookable in over 15 German cities plus Vienna.",
         "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation\nTicketing and voucher system\nData structure and payment integration\nAdmin tool, events, bookings, marketing, statistics\nSEO optimization\nCity rollout and operations",
-        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "stack": "PHP, Laravel, WordPress, Vue 3, TypeScript, Vuetify, Vite, MySQL, Stripe",
         "date": "in production"
       },
       "weinhopping": {

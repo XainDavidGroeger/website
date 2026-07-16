@@ -406,7 +406,7 @@
         "desc": "Mitsing-Events in 15+ Städten und Wien: Ticketing, Gutscheine und Themen-Formate von Rock bis Weihnachten.",
         "about": "SingAlong ist eine Eventreihe, bei der Hunderte Teilnehmer gemeinsam zu bekannten Hits singen, die Songtexte laufen auf großer Leinwand mit. Themen-Formate von Rock über Schlager bis Weihnachten, buchbar in über 15 deutschen Städten und Wien.",
         "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite\nTicketing und Gutschein-System\nImplementierung der Datenstruktur und Bezahlmethodik\nUmsetzung des Administrationstools, Events, Buchungen, Marketing, Statistik\nSEO-Optimierungen\nStädte-Rollout und Betrieb",
-        "stack": "PHP, Laravel, MySQL, JavaScript, REST, Blade",
+        "stack": "PHP, Laravel, WordPress, Vue 3, TypeScript, Vuetify, Vite, MySQL, Stripe",
         "date": "in Betrieb"
       },
       "weinhopping": {
