@@ -88,8 +88,11 @@ const reviews = [
 
 .review header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+  /* feste Kopfhöhe, damit alle Zitate auf einer Ebene beginnen
+     (höchster Fall: einzeiliger Name + zweizeilige Rolle) */
+  min-height: 66px;
 }
 .review img {
   border-radius: 50%;
