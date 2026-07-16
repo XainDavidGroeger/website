@@ -4,11 +4,11 @@ const { t } = useI18n()
 const groups = computed(() => [
   {
     key: 'backend',
-    items: ['PHP', 'Laravel', 'Livewire', 'Python', 'Django', 'MySQL', 'REST APIs'],
+    items: ['PHP', 'Laravel', 'Livewire', 'Python', 'Django', 'WordPress', 'MySQL', 'Redis', 'REST APIs', 'GraphQL', 'Stripe'],
   },
   {
     key: 'frontend',
-    items: ['Vue', 'Nuxt', 'React', 'TypeScript', 'Tailwind', 'SASS', 'GSAP'],
+    items: ['Vue', 'Nuxt', 'React', 'TypeScript', 'Vuetify', 'Tailwind', 'SASS', 'Vite'],
   },
   {
     key: 'tooling',
