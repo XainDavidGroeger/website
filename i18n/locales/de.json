@@ -371,7 +371,7 @@
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing, seit über 5 Jahren von mir gebaut und betreut.",
+        "desc": "Kennenlern-Events per Spiel in Bars: 15+ Städte plus Wien, drei Altersgruppen, Ticketing, seit über 10 Jahren von mir gebaut und betreut.",
         "about": "Socialmatch steht für eine einzigartige Veranstaltungsreihe in Bars, bei der man neue Leute bei einem von den Gründern kreierten Brettspiel kennenlernt, eine Mischung aus Fragen, Aktionsaufgaben und Unterhaltung, allein oder im Team. Sechs bis zehn Teilnehmer pro Event, ausgewogenes Verhältnis, ein Spielleiter führt durch den Abend.",
         "tasks": "Konzeption der Plattform\nAufsetzen der Seite auf einen Server, Registrierung der Domain\nRealisierung der Webseite mit vorgegebenem Design\nImplementierung der Datenstruktur\nImplementierung der Bezahlmethodik (Stripe, PayPal, Klarna)\nUmsetzung des Administrationstools, Events, Buchungen, automatisierte Marketing-Tools, Statistik\nSEO-Optimierungen\nImplementierung von Affiliate-Marketing-Tools\nTechnische Beratung",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",

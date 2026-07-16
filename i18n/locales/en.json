@@ -371,7 +371,7 @@
       },
       "socialmatch": {
         "name": "socialmatch.de",
-        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing, built and maintained by me for over 5 years.",
+        "desc": "Game-based meetup events in bars: 15+ cities plus Vienna, three age groups, ticketing, built and maintained by me for over 10 years.",
         "about": "Socialmatch is a unique event series in bars where you meet new people over a board game created by the founders, a mix of questions, action tasks and entertainment, played solo or in teams. Six to ten participants per event, a balanced ratio, and a host guides the evening.",
         "tasks": "Platform concept\nServer setup, domain registration\nWebsite implementation based on a given design\nData structure implementation\nPayment integration (Stripe, PayPal, Klarna)\nAdmin tool, events, bookings, automated marketing tools, statistics\nSEO optimization\nAffiliate marketing tooling\nTechnical consulting",
         "stack": "PHP, Laravel, MySQL, jQuery, Bootstrap, REST, Blade",
