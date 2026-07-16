@@ -15,7 +15,7 @@
   "sandboxTeaser": {
     "eyebrow": "anfassen statt behaupten",
     "title": "Überzeug dich selbst.",
-    "lede": "Referenzen sind gut, Anfassen ist besser. Deshalb gibt es die Sandbox: VoltGrid, ein erfundenes Produkt, einmal komplett durchgebaut. Von der Spec über Architektur, laufende API und UI-Kit bis zu Tests und Deployment, alles klickbar, vieles läuft wirklich.",
+    "lede": "Referenzen sind gut, Anfassen ist besser. Deshalb gibt es die Sandbox: VoltGrid, ein erfundenes Produkt, einmal komplett durchgedacht. Von der Spec über Architektur, laufende API und UI-Kit bis zu Tests und Deployment, alles klickbar, vieles läuft wirklich.",
     "cta": "→ sandbox öffnen",
     "ctaHint": "// 8 perspektiven · ein fallbeispiel · echte api"
   },
