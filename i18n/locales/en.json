@@ -421,16 +421,16 @@
         "name": "muziqme · self-booking",
         "desc": "Self-booking platform for live music: artist registration, direct booking for events, ticketing.",
         "about": "muziqme is a live music agency with an attached self-booking platform: private and business hosts book the right live music directly, while musicians register for free with their own profile.",
-        "tasks": "Takeover and ongoing development of the self-booking platform\nArtist registration and profiles\nBooking flow improvements\nTicketing features\nBug fixes, maintenance and technical consulting",
+        "tasks": "Bug fixes, maintenance and technical consulting",
         "stack": "PHP, Laravel, MySQL, JavaScript, Bootstrap",
         "date": "freelance engagement"
       },
       "buggyfit": {
         "name": "buggyfit.de",
-        "desc": "Fitness platform for moms: course booking, online shop, health-insurance billing, trainer education.",
-        "about": "buggyFit offers outdoor training for moms before and after pregnancy, with the baby in the stroller, in parks all over Germany. The platform bundles course booking, an online shop, health-insurance billing, a video channel and the training of new instructors.",
-        "tasks": "Takeover and ongoing development of the platform\nCourse booking improvements\nOnline shop\nSupport for health-insurance processes\nMaintenance, bug fixes and support",
-        "stack": "PHP, WordPress, WooCommerce, MySQL, JavaScript",
+        "desc": "Fitness platform for moms: course booking, trainer education.",
+        "about": "buggyFit offers outdoor training for moms before and after pregnancy, with the baby in the stroller, in parks all over Germany. The platform bundles course booking, a video channel and the training of new instructors.",
+        "tasks": "Takeover and ongoing development of the platform\nMaintenance, bug fixes and support",
+        "stack": "PHP, Laravel, Laravel Nova, MySQL, Redis, Vue 3, TypeScript",
         "date": "freelance engagement"
       }
     }
